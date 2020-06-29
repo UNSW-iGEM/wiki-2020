@@ -11,8 +11,8 @@ module.exports = function(root) {
 
     // Teaminfo. Duh.
     const teaminfo = {
-        year: 2018,
-        teamName: 'Virginia'
+        year: 2020,
+        teamName: 'UNSW_Australia'
     };
 
     const imagetypes = '{png,jpg,gif,svg}';
@@ -50,7 +50,7 @@ module.exports = function(root) {
         fonts: path.join(build, 'fonts/')
     };
 
-    // Used by push.js. Note that for the most part, 
+    // Used by push.js. Note that for the most part,
     // upload srcs are the same as built targets.
     var uploadsrc = {
         index: path.join(buildtarget.pages, 'index.html'),
@@ -118,18 +118,18 @@ module.exports = function(root) {
         "autoinduction": ["The activation of a phenotype without external stimuli."],
         "biofilms": ["A protective, adhesive matrix of polymers typically produced after quorum activation."],
         "E.coli": ["Escherichia coli. A commonly used chassis also found in the human gut microbiome."],
-        "LsrACDB": ["Active import protein for AI-2."],        
-        "LsrK": ["AI-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],        
-        "Lsr operon": ["LuxS Regulated (Lsr) operon responsive to AI-2."], 
+        "LsrACDB": ["Active import protein for AI-2."],
+        "LsrK": ["AI-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],
+        "Lsr operon": ["LuxS Regulated (Lsr) operon responsive to AI-2."],
         "LuxS": ["An enzyme closely linked to the production of AI-2."],
         "operon": ["A functional unit of DNA containing a cluster of genes under the control of a single promoter."],
         "phosphorylation": [" The addition of a phosphate group to an organic compound. "],
         "pLsr": ["The bidirectional promoter of the Lsr Operon."],
         "quorum sensing": ["The ability to detect and to respond to cell population density by gene regulation."],
         "sfGFP": ["superfolding Green Fluorescent Protein"],
-"T7 RNA Polymerase" : ["An RNA polymerase from the T7 bacteriophage is highly selective for the pT7 promoter."],     
+"T7 RNA Polymerase" : ["An RNA polymerase from the T7 bacteriophage is highly selective for the pT7 promoter."],
         "virulence": ["The likelihood of a microbe to cause disease based on its phenotypic state."],
-        "YdgG": ["Active export protein for AI-2."]  
+        "YdgG": ["Active export protein for AI-2."]
     };
 
     var handlebarsHelpers = function(file, t) {
@@ -169,9 +169,9 @@ module.exports = function(root) {
             clean: path.join(build, '/**'),
             app: app,
             build: build,
-            buildsrc: buildsrc, 
-            buildtarget: buildtarget, 
-            uploadsrc: uploadsrc, 
+            buildsrc: buildsrc,
+            buildtarget: buildtarget,
+            uploadsrc: uploadsrc,
             urls: urls,
             suffixes: suffixes,
         },
