@@ -7,7 +7,7 @@ If you have any issues with these setup steps send me a message on slack. I've t
 
 Sign-up for a github account [here](https://github.com/join).
 
-Message @jackrobbers your github username so you can be added to the UNSW-iGEM organisation and make changes to the wiki code. You'll be able to view and edit the code locally before being added to the organisation, but not push any changes to the repo.
+Message @JackRobbers your github username so you can be added to the UNSW-iGEM organisation and make changes to the wiki code. You'll be able to view and edit the code locally before being added to the organisation, but not push any changes to the repo.
 
 Download and install git from [here](https://git-scm.com/downloads). Set the default editor as either vscode or sublime. Leave every other option as the default.
 
