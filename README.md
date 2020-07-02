@@ -48,3 +48,21 @@ this will start a local webserver that you access with your browser..
 ### Publishing to the wiki
 
 ```gulp publish -l```
+
+## Git Usage
+
+### Command line
+
+Git is a tool for managing and merging different versions of code.
+
+`git add filename`
+`git add -A`
+`git commit -m "a commit message"`
+`git push`
+`git pull`
+`git checkout -b branch_name`
+`git checkout`
+
+pull requests
+
+### Github Desktop
