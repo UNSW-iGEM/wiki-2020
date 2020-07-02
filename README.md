@@ -27,9 +27,14 @@ From Github Desktop, Select "Repository > Open in Command Prompt (Windows) / Ope
 
 Type "npm install" and press enter. This will install all of the other software required to run the wiki code. If it doesn't work, reboot your computer to make sure node is installed correctly.
 
+
+#### Gulp and Bower cli
+
 Type "npm install --global gulp-cli" and press enter
 
 Type "npm install --global bower" and press enter
+
+On mac you also may need to follow [these instructions](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory) to install these global npm packages.
 
 Type "bower install" and press enter.
 
