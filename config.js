@@ -21,12 +21,11 @@ module.exports = function(root) {
     // Listed file sources for all tasks. Note use of glob patterns and wildcarding.
     // Used by any build tasks.
     var buildsrc = {
-        htmlpages: [path.join(app, '**/*.html'), path.join('!', app, '{templates,partials,content}/**/*.html')],
-        hbspages: [path.join(app, '**/*.hbs'), path.join('!', app, '{templates,partials,content}/**/*.hbs')],
+        htmlpages: [path.join(app, 'pages/**/*.html'), path.join('!', app, '{templates,partials,content}/**/*.html')],
+        hbspages: [path.join(app, 'pages/**/*.hbs'), path.join('!', app, '{templates,partials,content}/**/*.hbs')],
         htmlcontent: path.join(app, 'content/**/*.html'),
         markdowncontent: path.join(app, 'content/**/*.md'),
         docxcontent: path.join(app, 'content/**/*.docx'),
-        //drivecontent: TODO,
         partials: path.join(app, 'partials/'),
         templates: path.join(app, 'templates/**/*.html'),
         css: path.join(app, 'styles/**/*.css'),
@@ -41,7 +40,7 @@ module.exports = function(root) {
     var buildtarget = {
         pages: build,
         templates: path.join(build, 'templates/'),
-        content: path.join(build, 'content/'),
+        content: build,
         css: path.join(build, 'css/'),
         js: path.join(build, 'js/'),
         bowerjs: path.join(build, 'dist/js/'),
@@ -111,26 +110,6 @@ module.exports = function(root) {
 
     var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
     var environment = Object.assign(environments[userenv], {name: userenv});
-
-/*tooltip*/
-    const glossary = {
-        "Autoinducer-2": ["A universal signaling molecule used by microorganisms to coordinate group behavior through quorum sensing."],
-        "autoinduction": ["The activation of a phenotype without external stimuli."],
-        "biofilms": ["A protective, adhesive matrix of polymers typically produced after quorum activation."],
-        "E.coli": ["Escherichia coli. A commonly used chassis also found in the human gut microbiome."],
-        "LsrACDB": ["Active import protein for AI-2."],
-        "LsrK": ["AI-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],
-        "Lsr operon": ["LuxS Regulated (Lsr) operon responsive to AI-2."],
-        "LuxS": ["An enzyme closely linked to the production of AI-2."],
-        "operon": ["A functional unit of DNA containing a cluster of genes under the control of a single promoter."],
-        "phosphorylation": [" The addition of a phosphate group to an organic compound. "],
-        "pLsr": ["The bidirectional promoter of the Lsr Operon."],
-        "quorum sensing": ["The ability to detect and to respond to cell population density by gene regulation."],
-        "sfGFP": ["superfolding Green Fluorescent Protein"],
-"T7 RNA Polymerase" : ["An RNA polymerase from the T7 bacteriophage is highly selective for the pT7 promoter."],
-        "virulence": ["The likelihood of a microbe to cause disease based on its phenotypic state."],
-        "YdgG": ["Active export protein for AI-2."]
-    };
 
     var handlebarsHelpers = function(file, t) {
 

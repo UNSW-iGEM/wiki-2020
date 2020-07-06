@@ -28,6 +28,7 @@ gulp.registry(hub);
 
 // Just an example task
 gulp.task('dummy', function(done) {
+  console.log(global.wikibrick);
   console.log("Dummy task called");
   done();
 });

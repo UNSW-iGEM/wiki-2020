@@ -66,3 +66,8 @@ Git is a tool for managing and merging different versions of code.
 pull requests
 
 ### Github Desktop
+
+
+## Wiki requirements
+
+https://2020.igem.org/Competition/Deliverables/Wiki
