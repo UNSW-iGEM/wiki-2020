@@ -72,3 +72,6 @@ pull requests
 Jack Robbers
 Deborah Chandra 
 hehe
+* Jack Robbers
+* Deborah Chandra
+* Cornelius Bong
