@@ -180,3 +180,6 @@ typings/
 
 # Ignore scratch work directory
 **/spike
+
+#ignore ds store for mac users
+**/.DS_Store
