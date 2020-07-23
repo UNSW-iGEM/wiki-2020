@@ -66,3 +66,7 @@ Git is a tool for managing and merging different versions of code.
 pull requests
 
 ### Github Desktop
+
+### Wiki Team
+
+Jack Robbers
