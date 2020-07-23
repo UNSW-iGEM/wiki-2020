@@ -69,9 +69,12 @@ pull requests
 
 ### Wiki Team
 
+<<<<<<< HEAD
 Jack Robbers
 Deborah Chandra 
 hehe
+=======
 * Jack Robbers
 * Deborah Chandra
 * Cornelius Bong
+>>>>>>> b5e5172188a6b356ba72413a13a80cff1c6b91b3
