@@ -69,5 +69,5 @@ pull requests
 
 ### Wiki Team
 
-Jack Robbers
-Deborah Chandra 
+* Jack Robbers
+* Deborah Chandra
