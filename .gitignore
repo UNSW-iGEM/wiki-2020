@@ -1,4 +1,5 @@
-uploadmap.json
+uploadmap.yml
+wikisync.cookies
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
