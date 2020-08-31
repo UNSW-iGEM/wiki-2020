@@ -32,7 +32,7 @@ jobs:
       - name: iGEM WikiSync
         uses: igembitsgoa/wikisync-action@v0.2
         with:
-          team: 'BITSPilani-Goa_India'
+          team: 'UNSW_Australia'
           source: 'dist'
           build: 'igem'
         env:
