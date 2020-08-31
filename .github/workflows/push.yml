@@ -6,8 +6,7 @@ on:
 
 jobs:
   main:
-    if: "!contains(github.event.head_commit.message, 'no-ci') && \
-          contains(github.event.head_commit.message, 'iGEM-deploy')"
+    if: "!contains(github.event.head_commit.message, 'no-ci')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
