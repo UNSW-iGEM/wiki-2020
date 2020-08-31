@@ -19,35 +19,19 @@ Click "Clone a repository from the Internet..."
 
 Type in "UNSW-iGEM/wiki-2020" and click clone. This downloads all of the wiki code onto your computer. It might ask you to "initilize git lfs", which you should do.
 
-### Node.js, NPM, Gulp
+### Node.js, NPM
 
 Download and install node.js from [here](https://nodejs.org/en/download/). Click the large green square under LTS that corresponds to your OS. Wikibrick is built on node.js.
 
 From Github Desktop, Select "Repository > Open in Command Prompt (Windows) / Open in Command Prompt (Mac)".
 
-Type "npm install" and press enter. This will install all of the other software required to run the wiki code. If it doesn't work, reboot your computer to make sure node is installed correctly.
-
-
-#### Gulp and Bower cli
-
-Type "npm install --global gulp-cli" and press enter
-
-Type "npm install --global bower" and press enter
-
-On mac you also may need to follow [these instructions](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory) to install these global npm packages.
-
-Type "bower install" and press enter.
+Type ```npm install``` and press enter. This will install all of the other software required to run the wiki code. If it doesn't work, reboot your computer to make sure node is installed correctly.
 
 ## Usage
 
 ### Running locally
 
-```gulp serve```
-this will start a local webserver that you access with your browser..
-
-### Publishing to the wiki
-
-```gulp publish -l```
+```npm start```
 
 ## Git Usage
 
@@ -68,6 +52,6 @@ pull requests
 ### Github Desktop
 
 ### Wiki Team
-
 * Jack Robbers
 * Deborah Chandra
+* Cornelius Bong
