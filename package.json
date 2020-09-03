@@ -4,31 +4,21 @@
   "description": "Wiki for iGEM 2020 UNSW",
   "main": "index.js",
   "scripts": {
-    "preprocess": "python3 utils/preprocess.py",
-    "nav": "python3 utils/nav.py",
-    "citations": "python3 utils/citations.py",
-    "puglint": "glob-exec './src/**/*.pug' -- \"pug-lint {{files.join(' ')}}\"",
-    "custom_tests": "python3 utils/test.py",
-    "test": "npm-run-all puglint custom_tests",
-    "prestart": "npm-run-all preprocess nav citations custom_tests",
-    "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
-    "build": "webpack --config webpack.production.js",
-    "build:all": "npm-run-all prestart build",
-    "postbuild": "python3 utils/postbuild.py",
-    "wikisync": "python3.7 wikisync.py",
-    "publish": "npm-run-all build:all wikisync"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com//.git"
+    "url": "https://github.com/UNSW-iGEM/wiki-2020"
   },
   "author": "Jack Robbers",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com///issues"
+    "url": "https://github.com/UNSW-iGEM/wiki-2020/issues"
   },
-  "homepage": "https://github.com//#readme",
+  "homepage": "https://github.com/UNSW-iGEM/wiki-2020/#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",
     "bootstrap-reboot": "^4.4.1",
