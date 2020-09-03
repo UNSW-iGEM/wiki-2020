@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap');
 
-/*presets*/ 
+/*presets*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,7 +62,7 @@ input, textarea, select {
   text-rendering: optimizeLegibility;
 }
 
-/*edit here*/ 
+/*edit here*/
 header{
   display: flex;
   align-items: center;
@@ -87,10 +87,10 @@ a:hover{
 }
 
 header nav{
-  font-family: Josefin Sans; 
+  font-family: Josefin Sans;
   font-weight:600px;
-  font-size: 25px; 
-  line-height: 0; 
+  font-size: 25px;
+  line-height: 0;
   margin:16px 200px 16px 0;
 }
 
@@ -107,14 +107,14 @@ header nav a{
 nav ul li:hover div.sub-menu{
   display: block;
   position: absolute;
-} 
+}
 
 nav ul li:hover div.sub-menu ul{
-  display: block; 
+  display: block;
   margin: 10px;
 }
 
-nav 
+nav
 
 
 section{
@@ -123,7 +123,7 @@ section{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px 32px;
-  grid-auto-flow: dense;  
+  grid-auto-flow: dense;
 }
 
 section.banner img{
@@ -142,7 +142,7 @@ section.banner h1{
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  grid-column: 5/ span 4; 
+  grid-column: 5/ span 4;
 
 }
 
@@ -153,5 +153,5 @@ section.banner h2{
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  grid-column: 3/ span 8; 
+  grid-column: 3/ span 8;
 }
