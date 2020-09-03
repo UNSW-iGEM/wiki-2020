@@ -2,7 +2,8 @@ module.exports = {
     templateFormats: [
         "html",
         "md",
-        "css"
+        "css",
+        "scss"
     ],
     passthroughFileCopy: true
   };
