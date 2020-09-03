@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "wiki-2020",
   "version": "1.0.0",
   "description": "Wiki for iGEM 2020 UNSW",
   "main": "index.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "npx @11ty/eleventy --serve --input=src",
+    "build": "npx @11ty/eleventy --input=src"
   },
   "repository": {
     "type": "git",
