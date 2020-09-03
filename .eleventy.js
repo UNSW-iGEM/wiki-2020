@@ -3,7 +3,9 @@ module.exports = {
         "html",
         "md",
         "css",
-        "scss"
+        "scss",
+        "jpg",
+        "png"
     ],
     passthroughFileCopy: true
   };
