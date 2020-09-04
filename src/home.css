@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap');
 
-/*presets*/
+/*presets*/ 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,10 +22,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/*article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-}*/
+}
 body {
   line-height: 1;
 }
@@ -62,12 +62,13 @@ input, textarea, select {
   text-rendering: optimizeLegibility;
 }
 
-/*edit here*/
+/*edit here*/ 
 
 /*nav-bar*/
 header{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #F3E7F1;
 }
 
@@ -77,24 +78,22 @@ header img{
 }
 
 header nav{
-  font-family: Josefin Sans;
+  font-family: Josefin Sans; 
   font-weight:600px;
-  height: 3em;
-  font-size: 1em;
-  line-height: 0;
-  padding: 32px 200px 32px 0;
+  font-size: 25px; 
+  line-height: 0; 
+  margin:32px 200px 32px 0;
 }
 
+nav ul{
+  display: inline-flex;
+  list-style: none;
+}
 
 nav a:hover{
   color: #15524A;
   transition: 0.1s border-bottom 0.1s;
   border-bottom:2px solid #15524A;
-}
-
-nav .nav-item {
-  display: inline-block;
-  font-size: 3em;
 }
 
 header nav a{
@@ -103,8 +102,37 @@ header nav a{
   margin:0 0 0 25px;
 }
 
+.sub-menu{
+  display: none;
+  z-index: 1;
+}
+
+.sub-menu a:hover{
+  border-bottom: none;
+}
+
+nav ul li:hover div.sub-menu{
+  display: block;
+  position: absolute;
+} 
+
+nav ul li:hover div.sub-menu ul{
+  display: block; 
+  margin: 0px;
+  background-color:#F3E7F1;
+}
+
+.sub-menu li{
+  width: 100%;
+  margin: 32px 0 0 0;
+  border-radius: 0;
+  text-align: left;
+  font-size: 14px;
+
+}
+
 /*banner start*/
-section {
+section{
   margin:0px 0 20px 0;
 
   display: grid;
@@ -119,7 +147,6 @@ section.banner img{
   width: 100%;
   left: 0px;
   opacity: 0.75;
-  grid-column: 1/span 12
 }
 
 h1{
@@ -133,6 +160,11 @@ h1{
 section.banner h1{
   text-align: center;
   grid-column: 5/ span 4;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 h2{
@@ -146,10 +178,14 @@ h2{
 
 section.banner h2{
   text-align: center;
-  grid-column: 3/ span 8;
+  grid-column: 3/ span 8; 
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/*introduction section*/
+/*introduction section*/ 
 p{
   font-family: Source Sans Pro;
   font-style: normal;
@@ -164,10 +200,22 @@ section.introduction h1{
 }
 
 section.introduction p{
-  grid-column: 2/ span 6;
+  grid-column: 2/ span 6; 
   text-align: left;
 }
 
 section.introduction img{
   grid-column:8/ span 4;
 }
+
+
+
+
+
+
+
+
+
+
+
+
