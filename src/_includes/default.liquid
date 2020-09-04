@@ -2,45 +2,40 @@
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<body>
-	<header>
-		<a href="index.html"><img src="/images/waratah-logo.png" alt="UNSW iGEM logo"></a>
+<header>
+	<nav class="navbar navbar-expand-sm">
+		<a class="navbar-brand" href="index.html">
+			<img src="/images/waratah-logo.png" alt="UNSW iGEM logo">
+		</a>
+		<div class="navbar-nav justify-content-end">
+			<li class="nav-item"><a href="">Project</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#">Description</a></li>
+						<li><a href="#">Modelling</a></li>
+						<li><a href="#">Improved Parts</a></li>
+					</ul>
+				</div>
+			</li>
 
-		<nav>
-			<ul>
-				<li><a href="">Project</a>
-					<div class="sub-menu">
-						<ul>
-							<li><a href="#">Description</a></li>
-							<li><a href="#">Modelling</a></li>
-							<li><a href="#">Improved Parts</a></li>
-						</ul>
-					</div>
-				</li>
+			<a class="nav-item nav-link" href="">Experiment</a>
+			<a class="nav-item nav-link" href="">Human Practices</a>
+			<a class="nav-item nav-link" href="">About Us</a>
+			<a class="nav-item nav-link" href="">Judging</a>
+		</div>
+	</nav>
+</header>
 
-				<li><a href="">Experiment</a></li>
-				<li><a href="">Human Practices</a></li>
-				<li><a href="">About Us</a></li>
-				<li><a href="">Judging</a></li>
-			</ul>
-		</nav>
-	</header>
+<section class="banner">
+	<h1>PROTECC CORAL</h1>
+	<h2>To protect and conserve coral reefs,the heart of our oceans</h2>
+</section>
+<div class="container">
+	<div class="row">
+		{{ content }}
+	</div>
+</div>
 
-	<section class="banner">
-		<h1>PROTECC CORAL</h1>
-		<h2>To protect and conserve coral reefs,the heart of our oceans</h2>
-		<img src="/images/banner.jpg">
-	</section>
-
-	<section>
-
-	</section>
-
-	<footer>
-
-	</footer>
-
-
-</body>
-
-{{ content }}
+<img src="/images/banner.jpg">
+<footer>
+</footer>
