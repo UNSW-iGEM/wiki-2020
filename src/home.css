@@ -157,6 +157,14 @@ h1{
   line-height: 40px;
 }
 
+section h1 {
+  text-align: center;
+}
+
+section h2 {
+  text-align: center;
+}
+
 section.banner h1{
   text-align: center;
   grid-column: 5/ span 4;
