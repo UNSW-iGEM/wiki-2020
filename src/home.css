@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap');
 
-/*presets*/
+/*presets*/ 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,8 +62,7 @@ input, textarea, select {
   text-rendering: optimizeLegibility;
 }
 
-/*edit here*/
-
+/*edit here*/ 
 /*nav-bar*/
 header{
   display: flex;
@@ -78,12 +77,20 @@ header img{
 }
 
 header nav{
-  font-family: Josefin Sans;
+  font-family: Josefin Sans; 
   font-weight:600px;
-  font-size: 25px;
-  line-height: 0;
+  font-size: 25px; 
+  line-height: 0; 
   margin:32px 200px 32px 0;
 }
+
+nav li {
+    line-height: 1em;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+
 
 nav ul{
   display: inline-flex;
@@ -96,10 +103,11 @@ nav a:hover{
   border-bottom:2px solid #15524A;
 }
 
-header nav a{
-  color: black;
-  text-decoration: none;
-  margin:0 0 0 25px;
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px;
 }
 
 .sub-menu{
@@ -107,46 +115,49 @@ header nav a{
   z-index: 1;
 }
 
-.sub-menu a:hover{
-  border-bottom: none;
-}
-
 nav ul li:hover div.sub-menu{
   display: block;
   position: absolute;
+} 
+
+nav ul li:hover div.sub-menu ul {
+    display: block;
+    margin: 15px 0px 0px 15px;
+    background-color: #F3E7F1;
+    padding: 10px;
 }
 
-nav ul li:hover div.sub-menu ul{
-  display: block;
-  margin: 0px;
-  background-color:#F3E7F1;
-}
 
-.sub-menu li{
-  width: 100%;
-  margin: 32px 0 0 0;
-  border-radius: 0;
-  text-align: left;
-  font-size: 14px;
-
+nav ul li:hover div.sub-menu ul li {
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5em;
 }
 
 /*banner start*/
 section{
-  /* margin:0px 0 20px 0; */
+  margin:0px 0 20px 0;
 
-  /* display: grid; */
-  /* grid-template-columns: repeat(12, 1fr); */
-  /* grid-gap: 32px 32px; */
-  /* grid-auto-flow: dense; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
 
 }
 
+.banner{
+  position: relative;
+  text-align: center;
+}
+
 section.banner img{
-  /* position: absolute; */
-  /* width: 100%; */
-  /* left: 0px; */
-  /* opacity: 0.75; */
+  width: 100%;
+  left: 0px;
+  opacity: 0.75;
+  grid-column: 1/span 12
 }
 
 h1{
@@ -157,22 +168,12 @@ h1{
   line-height: 40px;
 }
 
-section h1 {
-  text-align: center;
-}
-
-section h2 {
-  text-align: center;
-}
-
 section.banner h1{
-  text-align: center;
-  grid-column: 5/ span 4;
+  text-align: center; 
   position: absolute;
   top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  width: 100%; 
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2{
@@ -186,15 +187,14 @@ h2{
 
 section.banner h2{
   text-align: center;
-  grid-column: 3/ span 8;
   position: absolute;
   top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/*introduction section*/
-p {
+/*introduction section*/ 
+p{
   font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
@@ -202,16 +202,148 @@ p {
   line-height: 23px;
 }
 
-section.introduction h1{
-  /* grid-column: 2/ span 6; */
-  /* text-align: center; */
+section.introduction div.introduction-text{
+  grid-column: 2/span 6;
 }
 
-section.introduction p{
-  /* grid-column: 2/ span 6; */
-  /* text-align: left; */
+section.introduction div.introduction-text h1{
+  text-align: center;
+  margin: 32px 0 0 0; 
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
 }
 
-section.introduction img{
-  /* grid-column:8/ span 4; */
+section.introduction div.introduction-text p{
+  margin: 32px 0 0 0; 
 }
+
+section.introduction div.introduction-image{
+  grid-column:8/ span 4;
+}
+
+/*journey section*/ 
+section.journey{
+  background: linear-gradient(180deg, #F3E7F1 0%, #EFF0FF 100%);
+}
+
+section.journey h1{
+  text-align: center;
+  grid-column: 2/span 10;
+  margin: 54px 0 40px 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.journey div.lab-work-des{
+  grid-column: 2/span 5;
+  text-align: center;
+}
+
+section.journey div.lab-work-des p{
+  margin: 32px 0 32px 0; 
+}
+
+section.journey div.hp-des{
+  grid-column: 7/span 5;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+section.journey div.hp-des p{
+  margin: 32px 0 32px 0; 
+}
+
+section.journey button{
+  margin: 0 0 54px 0;
+  box-shadow:inset 0px 0px 0px 0px #276873;
+  background-color:#ddd;
+  border:none;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family:Josefin Sans;
+  font-size:14px;
+  font-weight:bold;
+  line-height: 23px;
+  padding: 16px 32px;
+  text-decoration:none;
+  transition: 0.3s
+}
+
+section.journey button:hover{
+  background-color: #39857B;
+  color: white;
+}
+
+/*Meet the team section*/ 
+
+section.meet-team h1{
+  grid-column: 2/span 6; 
+  text-transform: uppercase;
+  text-align: center;
+  margin: 54px 0 30px 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.meet-team div.team-image{
+  grid-column: 2/span 6;
+}
+
+section.meet-team div.team-image img{
+  margin:0 0 54px 0;
+  filter: drop-shadow(-25px 30px 0px #F3E7F1);
+}
+
+section.meet-team div.team-intro{
+  grid-column: 8/ span 4;
+}
+
+section.meet-team div.team-intro p{
+    margin: 126px 0 50px 0;
+    text-align: center;
+}
+
+section.meet-team button{
+  margin: 0 0 54px 130px;
+  box-shadow:inset 0px 0px 0px 0px #276873;
+  background-color:#ddd;
+  border:none;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family:Josefin Sans;
+  font-size:14px;
+  font-weight:bold;
+  line-height: 23px;
+  padding: 16px 32px;
+  text-decoration:none;
+  transition: 0.3s
+}
+
+section.meet-team button:hover{
+  background-color: #39857B;
+  color: white;
+}
+
+/*footer section*/ 
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: #15524A;
+}
+
+footer img{
+  margin: 120px 0 120px 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
