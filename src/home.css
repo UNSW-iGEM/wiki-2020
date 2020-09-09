@@ -118,6 +118,7 @@ header nav a {
 nav ul li:hover div.sub-menu{
   display: block;
   position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 } 
 
 nav ul li:hover div.sub-menu ul {
@@ -215,6 +216,18 @@ section.introduction div.introduction-text h1{
 
 section.introduction div.introduction-text p{
   margin: 32px 0 0 0; 
+  text-align: justify;
+}
+
+section.introduction div.introduction-text a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+section.introduction div.introduction-text a:hover{
+  color: #15524A;
+  text-decoration: underline;
 }
 
 section.introduction div.introduction-image{
@@ -240,6 +253,7 @@ section.journey div.lab-work-des{
 
 section.journey div.lab-work-des p{
   margin: 32px 0 32px 0; 
+  text-align: justify;
 }
 
 section.journey div.hp-des{
@@ -250,6 +264,7 @@ section.journey div.hp-des{
 
 section.journey div.hp-des p{
   margin: 32px 0 32px 0; 
+  text-align: justify;
 }
 
 section.journey button{
@@ -298,14 +313,14 @@ section.meet-team div.team-intro{
 }
 
 section.meet-team div.team-intro p{
-    margin: 126px 0 50px 0;
+    margin: 126px 0 40px 0;
     text-align: center;
 }
 
 section.meet-team button{
-  margin: 0 0 54px 130px;
+  margin: 0 0 54px 146px;
   box-shadow:inset 0px 0px 0px 0px #276873;
-  background-color:#ddd;
+  background-color:#F3E7F1;
   border:none;
   display:inline-block;
   cursor:pointer;
@@ -334,6 +349,10 @@ footer{
 footer img{
   margin: 120px 0 120px 32px;
 }
+
+
+
+
 
 
 
