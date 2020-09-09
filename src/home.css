@@ -310,6 +310,7 @@ section.meet-team div.team-image img{
 
 section.meet-team div.team-intro{
   grid-column: 8/ span 4;
+  text-align: center;
 }
 
 section.meet-team div.team-intro p{
@@ -317,8 +318,7 @@ section.meet-team div.team-intro p{
     text-align: center;
 }
 
-section.meet-team button{
-  margin: 0 0 54px 146px;
+section.meet-team button{ 
   box-shadow:inset 0px 0px 0px 0px #276873;
   background-color:#F3E7F1;
   border:none;
