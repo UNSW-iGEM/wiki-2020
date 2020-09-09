@@ -14,6 +14,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install npm depedencies
+        run: npm install
+
       - name: Build
         run: npm run build
 
