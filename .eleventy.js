@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
             "md",
             "css",
             "jpg",
-            "png"
+            "png",
+            "svg",
         ],
         passthroughFileCopy: true
     };

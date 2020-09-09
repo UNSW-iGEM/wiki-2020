@@ -1,14 +1,12 @@
 {% comment %} Everything is already inside of html and body tags {% endcomment %}
-
-<link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+
 <header>
-	<nav class="navbar navbar-expand-sm">
-		<a class="navbar-brand" href="index.html">
-			<img src="/images/waratah-logo.png" alt="UNSW iGEM logo">
-		</a>
-		<div class="navbar-nav justify-content-end">
-			<li class="nav-item"><a href="">Project</a>
+	<a href="index.html"><img src="/images/waratah-logo.png"></a>
+	<nav>
+		<ul>
+			<li><a href="">Project</a>
 				<div class="sub-menu">
 					<ul>
 						<li><a href="#">Description</a></li>
@@ -18,24 +16,62 @@
 				</div>
 			</li>
 
-			<a class="nav-item nav-link" href="">Experiment</a>
-			<a class="nav-item nav-link" href="">Human Practices</a>
-			<a class="nav-item nav-link" href="">About Us</a>
-			<a class="nav-item nav-link" href="">Judging</a>
-		</div>
+			<li><a href="">Experiment</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#">Notebook</a></li>
+						<li><a href="#">Results</a></li>
+						<li><a href="#">Methods</a></li>
+						<li><a href="#">Safety Form</a></li>
+					</ul>
+				</div>
+			</li>
+
+			<li><a href="">Human Practices</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#">Stakeholders</a></li>
+						<li><a href="#">Integrated Human Practices</a></li>
+						<li><a href="#">Education and Outreach</a></li>
+					</ul>
+				</div>
+			</li>
+
+			<li><a href="">About Us</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="team.html">Team Members</a></li>
+						<li><a href="#">Collaborations</a></li>
+						<li><a href="#">Attributions</a></li>
+					</ul>
+				</div>
+			</li>
+
+			<li><a href="">Judging</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#">Medals</a></li>
+						<li><a href="#">Judging Form</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 	</nav>
 </header>
 
 <section class="banner">
+	<img src="images/banner.jpg">
+
 	<h1>PROTECC CORAL</h1>
 	<h2>To protect and conserve coral reefs,the heart of our oceans</h2>
 </section>
-<div class="container">
-	<div class="row">
-		{{ content }}
-	</div>
+
+<div class="content">
+	{{ content }}
 </div>
 
 <img src="/images/banner.jpg">
-<footer>
+<footer class="socials">
+	<a href="https://www.instagram.com/unsw_igem/"><img src="/images/Social-Instagram.svg"></a>
+	<a href="https://www.facebook.com/unswigemteam"><img src="/images/Social-Facebook.svg"></a>
 </footer>
