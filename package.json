@@ -8,7 +8,8 @@
     "serve": "npx @11ty/eleventy --serve --input=src",
     "start": "npm run clean && npm run serve",
     "generate": "npx @11ty/eleventy --input=src",
-    "build": "npm run clean && npm run generate"
+    "build": "npm run clean && npm run generate",
+    "webpack": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
