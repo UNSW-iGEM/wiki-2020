@@ -1,7 +1,6 @@
-const sass = require('./config/sass-process');
-
 module.exports = function(eleventyConfig) {
-    sass('./src/_includes/scss/main.scss', './_site/css/main.css');
+    eleventyConfig.addPassthroughCopy("build");
+    eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addFilter("sortByName", function(values) {
         let vals = [...values];     // this *seems* to prevent collection mutation...
         return vals.sort((a, b) => a.data.name.localeCompare(b.data.name));
@@ -15,6 +14,10 @@ module.exports = function(eleventyConfig) {
             "png",
             "svg",
         ],
-        passthroughFileCopy: true
+        passthroughFileCopy: true,
+        dir: {
+            input: "site",
+            output: "dist"
+          }
     };
 }

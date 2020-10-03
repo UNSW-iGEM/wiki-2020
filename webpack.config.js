@@ -1,17 +1,21 @@
-module.exports = {
-    module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: [
-            // Creates `style` nodes from JS strings
-            'style-loader',
-            // Translates CSS into CommonJS
-            'css-loader',
-            // Compiles Sass to CSS
-            'sass-loader',
-          ],
-        },
-      ],
-    },
-};
+const Encore = require('@symfony/webpack-encore');
+
+Encore
+  .setOutputPath('build/')
+  .setPublicPath('/wiki-2020/build')
+  .setManifestKeyPrefix('build')
+  .addEntry('app', './site/app.js')
+  .enableSingleRuntimeChunk()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableSassLoader()
+  .autoProvidejQuery()
+;
+
+if (Encore.isProduction()) {
+  Encore
+    .cleanupOutputBeforeBuild()
+    .enableVersioning()
+  ;
+}
+
+module.exports = Encore.getWebpackConfig();

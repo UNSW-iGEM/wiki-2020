@@ -1,0 +1,21 @@
+---
+layout: default.liquid
+---
+
+<div class="container-fluid">
+  <div class="row">
+    {% assign sortedMembers = collections.team | sortByName %}
+    {%- for member in sortedMembers -%}
+      <div class="card col-md-3">
+        <img class="card-img-top" src="/assets/images/team/{{ member.fileSlug | capitalize }}.jpg" alt="photo of team member {{ member.data.name }}">
+        <div class="card-body">
+          <h1 class="card-title">{{ member.data.name }}</h1>
+          <p class="card-subtitle">{{ member.data.degree}}</p>
+          {%- for team in member.data.teams -%}
+            <span class="badge badge-secondary">{{team}}</span>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>

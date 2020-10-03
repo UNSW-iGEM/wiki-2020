@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap");
-// @import "~bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
 @import '_home.scss';
 @import '_igem_reset.scss';
 
+#card {
+  background-color: red;
+}
 
 /*presets*/
 html,
