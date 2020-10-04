@@ -29,7 +29,7 @@ jobs:
         uses: igembitsgoa/wikisync-action@v0.2
         with:
           team: 'UNSW_Australia'
-          source: '_site'
+          source: 'dist'
           build: 'igem'
         env:
           IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}

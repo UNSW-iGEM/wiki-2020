@@ -9,7 +9,7 @@
     "dev:encore": "encore dev --watch",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "prod:encore": "encore production",
-    "deploy": "npm-run-all prod:encore prod:eleventy"
+    "build": "npm-run-all prod:encore prod:eleventy"
   },
   "repository": {
     "type": "git",
