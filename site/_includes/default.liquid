@@ -12,9 +12,9 @@
 							{% for item in topLevel.children %}
 								<li>
 								{% if item.url %}
-									<a href="{{ item.url }}">{{ item.name }}</a>
+									<a href="/{{ item.url }}">{{ item.name }}</a>
 								{% else %}
-									<a href="{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
+									<a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
 								{% endif %}
 								</li>
 							{% endfor %}
