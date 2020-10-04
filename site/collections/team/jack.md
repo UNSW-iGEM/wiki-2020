@@ -5,3 +5,5 @@ year: 2nd
 degree: Electrical Engineering & Computer Science
 teams: [dry lab, wiki]
 ---
+
+body text to slide up
