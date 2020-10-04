@@ -1,60 +1,27 @@
 {% comment %} Everything is already inside of html and body tags {% endcomment %}
 <link rel="stylesheet" type="text/css" href="/build/app.css">
 {% comment %} <script src="index.js"> {% endcomment %}
-
 <header>
 	<a href="index.html"><img src="/assets/images/waratah-logo.png"></a>
 	<nav>
 		<ul>
-			<li><a href="">Project</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="#">Description</a></li>
-						<li><a href="#">Modelling</a></li>
-						<li><a href="#">Improved Parts</a></li>
-					</ul>
-				</div>
-			</li>
-
-			<li><a href="">Experiment</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="#">Notebook</a></li>
-						<li><a href="#">Results</a></li>
-						<li><a href="#">Methods</a></li>
-						<li><a href="#">Safety Form</a></li>
-					</ul>
-				</div>
-			</li>
-
-			<li><a href="">Human Practices</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="#">Stakeholders</a></li>
-						<li><a href="#">Integrated Human Practices</a></li>
-						<li><a href="#">Education and Outreach</a></li>
-					</ul>
-				</div>
-			</li>
-
-			<li><a href="">About Us</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="team.html">Team Members</a></li>
-						<li><a href="#">Collaborations</a></li>
-						<li><a href="#">Attributions</a></li>
-					</ul>
-				</div>
-			</li>
-
-			<li><a href="">Judging</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="#">Medals</a></li>
-						<li><a href="#">Judging Form</a></li>
-					</ul>
-				</div>
-			</li>
+			{% for topLevel in nav %}
+				<li>{{ topLevel.name }}
+					<div class="sub-menu">
+						<ul>
+							{% for item in topLevel.children %}
+								<li>
+								{% if item.url %}
+									<a href="{{ item.url }}">{{ item.name }}</a>
+								{% else %}
+									<a href="{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
+								{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</li>
+			{% endfor %}
 		</ul>
 	</nav>
 </header>

@@ -3,9 +3,8 @@
 @import '_home.scss';
 @import '_igem_reset.scss';
 
-#card {
-  background-color: red;
-}
+$site-pink: #f3e7f1;
+$site-green: #15524a;
 
 /*presets*/
 html,
@@ -158,7 +157,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f3e7f1;
+  background-color: $site-pink;
 }
 
 header img {
@@ -186,9 +185,9 @@ nav ul {
 }
 
 nav a:hover {
-  color: #15524a;
+  color: $site-green;
   transition: 0.1s border-bottom 0.1s;
-  border-bottom: 2px solid #15524a;
+  border-bottom: 2px solid $site-green;
 }
 
 header nav a {
@@ -206,13 +205,13 @@ header nav a {
 nav ul li:hover div.sub-menu {
   display: block;
   position: absolute;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  // box-shadow: 0px 4px 4px $site-pink;
 }
 
 nav ul li:hover div.sub-menu ul {
   display: block;
   margin: 15px 0px 0px 15px;
-  background-color: #f3e7f1;
+  background-color: $site-pink;
   padding: 10px;
 }
 
@@ -228,7 +227,6 @@ nav ul li:hover div.sub-menu ul li {
 /*banner start*/
 section {
   margin: 0px 0 20px 0;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px 32px;
@@ -283,7 +281,7 @@ section.banner h2 {
 footer {
   display: flex;
   justify-content: center;
-  background-color: #15524a;
+  background-color: $site-green;
 }
 
 footer img {

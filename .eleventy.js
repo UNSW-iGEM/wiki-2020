@@ -1,4 +1,8 @@
+const yaml = require("js-yaml");
+
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addDataExtension("yml", contents => yaml.safeLoad(contents));
+
     eleventyConfig.addPassthroughCopy("build");
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addFilter("sortByName", function(values) {
