@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Farnaz Sedghi
-degree: 3rd year Medical Science (Human Anatomy)
+year: 3rd
+degree: Medical Science (Human Anatomy)
 teams: [wet lab]
 ---

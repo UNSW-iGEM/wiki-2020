@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Kelly Varianne
-degree: 3rd year Biotechnology
+year: 3rd
+degree: Biotechnology
 teams: [wet lab, design]
 ---

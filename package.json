@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel dev:*",
-    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --watch",
     "dev:encore": "encore dev --watch",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "prod:encore": "encore production",

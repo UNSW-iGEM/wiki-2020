@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Kelley Gao
-degree: 4th year Advanced science (molecular biology)
+year: 4th
+degree: Advanced Science (Molecular Biology)
 teams: [wet lab, human practices]
 ---

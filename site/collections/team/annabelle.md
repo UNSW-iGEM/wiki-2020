@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Annabelle Lee
-degree: 3rd year Advanced Science & Law
+year: 3rd
+degree: Advanced Science & Law
 teams: [human practices, grants]
 ---

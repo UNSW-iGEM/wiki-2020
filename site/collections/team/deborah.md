@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Deborah Chandra
-degree: 4th year Science (Biotechnology)
+year: 4th
+degree: Science (Biotechnology)
 teams: [wiki, design, human practices]
 ---

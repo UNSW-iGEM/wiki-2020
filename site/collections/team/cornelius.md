@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Cornelius Bong
-degree: 4th year Science (Bioinformatics) and Business
+year: 4th
+degree: Science (Bioinformatics) and Business
 teams: [wet lab, wiki]
 ---

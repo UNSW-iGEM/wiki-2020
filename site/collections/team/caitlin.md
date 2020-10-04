@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Caitlin Ramsay
-degree: 3rd year Bioinformatics Engineering & Science (Ecology)
+year: 3rd
+degree: Bioinformatics Engineering & Science (Ecology)
 teams: [dry lab]
 ---

@@ -4,6 +4,7 @@
 @import '_igem_reset.scss';
 
 $site-pink: #f3e7f1;
+$site-light-pink: #eff0ff;
 $site-green: #15524a;
 
 /*presets*/
@@ -290,4 +291,23 @@ footer img {
 
 .content section {
   display: grid;
+}
+
+#team-members {
+  .card {
+    background: linear-gradient(180deg, $site-pink 0%, $site-light-pink 100%);
+    border-radius: 0;
+  }
+
+  h1.card-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .card-img-top {
+    width: 75%;
+    align-self: center;
+  }
+
+
 }

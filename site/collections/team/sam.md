@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Sam Hum
-degree: 3rd year Science (Neuroscience & Genetics)
+year: 3rd
+degree: Science (Neuroscience & Genetics)
 teams: [wet lab, wiki]
 ---

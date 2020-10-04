@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Bella Beach
-degree: 3rd year Medical Science (Molecular Biology)
+year: 3rd
+degree: Medical Science (Molecular Biology)
 teams: [non-lab lead]
 ---

@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Sayali Gore
-degree: 3rd year Advanced Science (Molecular and Cell Biology)
+year: 3rd
+degree: Advanced Science (Molecular and Cell Biology)
 teams: [lab lead]
 ---

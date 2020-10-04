@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Zelun Li
-degree: 2nd year Advanced Science & Computer Science
+year: 2nd
+degree: Advanced Science & Computer Science
 teams: [dry lab, wet lab, wiki]
 ---

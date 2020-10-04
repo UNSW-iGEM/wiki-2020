@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Rupini Ramamurthy
-degree: 3rd year Science & Law
+year: 3rd
+degree: Science & Law
 teams: [wet lab, design]
 ---

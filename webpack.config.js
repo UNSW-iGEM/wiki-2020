@@ -1,8 +1,8 @@
 const Encore = require('@symfony/webpack-encore');
 
 Encore
-  .setOutputPath('build/')
-  .setPublicPath('/wiki-2020/build')
+  .setOutputPath('dist/build/')
+  .setPublicPath('/wiki-2020/dist/build')
   .setManifestKeyPrefix('build')
   .addEntry('app', './site/app.js')
   .enableSingleRuntimeChunk()

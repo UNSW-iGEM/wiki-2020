@@ -1,6 +1,7 @@
 ---
 tags: team
 name: Gabrielle Milet
-degree: 3rd year Science & Law
+year: 3rd
+degree: Science & Law
 teams: [design, human practices, wiki]
 ---
