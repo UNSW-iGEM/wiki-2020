@@ -1,0 +1,30 @@
+# 2 level YAML navbar specification. Each sub item can have a name and a url.
+# If the url is not set it will be set to the page name with underscores replacing spaces
+
+- name: Project
+  children:
+    - name: Description
+    - name: Modelling
+    - name: Improved Parts
+- name: Experiment
+  children:
+    - name: Notebook
+    - name: Results
+    - name: Methods
+    - name: Safety
+- name: Human Practices
+  children:
+    - name: Stakeholders
+    - name: Integrated Human Practices
+    - name: Education and Outreach
+- name: About Us
+  children:
+    - name: Team Members
+      url: Team
+    - name: Collaborations
+    - name: Partnership
+    - name: Attributions
+- name: Judging
+  children:
+    - name: Medals
+    - name: Judging Form
