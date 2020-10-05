@@ -1,0 +1,20 @@
+---
+layout: default.liquid
+---
+<div class="model container">
+    {{ content }}
+
+    <div class="row">
+
+        {% for link in links %}
+            <div class="col">
+                <a href="/Model/{{link.name}}">
+                    <div class="model-link card">
+                        {{ link.name | capitalize }}
+                        <img src="/assets/images/team/{{link.image | capitalize }}.jpg">
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

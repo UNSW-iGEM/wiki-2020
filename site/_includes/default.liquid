@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="/build/app.css">
 {% comment %} <script src="index.js"> {% endcomment %}
 <header>
-	<a href="index.html"><img src="/assets/images/waratah-logo.png"></a>
+	<a href="/index.html"><img src="/assets/images/waratah-logo.png"></a>
 	<nav>
 		<ul>
 			{% for topLevel in nav %}
@@ -28,8 +28,13 @@
 
 <section class="banner">
 	<img src="/assets/images/banner.jpg">
-
-	<h1>PROTECC CORAL</h1>
+	<h1>
+		{% if title %}
+			{{ title | capitalize }}
+		{% else %}
+			{{ page.fileSlug | capitalize }}
+		{% endif %}
+	</h1>
 	<h2>To protect and conserve coral reefs,the heart of our oceans</h2>
 </section>
 

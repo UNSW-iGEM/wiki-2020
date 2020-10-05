@@ -5,6 +5,7 @@
   children:
     - name: Description
     - name: Modelling
+      url: Model
     - name: Improved Parts
 - name: Experiment
   children:
