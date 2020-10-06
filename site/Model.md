@@ -1,10 +1,5 @@
 ---
 layout: model.liquid
-links:
-    - name: structural
-      image: caitlin
-    - name: mathematical
-      image: zelun
 ---
 
 ## Why

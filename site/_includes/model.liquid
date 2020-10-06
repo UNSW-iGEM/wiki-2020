@@ -6,12 +6,15 @@ layout: default.liquid
 
     <div class="row">
 
-        {% for link in links %}
+        {% for model in collections.model %}
+
+            {{ model.data | log }}
             <div class="col">
-                <a href="/Model/{{link.name}}">
-                    <div class="model-link card">
-                        {{ link.name | capitalize }}
-                        <img src="/assets/images/team/{{link.image | capitalize }}.jpg">
+                <a href="/Model/{{ model.data.page.fileSlug }}" class="model-link">
+                    <div class="card">
+                        {{ model.data.page.fileSlug | capitalize }}
+                        <img src="/assets/images/team/{{model.data.image | capitalize }}.jpg">
+                        {{ model.data.summary }}
                     </div>
                 </a>
             </div>

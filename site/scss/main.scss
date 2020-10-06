@@ -344,5 +344,8 @@ footer img {
 
 .model-link {
   text-align: center;
-  background-color: $site-pink;
+  div {
+    background-color: $site-pink;
+  }
+  color: black;
 }

@@ -1,3 +1,9 @@
+---
+tags: model
+summary: STRUCTURAL SUMMARY GOES HERE
+image: caitlin
+---
+
 ## How
 Refer to 2019 team’s guide on how to create 3D structure files of proteins, we will extend this tutorial by showing you how to dock protein units together to form a complex. % of proteins that are actually part of a multi-unit complex?
 
