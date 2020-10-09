@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap');
+
+/*presets*/ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*edit here*/ 
+/*nav-bar*/
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F3E7F1;
+}
+
+header img{
+  width: 50px;
+  margin:16px 0 16px 200px;
+}
+
+header nav{
+  font-family: Josefin Sans; 
+  font-weight:600px;
+  font-size: 25px; 
+  line-height: 0; 
+  margin:32px 200px 32px 0;
+}
+
+nav li {
+    line-height: 1em;
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+nav ul{
+  display: inline-flex;
+  list-style: none;
+}
+
+nav a:hover{
+  color: #15524A;
+  transition: 0.1s border-bottom 0.1s;
+  border-bottom:2px solid #15524A;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.sub-menu{
+  display: none;
+  z-index: 1;
+}
+
+nav ul li:hover div.sub-menu{
+  display: block;
+  position: absolute;
+} 
+
+nav ul li:hover div.sub-menu ul {
+    display: block;
+    margin: 15px 0px 0px 15px;
+    background-color: #F3E7F1;
+    padding: 10px;
+}
+
+
+nav ul li:hover div.sub-menu ul li {
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/*Banner section*/ 
+section{
+  margin:0px 0 32px 0;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+
+}
+
+.banner{
+  position: relative;
+  text-align: center;
+}
+
+section.banner img{
+  width: 100%;
+  left: 0px;
+  opacity: 0.5;
+  grid-column: 1/span 12
+}
+
+h1{
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+section.banner h1{
+  text-align: center; 
+  color: #eff0ff; 
+  position: absolute;
+  top: 45%;
+  width: 100%; 
+  text-shadow: 4px 4px 4px #000000;
+}
+
+/*HP introduction*/ 
+section.hp-intro h1{
+  grid-column: 2/span 10;
+  text-align: center;
+}
+
+section.hp-intro p{
+  grid-column: 2/ span 10;
+}
+
+
+/*Overview Section*/ 
+h2{
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+p{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+section.overview{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+  margin: 68px 100px 100px 100px;
+}
+
+section.overview div.stakeholders-scicomm{
+  grid-column:span 5;
+}
+
+section.overview div.stakeholders-scicomm h2{
+  margin: 20px 0 20px 0;
+}
+
+section.overview div.stakeholders-scicomm p{
+  text-align: justify;
+}
+
+section.overview div.stakeholders-scicomm a{
+  text-decoration: none;
+  color: black; 
+  transition: 0.3s;
+}
+
+section.overview div.stakeholders-scicomm a:hover{
+  color: #39857B;
+}
+
+/*footer section*/ 
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: #15524A;
+}
+
+footer img{
+  margin: 120px 0 120px 32px;
+}
