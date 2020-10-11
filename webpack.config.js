@@ -1,4 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
+const GoogleFontsPlugin = require("google-fonts-plugin")
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -69,6 +70,16 @@ Encore
     // uncomment if you use API Platform Admin (composer require api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/admin.js')
+    .addPlugin(new GoogleFontsPlugin({
+        fonts: [
+            { family: "Josefin Sans" },
+            { family: "Lato" },
+            { family: "Source Sans Pro"}
+        ],
+        "formats": [
+            "ttf"
+        ]
+    }))
 ;
 
 module.exports = Encore.getWebpackConfig();

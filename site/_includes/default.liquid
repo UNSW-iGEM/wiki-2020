@@ -8,19 +8,20 @@
 	<script src="/build/runtime.js"></script>
 	<script src="/build/app.js"></script>
 {% endblock %}
+<div id="UNSW-iGEM">
+	{% include header.html %}
 
-{% include header.html %}
-
-{% assign type = page.inputPath | getFileType %}
-{% if type == 'md' %}
-	<section>
+	{% assign type = page.inputPath | getFileType %}
+	{% if type == 'md' %}
+		<section>
+			{{ content }}
+		</section>
+	{% else %}
 		{{ content }}
-	</section>
-{% else %}
-	{{ content }}
-{% endif %}
+	{% endif %}
 
-<footer class="socials">
-	<a href="https://www.instagram.com/unsw_igem/"><img src="/assets/images/Social-Instagram.svg"></a>
-	<a href="https://www.facebook.com/unswigemteam"><img src="/assets/images/Social-Facebook.svg"></a>
-</footer>
+	<footer class="socials">
+		<a href="https://www.instagram.com/unsw_igem/"><img src="/assets/images/Social-Instagram.svg"></a>
+		<a href="https://www.facebook.com/unswigemteam"><img src="/assets/images/Social-Facebook.svg"></a>
+	</footer>
+</div>
