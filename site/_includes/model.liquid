@@ -7,8 +7,6 @@ layout: default.liquid
     <div class="row">
 
         {% for model in collections.model %}
-
-            {{ model.data | log }}
             <div class="col">
                 <a href="/Model/{{ model.data.page.fileSlug }}" class="model-link">
                     <div class="card">

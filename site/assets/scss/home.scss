@@ -1,0 +1,136 @@
+/*introduction section*/
+section.introduction div.introduction-text {
+  grid-column: 2 / span 6;
+}
+
+section.introduction div.introduction-text h1 {
+  text-align: center;
+  margin: 32px 0 0 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+
+section.introduction div.introduction-text p {
+  margin: 32px 0 0 0;
+  text-align: justify;
+}
+
+section.introduction div.introduction-text a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+section.introduction div.introduction-text a:hover {
+  color: #15524a;
+  text-decoration: underline;
+}
+
+section.introduction div.introduction-image {
+  grid-column: 8 / span 4;
+}
+
+/*journey section*/
+section.journey {
+  background: linear-gradient(180deg, #f3e7f1 0%, #eff0ff 100%);
+}
+
+section.journey h1 {
+  text-align: center;
+  grid-column: 2 / span 10;
+  margin: 54px 0 40px 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.journey div.lab-work-des {
+  grid-column: 2 / span 5;
+  text-align: center;
+}
+
+section.journey div.lab-work-des p {
+  margin: 32px 0 32px 0;
+  text-align: justify;
+}
+
+section.journey div.hp-des {
+  grid-column: 7 / span 5;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+section.journey div.hp-des p {
+  margin: 32px 0 32px 0;
+  text-align: justify;
+}
+
+section.journey button {
+  margin: 0 0 54px 0;
+  box-shadow: inset 0px 0px 0px 0px #276873;
+  background-color: #ddd;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 23px;
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+section.journey button:hover {
+  background-color: #39857b;
+  color: white;
+}
+
+/*Meet the team section*/
+
+section.meet-team h1 {
+  grid-column: 2 / span 6;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 54px 0 30px 0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.meet-team div.team-image {
+  grid-column: 2 / span 6;
+}
+
+section.meet-team div.team-image img {
+  margin: 0 0 54px 0;
+  filter: drop-shadow(-25px 30px 0px #f3e7f1);
+}
+
+section.meet-team div.team-intro {
+  grid-column: 8 / span 4;
+}
+
+section.meet-team div.team-intro p {
+  margin: 126px 0 40px 0;
+  text-align: center;
+}
+
+section.meet-team button {
+  margin: 0 0 54px 146px;
+  box-shadow: inset 0px 0px 0px 0px #276873;
+  background-color: #f3e7f1;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 23px;
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+section.meet-team button:hover {
+  background-color: #39857b;
+  color: white;
+}

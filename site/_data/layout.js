@@ -1,1 +1,1 @@
-module.exports = "nothome.liquid";
+module.exports = "default.liquid";
