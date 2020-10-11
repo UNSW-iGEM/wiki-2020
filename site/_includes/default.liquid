@@ -1,57 +1,26 @@
 {% comment %} Everything is already inside of html and body tags {% endcomment %}
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('scss/main.scss') }}">
+	{{ encore_entry_link_tags('app') }}
+	<link rel="stylesheet" href="/build/app.css">
 {% endblock %}
-{% comment %} <script src="index.js"> {% endcomment %}
-<header>
-	<a href="/index.html"><img src="/assets/images/waratah-logo.png"></a>
-	<nav>
-		<ul>
-			{% for topLevel in nav %}
-				<li>{{ topLevel.name }}
-					<div class="sub-menu">
-						<ul>
-							{% for item in topLevel.children %}
-								<li>
-								{% if item.url %}
-									<a href="/{{ item.url }}">{{ item.name }}</a>
-								{% else %}
-									<a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
-								{% endif %}
-								</li>
-							{% endfor %}
-						</ul>
-					</div>
-				</li>
-			{% endfor %}
-		</ul>
-	</nav>
-</header>
+{% block javascripts %}
+	{{ encore_entry_script_tags('app') }}
+	<script src="/build/runtime.js"></script>
+	<script src="/build/app.js"></script>
+{% endblock %}
 
-<section class="banner">
-	{% if banner %}
-		<img src="/assets/images/{{ banner }}">
-	{% else %}
-		<img src="/assets/images/banner.jpg">
-	{% endif %}
-	<h1>
-		{% if title %}
-			{{ title | capitalize }}
-		{% else %}
-			{{ page.fileSlug | capitalize }}
-		{% endif %}
-	</h1>
-	{% if subtitle %}
-		<h2></h2>
-</section>
+{% include header.html %}
 
-<div class="content">
+{% assign type = page.inputPath | getFileType %}
+{% if type == 'md' %}
+	<section>
+		{{ content }}
+	</section>
+{% else %}
 	{{ content }}
-</div>
+{% endif %}
 
 <footer class="socials">
 	<a href="https://www.instagram.com/unsw_igem/"><img src="/assets/images/Social-Instagram.svg"></a>
 	<a href="https://www.facebook.com/unswigemteam"><img src="/assets/images/Social-Facebook.svg"></a>
 </footer>
-
-{% comment %} code for bibliography goes here {% endcomment %}

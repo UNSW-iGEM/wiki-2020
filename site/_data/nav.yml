@@ -4,17 +4,29 @@
 - name: Project
   children:
     - name: Description
-    - name: Modelling
-      url: Model
-    - name: Improved Parts
+    - name: Design
+    - name: Contribution
 - name: Experiment
   children:
+    - name: Overview
+      url: experiment-overview
+    - name: Glutathione
+    - name: sHSPs
     - name: Notebook
-    - name: Results
-    - name: Methods
+    - name: Protocols
     - name: Safety
+- name: Modelling
+  children:
+    - name: Overview
+      url: Model
+    - name: Structural
+      url: Model/structural
+    - name: Mathematical
+      url: Model/mathematical
 - name: Human Practices
   children:
+    - name: Overview
+      url: hp-overview
     - name: Stakeholders
     - name: Integrated Human Practices
     - name: Education and Outreach
@@ -23,7 +35,6 @@
     - name: Team Members
       url: Team
     - name: Collaborations
-    - name: Partnership
     - name: Attributions
 - name: Judging
   children:

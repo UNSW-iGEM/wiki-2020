@@ -1,0 +1,66 @@
+section.symposium h1{
+  grid-column: 4/span 6;
+  text-align: center;
+  margin-top: 50px;
+  text-shadow: 4px 4px 0px #F3E7F1;
+}
+
+section.symposium p{
+  grid-column: 2/span 10;
+}
+
+div.video{
+  grid-column: 4/span 6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.symposium h2{
+  margin: 20px 0;
+}
+
+div.exeter{
+  grid-column: 2/span 5;
+}
+
+div.exeter p{
+  margin-bottom: 70px;
+}
+
+div.st-andrews{
+  grid-column: span 5;
+}
+
+div.st-andrews p{
+  margin-bottom: 70px;
+}
+
+/*social media*/
+section.social-media{
+  background-color: #F3E7F1;
+  margin: 0;
+}
+
+section.social-media h1{
+  grid-column: span 12;
+  text-align: center;
+  margin-top: 70px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+section.social-media h2{
+  margin: 32px 0 15px 0;
+}
+
+section.social-media p{
+  margin-bottom: 60px;
+
+}
+
+div.uppsala{
+  grid-column: 2/span 5;
+}
+
+div.duesseldorf{
+  grid-column: span 5;
+}
