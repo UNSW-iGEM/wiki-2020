@@ -1,5 +1,7 @@
 # UNSW_Australia 2020 Wiki
 
+view the live verion: https://2020.igem.org/Team:UNSW_Australia/
+
 ## Setup
 
 ### Github and Git
