@@ -1,7 +1,6 @@
 section.symposium h1{
   grid-column: 4/span 6;
   text-align: center;
-  margin-top: 50px;
   text-shadow: 4px 4px 0px #F3E7F1;
 }
 

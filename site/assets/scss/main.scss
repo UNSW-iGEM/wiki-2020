@@ -41,8 +41,6 @@ html{
   scroll-behavior: smooth;
 }
 
-
-
 /*nav-bar*/
 header .navbar {
   display: flex;
@@ -117,9 +115,9 @@ nav ul li:hover div.sub-menu ul li {
 }
 
 section {
-  margin: 0px 0 20px 0;
+  margin: 50px 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px 32px;
   grid-auto-flow: dense;
   * {
