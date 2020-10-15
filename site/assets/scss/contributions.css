@@ -1,0 +1,59 @@
+/*contributions section*/ 
+p{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+section.contributions div.contribution-title{
+  grid-column: 3/ span 8; 
+  background-color: #15524A;
+}
+
+section.contributions div.contribution-title h1{
+  text-align: center;
+  color: white; 
+  margin: 32px;
+}
+
+section.contributions p{
+  grid-column: 3/ span 8;
+}
+
+section.contributions button{
+  box-shadow:inset 0px 0px 0px 0px #276873;
+  background-color:#F3E7F1;
+  border:none;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family:Josefin Sans;
+  font-size:14px;
+  font-weight:bold;
+  line-height: 23px;
+  padding: 16px 32px;
+  text-decoration:none;
+  transition: 0.3s;
+  grid-column: 3/ span 2;
+}
+
+section.contributions button:hover{
+  background-color: #15524A;
+  color: white;
+}
+
+/*footer section*/ 
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: #15524A;
+}
+
+footer img{
+  margin: 120px 0 120px 32px;
+}
+
+
+
