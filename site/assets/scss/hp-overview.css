@@ -16,24 +16,24 @@ section.overview {
   margin: 68px 100px 100px 100px;
 }
 
-section.overview div.stakeholders-scicomm {
+section.overview div.stakeholders{
   grid-column: span 5;
 }
 
-section.overview div.stakeholders-scicomm h2 {
+section.overview div.stakeholders h2 {
   margin: 20px 0 20px 0;
 }
 
-section.overview div.stakeholders-scicomm p {
+section.overview div.stakeholders p {
   text-align: justify;
 }
 
-section.overview div.stakeholders-scicomm a {
+section.overview div.stakeholders a {
   text-decoration: none;
   color: black;
   transition: 0.3s;
 }
 
-section.overview div.stakeholders-scicomm a:hover {
+section.overview div.stakeholders a:hover {
   color: #39857b;
 }

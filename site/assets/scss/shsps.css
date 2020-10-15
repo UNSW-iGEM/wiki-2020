@@ -1,0 +1,88 @@
+/*navigation box*/
+div.nav-items a{
+  text-decoration: none;
+}
+
+div.nav-items ul{
+  margin: 29px;
+}
+
+div.nav-items li{
+  list-style-position: inside;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 12px;
+}
+
+div.nav-items li:hover{
+  transition: 0.3s;
+  color: #FAD4D6;
+}
+
+/*Stakeholders box*/ 
+p{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+div.content-box{
+  background-color: #F3E7F1;
+  grid-column: 5/span 7;
+}
+
+div.content-info{
+  margin: 40px;
+}
+
+div.content-info p{
+  margin: 0 0 30px 0;
+}
+
+div.methods img{
+  grid-column: 2/ span 5;
+}
+
+div.figures{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+div.figures img{
+  grid-column: 3/ span 4;
+}
+
+div.figures p{
+  grid-column: span 8;
+}
+
+b{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* references */
+h2{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 36px;
+}
+
+div.references li{
+  list-style-position: inside;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 23px;
+}
