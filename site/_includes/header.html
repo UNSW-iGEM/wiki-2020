@@ -1,28 +1,24 @@
 <header>
-    <div class="navbar">
+    <nav class="navbar">
         <a href="/index.html"><img src="/assets/images/waratah-logo.png"></a>
-        <nav>
-            <ul>
-                {% for topLevel in nav %}
-                    <li>{{ topLevel.name }}
-                        <div class="sub-menu">
-                            <ul>
-                                {% for item in topLevel.children %}
-                                    <li>
-                                    {% if item.url %}
-                                        <a href="/{{ item.url }}">{{ item.name }}</a>
-                                    {% else %}
-                                        <a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
-                                    {% endif %}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
+        {% for topLevel in nav %}
+            <div class="dropdown">
+                <button class="dropbtn">
+                    {{ topLevel.name }}
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    {% for item in topLevel.children %}
+                        {% if item.url %}
+                            <a href="/{{ item.url }}">{{ item.name }}</a>
+                        {% else %}
+                            <a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </nav>
 
     <div class="banner">
         {% if banner %}
