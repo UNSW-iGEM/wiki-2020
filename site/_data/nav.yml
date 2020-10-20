@@ -6,12 +6,17 @@
     - name: Description
     - name: Design
     - name: Contribution
+- name: Human Practices
+  children:
+    - name: Integrated Human Practices
+      url: Human_Practices
+    - name: Stakeholders
+    - name: Proposed Implementation
+      url: Implementation
 - name: Experiment
   children:
-    - name: Overview
-      url: experiment-overview
-    - name: Glutathione
-    - name: sHSPs
+    - name: Engineering sHSPs
+      url: Engineering
     - name: Notebook
     - name: Protocols
     - name: Safety
@@ -23,14 +28,21 @@
       url: Model/structural
     - name: Mathematical
       url: Model/mathematical
-- name: Human Practices
+- name: Science Communication
   children:
-    - name: Overview
-      url: hp-overview
-    - name: Stakeholders
-    - name: Integrated Human Practices
-    - name: Education and Outreach
-- name: About Us
+    - name: Education & Outreach
+      url: Education
+    - name: Children's Book
+      url: Book
+    - name: Education Package 
+      url: High_School 
+    - name: Virtual Escape Room 
+      url: Escape_Room
+    - name: Molecular Cloud Interview
+      url: Interview
+    - name: Presenting to the Public
+      url: Talk 
+- name: People
   children:
     - name: Team Members
       url: Team

@@ -1,73 +1,23 @@
 <header>
-  <div class="navbar">
-      <a href="index.html"><img src="/assets/images/waratah-logo.png"></a>
-
-      <div class="dropdown">
-        <button class="dropbtn">Project</button>
-        <div class="dropdown-content">
-          <a href="Description.html">Description</a>
-          <a href="Design.html">Desgin</a>
-          <a href="Contribution.html">Contribution</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Human Practices</button>
-        <div class="dropdown-content">
-          <a href="Human_Practices.html">Integrated Human Practices</a>
-          <a href="Stakeholders.html">Stakeholders</a>
-          <a href="Implementation.html">Proposed Implementation</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Experiment</button>
-        <div class="dropdown-content">
-          <a href="Engineering.html">Engineering sHSPs</a>
-          <a href="Notebook.html">Notebook</a>
-          <a href="Protocols.html">Protocols</a>
-          <a href="Safety.html">Safety</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Modelling</button>
-        <div class="dropdown-content">
-          <a href="#">Overview</a>
-          <a href="#">Structure Determination</a>
-          <a href="#">Molecular Dynamics</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Science Communication</button>
-        <div class="dropdown-content">
-          <a href="Education.html">Education & Outreach</a>
-          <a href="Book.html">Children's Book</a>
-          <a href="High_School.html">Education Package</a>
-          <a href="Escape_Room.html">Virtual Escape Room</a>
-          <a href="Interview.html">Molecular Cloud Interview</a>
-          <a href="Talk.html">Presenting to the Public</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">People</button>
-        <div class="dropdown-content">
-          <a href="#">Team Members</a>
-          <a href="Collaborations.html">Collaborations</a>
-          <a href="Attributions.html">Attributions</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Judging</button>
-        <div class="dropdown-content">
-          <a href="Medals.html">Medals</a>
-          <a href="#">Judging Form</a>
-        </div>
-      </div>
-  </div>
+    <nav class="navbar">
+        <a href="/index.html"><img src="/assets/images/waratah-logo.png"></a>
+        {% for topLevel in nav %}
+            <div class="dropdown">
+                <button class="dropbtn">
+                    {{ topLevel.name }}
+                </button>
+                <div class="dropdown-content">
+                    {% for item in topLevel.children %}
+                        {% if item.url %}
+                            <a href="/{{ item.url }}">{{ item.name }}</a>
+                        {% else %}
+                            <a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </nav>
 
     <div class="banner">
         {% if banner %}
