@@ -1,59 +1,42 @@
-/*navigation box*/
-  div.nav-items{
-  font-weight: 600;
-  font-size: 20px;
-  color: #FFFFFF;
-  background-color: #15524A;
-  grid-column: 2/span 3;
-  max-height: 9%;
+
+/*HP introduction*/ 
+section.hp-intro h1{
+  grid-column: 2/span 10;
+  text-align: center;
 }
 
-div.nav-items a{
-  text-decoration: none;
+section.hp-intro p{
+  grid-column: 2/ span 10;
 }
 
-div.nav-items ol{
-  margin: 32px;
-}
 
-div.nav-items li{
-  list-style-position: inside;
-  border-bottom: 2px solid white;
-  color: white;
-  margin: 12px;
-}
-
-div.nav-items li:hover{
-  transition: 0.3s;
-  color: #FAD4D6;
-}
-
-/*Stakeholders box*/
-div.stakeholder-box{
-  background-color: #F3E7F1;
-  grid-column: 5/span 7;
-}
-
-div.stakeholder-info{
-  margin: 40px;
-}
-
-div.stakeholder-info p{
-  margin: 0 0 30px 0;
-}
-
-div.stakeholder-profile{
-  margin: 0px 0 32px 0;
+/*Overview Section*/ 
+section.overview{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-gap: 32px 32px;
   grid-auto-flow: dense;
+  margin: 68px 100px 100px 100px;
 }
 
-div.stakeholder-profile img{
-  grid-column: span 3;
+section.overview div.stakeholders-scicomm{
+  grid-column:span 5;
 }
 
-div.stakeholder-profile p{
-  grid-column: span 9;
+section.overview div.stakeholders-scicomm h2{
+  margin: 20px 0 20px 0;
+}
+
+section.overview div.stakeholders-scicomm p{
+  text-align: justify;
+}
+
+section.overview div.stakeholders-scicomm a{
+  text-decoration: none;
+  color: black; 
+  transition: 0.3s;
+}
+
+section.overview div.stakeholders-scicomm a:hover{
+  color: #39857B;
 }

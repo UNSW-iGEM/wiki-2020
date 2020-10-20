@@ -36,16 +36,5 @@ section.contributions button:hover{
   color: white;
 }
 
-/*footer section*/ 
-footer{
-  display: flex;
-  justify-content: center;
-  background-color: #15524A;
-}
-
-footer img{
-  margin: 120px 0 120px 32px;
-}
-
 
 
