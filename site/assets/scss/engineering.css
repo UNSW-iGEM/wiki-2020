@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Lato&family=Source+Sans+Pro&display=swap');
+
+/*presets*/ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+/*ol,*/ ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/*edit here*/ 
+/*nav-bar*/
+body {
+  margin: 0px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #F3E7F1;
+}
+
+.navbar a {
+  font-family: Josefin Sans;
+  float: left;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar img{
+  width: 50px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: Josefin Sans;
+  margin-top: 25px;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin-left: 40px;
+  transition: 0.3s;
+  
+}
+
+.navbar a:hover{
+  background-color:transparent;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #15524A;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 40px;
+}
+
+.dropdown-content a {
+  font-family: Josefin Sans;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #15524A;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*workflow image*/ 
+section.workflow{
+  margin-bottom: 100px;
+}
+
+section.workflow img{
+  grid-column: 3/span 8;
+}
+
+section.workflow h2{
+  grid-column: 3/span 8;
+}
+
+p{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+section.workflow p{
+  grid-column: 3/span 8;
+}
+
+/*banner section*/ 
+section{
+  margin:0px 0 32px 0;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+.banner{
+  position: relative;
+  text-align: center;
+}
+
+h1{
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+section.banner h1{
+  text-align: center; 
+  text-shadow: 4px 4px 0px #F3E7F1;
+  grid-column: span 12;
+  margin: 100px;
+}
+
+/*navigation box*/
+html{
+  scroll-behavior: smooth;
+}
+
+div.nav-items{
+  font-family: Josefin Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #15524A;
+  grid-column: 2/span 3;
+  max-height: 11.5%; 
+}
+
+div.nav-items a{
+  text-decoration: none;
+}
+
+div.nav-items ul{
+  margin: 29px;
+}
+
+div.nav-items li{
+  list-style-position: inside;
+  border-bottom: 2px solid white;
+  color: white;
+  margin: 12px;
+}
+
+div.nav-items li:hover{
+  transition: 0.3s;
+  color: #FAD4D6;
+}
+
+/*Stakeholders box*/ 
+p{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+div.content-box{
+  background-color: #F3E7F1;
+  grid-column: 5/span 7;
+}
+
+div.content-info{
+  margin: 40px;
+}
+
+div.content-info p{
+  margin: 0 0 30px 0;
+}
+
+div.methods img{
+  grid-column: 2/ span 5;
+}
+
+div.figures{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+div.figures img{
+  grid-column: 3/ span 4;
+}
+
+div.figures p{
+  grid-column: span 8;
+}
+
+b{
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* references */
+h2{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 36px;
+}
+
+div.references li{
+  list-style-position: inside;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 23px;
+}
+
+/*footer section*/ 
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: #15524A;
+}
+
+footer img{
+  margin: 120px 0 120px 32px;
+}
