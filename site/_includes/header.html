@@ -9,7 +9,11 @@
                 <div class="dropdown-content">
                     {% for item in topLevel.children %}
                         {% if item.url %}
-                            <a href="/{{ item.url }}">{{ item.name }}</a>
+                            {% if item.url contains 'http' %}
+                                <a href="{{ item.url }}">{{ item.name }}</a>
+                            {% else %}
+                                <a href="/{{ item.url }}">{{ item.name }}</a>
+                            {% endif %}
                         {% else %}
                             <a href="/{{ item.name | replace: ' ', '_' }}">{{ item.name }}</a>
                         {% endif %}

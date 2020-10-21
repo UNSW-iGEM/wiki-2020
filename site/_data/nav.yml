@@ -34,14 +34,14 @@
       url: Education
     - name: Children's Book
       url: Book
-    - name: Education Package 
-      url: High_School 
-    - name: Virtual Escape Room 
+    - name: Education Package
+      url: High_School
+    - name: Virtual Escape Room
       url: Escape_Room
     - name: Molecular Cloud Interview
       url: Interview
     - name: Presenting to the Public
-      url: Talk 
+      url: Talk
 - name: People
   children:
     - name: Team Members
@@ -52,3 +52,4 @@
   children:
     - name: Medals
     - name: Judging Form
+      url: 'https://igem.org/2020_Judging_Form?id=3558'
