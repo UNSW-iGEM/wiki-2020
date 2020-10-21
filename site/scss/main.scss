@@ -12,11 +12,11 @@ $site-green: #15524a;
 @import 'hp-overview.css';
 @import 'team.scss';
 @import 'contribution.css';
-@import 'description.css';
+@import 'description.scss';
 @import 'Education.css';
 @import 'engineering.css';
 @import 'IHP.css';
-@import 'Notebook.css'; 
+@import 'Notebook.css';
 
 #UNSW-iGEM {
   h1 {
@@ -80,7 +80,7 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 15px;  
+  font-size: 15px;
   border: none;
   outline: none;
   color: black;
@@ -90,7 +90,7 @@ body {
   margin: 0;
   transition: 0.3s;
   margin-left: 40px
-  
+
 }
 
 .navbar a:hover{
