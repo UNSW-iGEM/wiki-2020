@@ -20,6 +20,7 @@ $site-black: #000000;
 @import 'Notebook.css';
 @import 'model.scss';
 // @import 'book.scss';
+@import 'Medals.scss';
 
 #UNSW-iGEM {
   h1 {
@@ -36,14 +37,13 @@ $site-black: #000000;
     font-size: 30px;
     line-height: 36px;
   }
-  p, span, button {
+  p {
     font-family: Source Sans Pro !important;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
   }
-
 }
 
 
