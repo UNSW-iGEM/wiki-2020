@@ -61,6 +61,7 @@ div.nav-items-engg a{
 
 div.nav-items-engg ul{
   margin: 29px;
+  list-style:none;
 }
 
 div.nav-items-engg li{
