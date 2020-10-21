@@ -1,4 +1,4 @@
-/*introduction image*/ 
+/*introduction image*/
 section.introduction h1{
   grid-column: span 12;
   text-align: center;
@@ -8,9 +8,9 @@ section.introduction p{
   grid-column: 3/span 8;
 }
 
-/*category section*/ 
+/*category section*/
 section.categories div.category{
-  background-color: #15524A;
+  background-color: $site-green;
   grid-column: 3/span 8;
   margin: 32px 0;
 }
@@ -36,11 +36,11 @@ section.categories div.category-des p{
 
 .category-des button{
   box-shadow:inset 0px 0px 0px 0px #276873;
-  background-color:#ddd;
+  background-color: $site-grey;
   border:none;
   display:inline-block;
   cursor:pointer;
-  color:#000000;
+  color:$site-black;
   font-family:Josefin Sans;
   font-size:14px;
   font-weight:bold;
@@ -53,8 +53,6 @@ section.categories div.category-des p{
 }
 
 .category-des button:hover{
-  background-color: #15524A;
+  background-color: $site-green;
   color: white;
 }
-
-

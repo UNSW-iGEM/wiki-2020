@@ -22,7 +22,7 @@ table#Medal {
   tr,
   td,
   th {
-    border: 1px solid #dddddd;
+    border: 1px solid $site-grey;
     text-align: left;
     padding: 8px;
     font-family: Source Sans Pro !important;
@@ -42,7 +42,7 @@ table#Medal {
   }
 
   a:hover {
-    color: #fad4d6;
+    color: $site-pink;
   }
 }
 

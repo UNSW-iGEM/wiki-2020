@@ -22,7 +22,7 @@ section.introduction div.introduction-text a {
 }
 
 section.introduction div.introduction-text a:hover {
-  color: #15524a;
+  color: $site-green;
   text-decoration: underline;
 }
 
@@ -32,7 +32,7 @@ section.introduction div.introduction-image {
 
 /*journey section*/
 section.journey {
-  background: linear-gradient(180deg, #f3e7f1 0%, #eff0ff 100%);
+  background: linear-gradient(180deg, $site-pink 0%, $site-light-pink 100%);
 }
 
 section.journey h1 {
@@ -66,11 +66,11 @@ section.journey div.hp-des p {
 section.journey button {
   margin: 0 0 54px 0;
   box-shadow: inset 0px 0px 0px 0px #276873;
-  background-color: #ddd;
+  background-color: $site-grey;
   border: none;
   display: inline-block;
   cursor: pointer;
-  color: #000000;
+  color: $site-black;
   font-family: Josefin Sans;
   font-size: 14px;
   font-weight: bold;
@@ -101,7 +101,7 @@ section.meet-team div.team-image {
 
 section.meet-team div.team-image img {
   margin: 0 0 54px 0;
-  filter: drop-shadow(-25px 30px 0px #f3e7f1);
+  filter: drop-shadow(-25px 30px 0px $site-pink);
 }
 
 section.meet-team div.team-intro {
@@ -116,11 +116,11 @@ section.meet-team div.team-intro p {
 section.meet-team button {
   margin: 0 0 54px 146px;
   box-shadow: inset 0px 0px 0px 0px #276873;
-  background-color: #f3e7f1;
+  background-color: $site-pink;
   border: none;
   display: inline-block;
   cursor: pointer;
-  color: #000000;
+  color: $site-black;
   font-family: Josefin Sans;
   font-size: 14px;
   font-weight: bold;

@@ -1,4 +1,4 @@
-/*attributions section*/ 
+/*attributions section*/
 section{
   margin:45px 0 45px 0;
 
@@ -19,7 +19,7 @@ h1{
 }
 
 div.attributions-box{
-  background-color: #F3E7F1;
+  background-color: $site-pink;
   grid-column: 2/span 10;
 }
 
@@ -52,7 +52,7 @@ div.attribute-photo{
 }
 
 div.attribute-des{
-  grid-column: 4/ span 6; 
+  grid-column: 4/ span 6;
 }
 
 div.attribute-des h2{
