@@ -76,21 +76,30 @@ div.project-goals {
     text-align: center;
     margin: 25px;
   }
-  ul li {
-    list-style-position: inside;
+}
+
+#goals {
+  li {
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
   }
+  ol li {
+    list-style-type: arabic;
+  }
+  ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
 }
 
-div.HP-goals{
+div.HP-goals {
   grid-column: 2/span 5;
 }
 
-div.Lab-goals{
+div.Lab-goals {
   grid-column: 7/ span 5;
 }
 

@@ -4,14 +4,16 @@
 <div id="UNSW-iGEM">
 	{% include header.html %}
 
-	{% assign type = page.inputPath | getFileType %}
-	{% if type == 'md' %}
-		<section>
+	<div id="{{ page.fileSlug }}">
+		{% assign type = page.inputPath | getFileType %}
+		{% if type == 'md' %}
+			<section>
+				{{ content }}
+			</section>
+		{% else %}
 			{{ content }}
-		</section>
-	{% else %}
-		{{ content }}
-	{% endif %}
+		{% endif %}
+	</div>
 
 	<footer class="socials">
 		<a href="https://www.instagram.com/unsw_igem/"><img src="/assets/images/Social-Instagram.svg"></a>

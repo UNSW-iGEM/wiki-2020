@@ -18,15 +18,9 @@ module.exports = function(eleventyConfig) {
         // grab the paper name and stuff from the csv.
         return "(Li, Robbers 2030)";
     });
+
+    eleventyConfig.addPassthroughCopy('assets')
     return {
-        templateFormats: [
-            "html",
-            "md",
-            "jpg",
-            "png",
-            "svg",
-        ],
-        passthroughFileCopy: true,
         dir: {
             input: "site",
             output: "dist"
