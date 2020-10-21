@@ -16,8 +16,9 @@ div.nav-items a{
   text-decoration: none;
 }
 
-div.nav-items ol{
+div.nav-items ul{
   margin: 32px;
+  list-style: none;
 }
 
 div.nav-items li{
