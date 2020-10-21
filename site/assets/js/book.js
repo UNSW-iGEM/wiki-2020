@@ -44,9 +44,6 @@ function renderPage(num) {
       }
     });
   });
-
-  // Update page counters
-  document.getElementById('page_num').textContent = num;
 }
 
 /**
@@ -90,8 +87,20 @@ document.getElementById('next').addEventListener('click', onNextPage);
  */
 pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
   pdfDoc = pdfDoc_;
-  document.getElementById('page_count').textContent = pdfDoc.numPages;
-
   // Initial/first page rendering
   renderPage(pageNum);
 });
+
+window.onload = (e) => {
+  const back = document.getElementById("prev");
+  const forward = document.getElementById("next");
+  window.addEventListener('keydown', (e) => {
+      if (e.key == 'ArrowRight') {
+          console.log('a');
+          forward.click();
+      } else if (e.key == 'ArrowLeft') {
+          console.log('b');
+          back.click();
+      }
+  })
+}

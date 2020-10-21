@@ -11,6 +11,21 @@
       background-color: $site-pink;
     }
   }
+
+  canvas {
+    height: 80vh;
+  }
+
+  #book-viewer, #controls {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #controls {
+    padding-top: 2em;
+  }
+
+
 }
 
 $arrow-size: 2em;
