@@ -1,0 +1,26 @@
+/*notebook section*/ 
+section.notebook div.weeks{
+  grid-column: 3/ span 8; 
+  background-color: #15524A;
+}
+
+section.notebook div.weeks h1{
+  text-align: center;
+  color: white; 
+  margin: 32px;
+}
+
+section.notebook p{
+  grid-column: 3/ span 8;
+}
+
+
+
+
+
+
+
+
+
+
+
