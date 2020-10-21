@@ -1,21 +1,13 @@
 ---
 layout: default.liquid
 ---
-<div class="model container">
-    {{ content }}
-
-    <div class="row">
-
-        {% for model in collections.model %}
-            <div class="col">
-                <a href="/Model/{{ model.data.page.fileSlug }}" class="model-link">
-                    <div class="card">
-                        {{ model.data.page.fileSlug | capitalize }}
-                        <img src="/assets/images/team/{{model.data.image | capitalize }}.jpg">
-                        {{ model.data.summary }}
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
+{{ content }}
+<div id="model">
+    {% for model in collections.model %}
+        <a href="/Model/{{ model.data.page.fileSlug }}" class="card">
+            {{ model.data.page.fileSlug | capitalize }}
+            <img src="/assets/images/team/{{model.data.image | capitalize }}.jpg">
+            {{ model.data.summary }}
+        </a>
+    {% endfor %}
 </div>

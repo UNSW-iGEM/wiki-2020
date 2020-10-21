@@ -1,0 +1,15 @@
+#model {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  ul {
+    list-style: disc;
+  }
+  a {
+    text-align: center;
+    color: $site-black;
+    display: block;
+    div {
+        background-color: $site-pink;
+    }
+  }
+}
