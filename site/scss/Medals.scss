@@ -23,7 +23,7 @@ tr,td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro !important;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -35,19 +35,19 @@ ul, ol{
 }
 
 section.bronze th{
-  background-color: #FCE5CD;
+  background-color: #FCE5CD !important;
 }
 
 section.silver th{
-  background-color: #EFEFEF;
+  background-color: #EFEFEF !important;
 }
 
 section.gold th{
-  background-color: #FFF2CC;
+  background-color: #FFF2CC !important;
 }
 
 section.special th{
-  background-color: #CFE2F3;
+  background-color: #CFE2F3 !important;
 }
 
 a{
