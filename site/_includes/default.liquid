@@ -1,14 +1,6 @@
 {% comment %} Everything is already inside of html and body tags {% endcomment %}
-{% block stylesheets %}
-	{{ encore_entry_link_tags('app') }}
-	<link rel="stylesheet" href="/build/app.css">
-	<link rel="stylesheet" href="/build/ttf.css">
-{% endblock %}
-{% block javascripts %}
-	{{ encore_entry_script_tags('app') }}
-	<script src="/build/runtime.js"></script>
-	<script src="/build/app.js"></script>
-{% endblock %}
+<link rel="stylesheet" href="/assets/app.css">
+<link rel="stylesheet" href="/assets/ttf.css">
 <div id="UNSW-iGEM">
 	{% include header.html %}
 
