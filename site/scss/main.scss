@@ -1,6 +1,8 @@
 $site-pink: #f3e7f1;
 $site-light-pink: #eff0ff;
 $site-green: #15524a;
+$site-white: #ffffff;
+$site-black: #000000;
 
 @import 'presets.scss';
 @import 'home.scss';
@@ -109,23 +111,23 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   margin-left: 40px;
+  a {
+    font-family: Josefin Sans;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $site-green !important;
+      color: $site-white;
+    }
+  }
 }
 
-.dropdown-content a {
-  font-family: Josefin Sans;
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  transition: 0.3s;
-}
-
-.dropdown-content a:hover {
-  background-color: #15524A;
-  color: white;
-}
 
 .dropdown:hover .dropdown-content {
   display: block;
