@@ -1,7 +1,7 @@
 /*background section*/
 section.bg-GBR div.quote{
   grid-column: 2/span 10;
-  background-color: #F3E7F1;
+  background-color: $site-pink;
 }
 
 section.bg-GBR div.quote h1{
@@ -52,7 +52,7 @@ div.inspiration #first{
 
 /*why syn-bio*/
 div.syn-bio{
-  background-color: #F3E7F1;
+  background-color: $site-pink;
   grid-column: 2/ span 10;
 }
 

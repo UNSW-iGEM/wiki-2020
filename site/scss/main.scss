@@ -3,21 +3,22 @@ $site-light-pink: #eff0ff;
 $site-green: #15524a;
 $site-white: #ffffff;
 $site-black: #000000;
+$site-grey: #dddddd;
 
 @import 'presets.scss';
 @import 'home.scss';
 @import '_igem_reset.scss';
-@import 'stakeholders.css';
-@import 'collaborations.css';
-@import 'attributions.css';
-@import 'hp-overview.css';
+@import 'stakeholders.scss';
+@import 'collaborations.scss';
+@import 'attributions.scss';
+@import 'hp-overview.scss';
 @import 'team.scss';
-@import 'contribution.css';
+@import 'contribution.scss';
 @import 'description.scss';
-@import 'Education.css';
-@import 'engineering.css';
-@import 'IHP.css';
-@import 'Notebook.css';
+@import 'Education.scss';
+@import 'engineering.scss';
+@import 'IHP.scss';
+@import 'Notebook.scss';
 @import 'model.scss';
 // @import 'book.scss';
 @import 'Medals.scss';
@@ -58,7 +59,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #F3E7F1;
+  background-color: $site-pink;
 }
 
 .navbar a {
@@ -102,7 +103,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  background-color:  #15524A;
+  background-color:  $site-green;
   color: white;
 }
 

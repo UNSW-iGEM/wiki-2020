@@ -19,7 +19,7 @@ div.nav-items li:hover{
   color: #FAD4D6;
 }
 
-/*Stakeholders box*/ 
+/*Stakeholders box*/
 p{
   font-family: Source Sans Pro;
   font-style: normal;
@@ -29,7 +29,7 @@ p{
 }
 
 div.content-box{
-  background-color: #F3E7F1;
+  background-color: $site-pink;
   grid-column: 5/span 7;
 }
 

@@ -1,5 +1,5 @@
 <svg width="1281" height="316" viewBox="0 0 1281 316" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="1280" height="316" fill="#15524A"/>
+<rect width="1280" height="316" fill="$site-green"/>
 <rect x="800" y="216" width="480.188" height="100" fill="url(#pattern0)"/>
 <rect x="640" y="216" width="462.825" height="100" fill="url(#pattern1)"/>
 <rect width="501" height="100" transform="matrix(-1 0 0 1 800 216)" fill="url(#pattern2)"/>
