@@ -6,7 +6,7 @@ section.bg-GBR div.quote{
 
 section.bg-GBR div.quote h1{
   text-align: center;
-  margin: 100px;
+  margin: 100px !important;
 }
 
 section.bg-GBR div.bg-text{
@@ -87,7 +87,7 @@ div.project-goals {
     line-height: 23px;
   }
   ol li {
-    list-style-type: arabic;
+    list-style-type: decimal;
   }
   ul li {
     list-style-type: disc;
