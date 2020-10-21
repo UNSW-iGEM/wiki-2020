@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
         return "(Li, Robbers 2030)";
     });
 
-    eleventyConfig.addPassthroughCopy('assets')
+    eleventyConfig.addPassthroughCopy('site/assets')
     return {
         dir: {
             input: "site",
