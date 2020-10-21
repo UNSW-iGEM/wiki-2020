@@ -38,5 +38,15 @@ jobs:
           IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
           IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
 
+      - name: iGEM WikiSync (again)
+        uses: igembitsgoa/wikisync-action@v0.2
+        with:
+          team: 'UNSW_Australia'
+          source: 'dist'
+          build: 'igem'
+        env:
+          IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
+          IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
+
       - name: Print Upload Map
         run: cat upload_map.yml
