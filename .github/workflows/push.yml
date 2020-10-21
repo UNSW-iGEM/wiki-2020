@@ -20,25 +20,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Build again (fingers crossed)
-        run: npm run build
-
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
 
       - name: iGEM WikiSync
-        uses: igembitsgoa/wikisync-action@v0.2
-        with:
-          team: 'UNSW_Australia'
-          source: 'dist'
-          build: 'igem'
-        env:
-          IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
-          IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
-
-      - name: iGEM WikiSync (again)
         uses: igembitsgoa/wikisync-action@v0.2
         with:
           team: 'UNSW_Australia'
