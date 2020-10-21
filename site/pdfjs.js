@@ -1,11 +1,12 @@
 // adapted from https://mozilla.github.io/pdf.js/examples/
+console.log('bb');
+var pdfjsLib = require("pdfjs-dist");
 
 var url = "/assets/Captain Coral to the Rescue!.pdf"
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
-var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = "/assets/pdf.worker.js";
+
 
 var pdfDoc = null,
     pageNum = 1,
@@ -20,6 +21,7 @@ var pdfDoc = null,
  * @param num Page number.
  */
 function renderPage(num) {
+  console.log('aa');
   pageRendering = true;
   // Using promise to fetch the page
   pdfDoc.getPage(num).then(function(page) {
