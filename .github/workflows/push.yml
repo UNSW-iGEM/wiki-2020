@@ -20,6 +20,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Build again (fingers crossed)
+        run: npm run build
+
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
