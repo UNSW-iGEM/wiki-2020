@@ -68,44 +68,31 @@ p#last{
   margin-bottom: 50px;
 }
 
-/*project goals*/
-div.project-goals{
-  background-color: #15524A;
+div.project-goals {
+  background-color: $site-green;
   grid-column: 2/ span 10;
-}
-
-div.project-goals h1{
-  color: white;
-  text-align: center;
-  margin: 25px;
+  h1{
+    color: white;
+    text-align: center;
+    margin: 25px;
+  }
+  ul li {
+    list-style-position: inside;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 
 div.HP-goals{
   grid-column: 2/span 5;
 }
 
-div.HP-goals ul,li{
-  list-style-position: inside;
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-}
-
 div.Lab-goals{
   grid-column: 7/ span 5;
 }
-
-div.Lab-goals ul,li{
-  list-style-position: inside;
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-}
-
 
 /*final statement*/
 h1#final-statement{
