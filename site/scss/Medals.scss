@@ -1,66 +1,63 @@
 /*Table*/
-section.bronze{
-  margin:150px;
+section.bronze {
+  margin: 150px;
 }
 
-section.silver{
-  margin:150px;
+section.silver {
+  margin: 150px;
 }
 
-section.gold{
-  margin:150px;
+section.gold {
+  margin: 150px;
 }
 
-section.special{
-  margin:150px;
+section.special {
+  margin: 150px;
 }
 
 table#Medal {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-tr,td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  font-family: Source Sans Pro !important;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 23px;
-}
-ul, ol{
-  list-style-position: inside;
-}
-}
+  tr,
+  td,
+  th {
+    border: 1px solid $site-grey;
+    text-align: left;
+    padding: 8px;
+    font-family: Source Sans Pro !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  ul,
+  ol {
+    list-style-position: inside;
+  }
+  a {
+    text-decoration: none;
+    color: black !important;
+    transition: 0.3s;
+  }
 
-section.bronze th{
-  background-color: #FCE5CD !important;
-}
-
-section.silver th{
-  background-color: #EFEFEF !important;
-}
-
-section.gold th{
-  background-color: #FFF2CC !important;
-}
-
-section.special th{
-  background-color: #CFE2F3 !important;
+  a:hover {
+    color: $site-pink;
+  }
 }
 
-a{
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
+section.bronze th {
+  background-color: #fce5cd !important;
 }
 
-a:hover{
-  color: #FAD4D6;
+section.silver th {
+  background-color: #efefef !important;
 }
 
+section.gold th {
+  background-color: #fff2cc !important;
+}
 
-
-
-
+section.special th {
+  background-color: #cfe2f3 !important;
+}

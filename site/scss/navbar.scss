@@ -1,6 +1,6 @@
 .navbar {
   overflow: hidden;
-  background-color: #F3E7F1;
+  background-color: $site-pink;
 }
 
 .navbar a {
@@ -43,7 +43,7 @@
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #15524A;
+  background-color: $site-green;
   color: white;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #15524A;
+  background-color: $site-green;
   color: white;
 }
 

@@ -5,23 +5,23 @@ $site-white: #ffffff;
 $site-black: #000000;
 $site-grey: #dddddd;
 
-@import "presets.scss";
-@import "home.scss";
-@import "_igem_reset.scss";
-@import "stakeholders.css";
-@import "collaborations.css";
-@import "attributions.css";
-@import "hp-overview.css";
-@import "team.scss";
-@import "contribution.css";
-@import "description.scss";
-@import "Education.css";
-@import "engineering.css";
-@import "IHP.css";
-@import "Notebook.css";
-@import "model.scss";
-@import "book.scss";
-@import "Medals.scss";
+@import 'presets.scss';
+@import 'home.scss';
+@import '_igem_reset.scss';
+@import 'stakeholders.scss';
+@import 'collaborations.scss';
+@import 'attributions.scss';
+@import 'hp-overview.scss';
+@import 'team.scss';
+@import 'contribution.scss';
+@import 'description.scss';
+@import 'Education.scss';
+@import 'engineering.scss';
+@import 'IHP.scss';
+@import 'Notebook.scss';
+@import 'model.scss';
+@import 'book.scss';
+@import 'Medals.scss';
 
 #UNSW-iGEM {
   h1 {
@@ -83,7 +83,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #f3e7f1;
+  background-color: $site-pink;
 }
 
 .navbar a {
@@ -126,7 +126,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #15524a;
+  background-color:  $site-green;
   color: white;
 }
 
@@ -150,7 +150,7 @@ body {
 
     &:hover {
       background-color: $site-green !important;
-      color: $site-white;
+      color: $site-white !important;
     }
   }
 }

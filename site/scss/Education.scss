@@ -10,7 +10,7 @@ section.introduction p{
 
 /*category section*/
 section.categories div.category{
-  background-color: #15524A;
+  background-color: $site-green;
   grid-column: 3/span 8;
   margin: 32px 0;
 }
