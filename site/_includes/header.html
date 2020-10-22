@@ -31,9 +31,9 @@
         {% endif %}
         <h1>
             {% if title %}
-                {{ title | capitalize }}
+                {{ title | upcase }}
             {% else %}
-                {{ page.fileSlug | replace: '_', ' ' | capitalize }}
+                {{ page.fileSlug | replace: '_', ' ' | upcase }}
             {% endif %}
         </h1>
         {% if subtitle %}
