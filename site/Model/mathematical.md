@@ -37,7 +37,7 @@ Blah blah
 ## Discussion
 ### Limitations 
 We used the opensource package developed by .........(fill this in). However, we experienced some techinical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package. Thanks to Rodrigo Santibáñez(might or might not mention) a active member in the PySB community helped us ......
-Due to time contraint we choose to not use the `Expression` feature in PySB, instead we run multiple rounds of different rate contant(k_{20}) to represent the model behaviour at different temperature.
+Due to time contraint we choose to not use the `Expression` feature in PySB, instead we run multiple rounds of different rate contant($$k_{20}$$) to represent the model behaviour at different temperature.
 ## Analysis and Results
 ## Conclusion
 ## Future direction
