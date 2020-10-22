@@ -4,6 +4,11 @@ summary: We modelled the main biochemical reaction happening inside Symbiodinium
 image: zelun
 ---
 
+{% include mathjax.html %}
+
+$$k = \frac{1}{2}$$
+$$\ce{CO2 + C -> 2 CO}$$
+
 ## Why mathematical modelling
 
 Mathematical modelling is a powerful tool for verifiying and evaluating sythetic biology solutions. However as with all modelling, care must be taken to select values and parameters that reflect the real world.
