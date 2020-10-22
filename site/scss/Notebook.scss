@@ -10,6 +10,36 @@ section.notebook div.weeks h1{
   margin: 32px;
 }
 
+section.notebook ul{
+	grid-column:4/ span 8;
+	list-style-position: inside;
+	font-family: Source Sans Pro;
+}
+
+section.notebook li{
+	margin:5px;
+}
+
 section.notebook p{
   grid-column: 3/ span 8;
 }
+
+section.notebook img#lab1{
+	grid-column: 3/span 4; 
+}
+
+section.notebook img#lab2{
+	grid-column: 7/ span 4;
+}
+
+section.notebook   a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+  }
+
+ section.notebook a:hover {
+    color: #fad4d6;
+  }
+
+

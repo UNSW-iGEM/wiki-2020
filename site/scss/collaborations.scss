@@ -1,9 +1,20 @@
+/*introduction*/ 
+section.collab-intro h1{
+  text-align: center; 
+  text-shadow: 4px 4px 0px $site-pink;
+}
+
+
 /*Symposium section*/
+section.symposium{
+  background-color: $site-pink;
+}
+
 section.symposium h1{
   grid-column: 4/span 6;
   text-align: center;
   margin-top: 50px;
-  text-shadow: 4px 4px 0px $site-pink;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
 section.symposium p{
@@ -25,7 +36,8 @@ div.exeter{
 }
 
 div.exeter p{
-  margin-bottom: 70px;
+  text-align: justify;
+  margin-bottom: 25px;
 }
 
 div.st-andrews{
@@ -33,13 +45,24 @@ div.st-andrews{
 }
 
 div.st-andrews p{
-  margin-bottom: 70px;
+  text-align: justify;
+}
+
+/*comms section*/ 
+section.communications h1{
+  text-align: center; 
+  text-shadow: 4px 4px 0px $site-pink;
+}
+
+section.communications p{
+  grid-column: 4/ span 6;
+  text-align: justify;
 }
 
 /*social media*/
 section.social-media{
-  background-color: $site-pink;
   margin: 0;
+  background-color: $site-pink;
 }
 
 section.social-media h1{
@@ -65,3 +88,38 @@ div.uppsala{
 div.duesseldorf{
   grid-column: span 5;
 }
+
+/*team collabs*/ 
+section.team-collab{
+  background-color: $site-pink;
+  margin-bottom: 0px;
+}
+
+section.team-collab h1{
+  text-align: center;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+}
+
+section.team-collab h2{
+  margin: 20px 0;
+}
+
+section.team-collab p{
+  margin-bottom: 25px;
+}
+
+div.team{
+  grid-column: 2/ span 10;
+}
+
+img#height{
+  max-height: 180px;
+}
+
+
+
+
+
+
+

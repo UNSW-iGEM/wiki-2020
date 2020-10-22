@@ -30,7 +30,7 @@
       url: Model/mathematical
 - name: Science Communication
   children:
-    - name: Education & Outreach
+    - name: Overview
       url: Education
     - name: Children's Book
       url: Book
