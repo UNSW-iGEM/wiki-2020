@@ -14,6 +14,10 @@ section.contributions p{
   grid-column: 3/ span 8;
 }
 
+section.contributions ol{
+  grid-column:3 /span 8;
+}
+
 section.contributions button{
   box-shadow:inset 0px 0px 0px 0px #276873;
   background-color: $site-pink;
