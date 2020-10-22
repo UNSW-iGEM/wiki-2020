@@ -7,6 +7,7 @@ image: zelun
 {% include mathjax.html %}
 
 $$k = \frac{1}{2}$$
+$$\ce{CO2 + C -> 2 CO}$$
 
 ## Why mathematical modelling
 
