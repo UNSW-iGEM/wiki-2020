@@ -22,13 +22,15 @@
             </div>
         {% endfor %}
     </nav>
-
-    <div class="banner">
-        {% if banner %}
-            <img src="/assets/images/{{ banner }}">
-        {% else %}
-            <img src="/assets/images/Home Banner.svg">
-        {% endif %}
+    {% if page.url == '/' %}
+        {% assign banner = '/assets/images/Home Banner.svg' %}
+        {% assign bannerClass = "banner-home" %}
+    {% else %}
+        {% assign banner = "/assets/images/Page Banner.svg" %}
+        {% assign bannerClass = "banner-page" %}
+    {% endif %}
+    <div class="banner {{ bannerClass }}">
+        <img src="{{ banner }}">
         <h1>
             {% if title %}
                 {{ title | upcase }}
