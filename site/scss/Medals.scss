@@ -1,20 +1,4 @@
 /*Table*/
-section.bronze {
-  margin: 150px;
-}
-
-section.silver {
-  margin: 150px;
-}
-
-section.gold {
-  margin: 150px;
-}
-
-section.special {
-  margin: 150px;
-}
-
 table#Medal {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -38,8 +22,9 @@ table#Medal {
   }
   a {
     text-decoration: none;
-    color: black !important;
+    color: black;
     transition: 0.3s;
+    font-weight: bold;
   }
 
   a:hover {
