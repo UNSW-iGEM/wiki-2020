@@ -28,6 +28,12 @@ Our model is built using the [pysb](https://pysb.org) python package for systems
 ### Assumption of the model
 Blah blah
 
+Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
+We picked a few of the parameters relating to temp change, 
+    - (\\(k_{1}\\)) goes down if temperature goes up
+    - (\\(k_{29}, k_{30}, k_{6}, k_{20}\\)) go up if temperature rises
+    - But also have to run this comparing the base_model with the HSP22E and Glutathione model to see if the misfolding gets better as a result of the tuning of our para or its actually getting better because of the sHSP and glutathione
+
 ![Figure 1)[Flow chart]
 
 !(Figure 2)[Graph_1.jpg]
