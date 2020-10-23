@@ -29,14 +29,13 @@
         {% assign banner = "/assets/images/Page Banner.svg" %}
         {% assign bannerClass = "banner-page" %}
     {% endif %}
+    {% if title == nil %}
+        {% assign title = page.fileSlug | replace: '_', ' ' %}
+    {% endif %}
     <div class="banner {{ bannerClass }}">
         <img src="{{ banner }}">
         <h1>
-            {% if title %}
-                {{ title | upcase }}
-            {% else %}
-                {{ page.fileSlug | replace: '_', ' ' | upcase }}
-            {% endif %}
+            {{ title | upcase }}
         </h1>
         {% if subtitle %}
             <h2>{{ subtitle }}</h2>

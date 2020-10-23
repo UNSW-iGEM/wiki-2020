@@ -1,4 +1,6 @@
 ---
+title: Mathematical Modelling
+# subtitle: Modelling biochemical reactions to determine the effectiveness of PROTECC Coral
 tags: model
 summary: We modelled the main biochemical reaction happening inside Symbiodinium to determine the effectiveness of our Wet lab solution. In this model we consider the addition of sHSP and glutathionine. *WHAT WE FOUND GOES HERE*
 image: zelun
@@ -35,7 +37,7 @@ Blah blah
 ## Comparison
 
 ## Discussion
-### Limitations 
+### Limitations
 We used the opensource package developed by .........(fill this in). However, we experienced some techinical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package. Thanks to Rodrigo Santibáñez(might or might not mention) a active member in the PySB community helped us ......
 Due to time contraint we choose to not use the `Expression` feature in PySB, instead we run multiple rounds of different rate contant($k_{20}$) to represent the model behaviour at different temperature.
 ## Analysis and Results
