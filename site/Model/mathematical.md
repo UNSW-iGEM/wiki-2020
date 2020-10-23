@@ -23,9 +23,9 @@ The aim is to produce a model that shows the effectiveness of the solution and p
 
 ## Implementation
 
-Our model is built using the [pysb](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers. {{ zotero_key | cite }}
+Our model is built using the [pysb](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers.
 
-## Assumption of the model
+### Assumption of the model
 Blah blah
 
 ![Figure 1)[Flow chart]
@@ -34,7 +34,7 @@ Blah blah
 
 !(Figure 3)[Graph 2]
 
-## Comparison between stochastic and deterministic
+### stochastic and deterministic
 
 a bunch of graphs. rest are either stochastic or determinisitic
 
