@@ -8,9 +8,10 @@
     - name: Contribution
 - name: Human Practices
   children:
-    - name: Integrated Human Practices
+    - name: Overview
       url: Human_Practices
-    - name: Stakeholders
+    - name: Integrated Human Practices
+      url: IHP
     - name: Proposed Implementation
       url: Implementation
 - name: Experiment
