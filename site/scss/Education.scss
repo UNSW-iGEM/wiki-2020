@@ -11,7 +11,17 @@ section.introduction p{
 
 section.introduction ol{
   grid-column:3 /span 8;
-  margin: 0px;
+  
+}
+
+section.introduction ul{
+	grid-column:3/ span 8;
+	//list-style-position: inside;
+	font-family: Source Sans Pro !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 /*category section*/

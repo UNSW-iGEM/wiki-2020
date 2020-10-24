@@ -1,0 +1,14 @@
+Things to do:
+- Ensure that Talk.html has proper content in it
+- Images in Escape_Room.html are scaled better and positioned correctly
+- Make sure references fit the grid properly
+- Interview may need the video/audio files? As well as links to social media. Maybe include minimalistic icons.
+- Image Scaling in High_School.html
+
+- add in stuff after Kings School interview, idk where tho lol
+
+Optional:
+- Include minimalistic icons to represent certain areas of each page, eg social media = social media icons
+- Add block background behind each title as a full width divider between the sections
+- Maybe change book to have a slideshow bc pdf embed looks ugly
+- find alternative to pdf embed cough
