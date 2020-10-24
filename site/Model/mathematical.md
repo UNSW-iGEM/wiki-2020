@@ -23,7 +23,9 @@ The aim is to produce a model that shows the effectiveness of the solution and p
 
 ## Implementation
 
-Our model is built using the [pysb](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers.
+Our model is built using the [PySB](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers.
+
+PySB models are written in a domain specific language that somewhat abuses pythons normal style.
 
 ### Assumption of the model
 
@@ -35,7 +37,7 @@ Assumption table
 Blah blah
 
 Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
-We picked a few of the parameters relating to temp change, 
+We picked a few of the parameters relating to temp change,
     - (\\(k_{1}\\)) goes down if temperature goes up
     - (\\(k_{29}, k_{30}, k_{6}, k_{20}\\)) go up if temperature rises
     - But also have to run this comparing the base_model with the HSP22E and Glutathione model to see if the misfolding gets better as a result of the tuning of our para or its actually getting better because of the sHSP and glutathione
