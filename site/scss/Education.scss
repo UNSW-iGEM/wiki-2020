@@ -8,6 +8,11 @@ section.introduction p{
   grid-column: 3/span 8;
 }
 
+section.introduction ol{
+  grid-column:3 /span 8;
+  margin: 0px;
+}
+
 /*category section*/
 section.categories div.category{
   background-color: $site-green;
