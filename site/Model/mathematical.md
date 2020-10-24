@@ -26,6 +26,12 @@ The aim is to produce a model that shows the effectiveness of the solution and p
 Our model is built using the [pysb](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers.
 
 ### Assumption of the model
+
+Assumption table
+---
+|Reaction Name | Reaction | Parameter | Default value | Assumption
+|---|---|---|---|---|
+|Protein Synthesis| blank| (\\) | 10.0 | this should be a normal value
 Blah blah
 
 Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
