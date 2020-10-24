@@ -48,6 +48,43 @@ $site-grey: #dddddd;
   code {
     background-color: $site-pink;
   }
+
+  // make some nice tables, originally from medals page
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    th {
+      background-color: $site-pink;
+    }
+
+    tr,
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      font-family: Source Sans Pro !important;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+    }
+    ul,
+    ol {
+      list-style-position: inside;
+      margin: 0px;
+    }
+    a {
+      text-decoration: none;
+      color: black !important;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #fad4d6;
+    }
+  }
 }
 
 
