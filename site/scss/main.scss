@@ -228,3 +228,12 @@ div.references li, ol{
   border-radius: 0;
   overflow: hidden;
 }
+
+/*book page*/ 
+embed{
+  grid-column: 4/span 6;
+}
+
+iframe{
+  grid-column:5/span 6;
+}
