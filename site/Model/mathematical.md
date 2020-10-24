@@ -32,7 +32,7 @@ Assumption table
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
 |Protein Synthesis| blank| (\\) | 10.0 | this should be a normal value
-Blah blah
+
 
 Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
 We picked a few of the parameters relating to temp change, 
