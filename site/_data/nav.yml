@@ -32,17 +32,17 @@
 - name: Science Communication
   children:
     - name: Overview
-      url: Education
+      url: Scicomm/Education
     - name: Children's Book
-      url: Book
+      url: Scicomm/Book
     - name: Education Package
-      url: High_School
+      url: Scicomm/High_School
     - name: Virtual Escape Room
-      url: Escape_Room
+      url: Scicomm/Escape_Room
     - name: Molecular Cloud Interview
-      url: Interview
+      url: Scicomm/Interview
     - name: Presenting to the Public
-      url: Talk
+      url: Scicomm/Talk
 - name: People
   children:
     - name: Team Members
