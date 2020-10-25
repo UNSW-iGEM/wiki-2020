@@ -13,22 +13,22 @@ $$\ce{CO2 + C -> 2 CO}$$
 
 ## Why mathematical modelling
 
-Mathematical modelling is a powerful tool for verifiying and evaluating sythetic biology solutions. However as with all modelling, care must be taken to select values and parameters that reflect the real world.
+Mathematical modelling is a powerful tool for verifiying and evaluating sythetic biology solutions. Since the ultimate target chasis Symbiodinium is nigh impossible to work with, *in silico* verification comes in as a alternative to the normal *in vovo* strategy. In this mathematical model we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We hope this model was able to facilitate our understanding of how HSP22E, HSP22F and Glutathione is able to alleviate the cell condition in a quantitative manner. However as with all modelling, care must be taken to select values and parameters that reflect the real world.
 
-We chose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution.
+<!-- We choose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution. -->
 
 ## Aim
-
-The aim is to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of sHSP and gluthationine would effect the cell's response under various temperatures.
+The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and gluthationine would effect the cell's response under various temperatures. We further aimed to figure out the optimal condition for a cell to trigger the thermal protective response we designed for the cell.
 
 ## Implementation
-
-Our model is built using the [PySB](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We chose to compare both deterministic and stochastic solvers.
-
+### Computational Language and tool
+Our model was built using the [PySB](https://pysb.org) python package for systems biology. pysb provides a number of solvers for the system that can be swapped out. We choose to compare both deterministic and stochastic solvers.
 PySB models are written in a domain specific language that somewhat abuses pythons normal style.
+### Base of the Model
+1. The base of the model was inspired by a model from the *Modelling the actions of chaperones and their role in ageing*(**Citation Here**), where we adopted most of their model with a few modification added.
+2. 
 
 ### Assumption of the model
-
 Assumption table
 ---
 |Reaction Name | Reaction | Parameter | Default value | Assumption
@@ -48,7 +48,6 @@ Assumption table
 | Hsp90 degradation | \\(\ce{HSP\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)|.
 | ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | 12.0, 0.02 | .
 | ROS production and base removal | \\(\ce{None <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | 0.1, 0.001 | .
-
 
 Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
 We picked a few of the parameters relating to temp change,
