@@ -29,15 +29,21 @@ section.introduction li{
 }
 
 section.introduction a{
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
-    font-weight: bold;
-    padding-right: 0px !important;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  font-weight: bold;
+  padding-right: 0px !important;
 }
 
 section.introduction a:hover{
     color: #fad4d6;
+}
+
+section.introduction div.divide{
+  //background-color: $site-green;
+  //grid-column: 3/span 8;
+  //margin: 32px 0;
 }
 
 /*category section*/
@@ -55,6 +61,7 @@ section.categories div.category h1{
 
 section.categories img{
   grid-column: 3/ span 4;
+  border: 5px solid $site-green;
 }
 
 section.categories div.category-des{
