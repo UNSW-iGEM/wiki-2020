@@ -16,6 +16,11 @@ section.notebook ul{
 	font-family: Source Sans Pro;
 }
 
+section.notebook ol{
+  font-size: 18px; 
+  grid-column: 3/span 8;
+}
+
 section.notebook li{
 	margin:5px;
 }
@@ -32,10 +37,11 @@ section.notebook img#lab2{
 	grid-column: 7/ span 4;
 }
 
-section.notebook   a {
+section.notebook a{
     text-decoration: none;
     color: black;
     transition: 0.3s;
+    padding-right: 0px !important;
   }
 
  section.notebook a:hover {
