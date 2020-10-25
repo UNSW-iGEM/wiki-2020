@@ -65,10 +65,11 @@ section.notebook a:hover {
     color: #fad4d6;
   }
 
-section.notebook table {
+section.protocols table {
     grid-column: 4/span 6;
 }
 
+/*protocol page*/
 table#protocols tr, table#protocols td, table#protocols th {
     border: 1px solid #dddddd;
     text-align: center;
@@ -79,5 +80,66 @@ table#protocols tr, table#protocols td, table#protocols th {
     font-size: 18px;
     line-height: 23px;
 }
+
+
+section.protocols h2{
+  grid-column: 3/span 8;
+  text-align: center;
+  border-bottom: 1px solid black !important;
+}
+
+section.protocols h3{
+  grid-column: 3/span 8;
+}
+
+section.protocols div.protocol-title{
+  grid-column: 3/ span 8;
+  background-color: $site-green;
+}
+
+section.protocols div.protocol-title h1{
+  text-align: center;
+  color: white;
+  margin: 32px;
+}
+
+section.protocols ul{
+  grid-column:4/ span 8;
+  list-style-position: inside;
+  font-family: Source Sans Pro;
+  margin-left: 20px;
+}
+
+section.protocols ul#notebook{
+  grid-column: 3/ span 8;
+}
+
+
+section.protocols ol{
+  font-size: 18px; 
+  grid-column: 3/span 8;
+  margin:0px;
+}
+
+section.protocols li{
+  margin:5px;
+}
+
+section.protocols p{
+  grid-column: 3/ span 8;
+}
+
+a#protocol-link{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  padding-right: 0px !important;
+}
+
+a#protocol-link:hover{
+ color: #fad4d6;
+}
+
+
 
 
