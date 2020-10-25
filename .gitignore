@@ -3,7 +3,6 @@ node_modules
 .DS_Store
 wikisync.log
 wikisync.cookies
-upload_map.yml
 build/
 dist
 igem
