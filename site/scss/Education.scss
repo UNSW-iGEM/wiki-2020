@@ -47,10 +47,12 @@ section.introduction a:hover{
     color: #fad4d6;
 }
 
-section.introduction div.divide{
-  //background-color: $site-green;
-  //grid-column: 3/span 8;
-  //margin: 32px 0;
+section.introduction div.divide h1{
+  background-color:  #fad4d6;
+  grid-column: 3/span 8;
+  margin: 32px 0;
+  text-shadow: 0px 0px 0px #F3E7F1;
+  text-align: center;
 }
 
 /*category section*/
