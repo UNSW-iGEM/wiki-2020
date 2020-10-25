@@ -28,6 +28,13 @@ section.introduction li{
   margin: 10px;
 }
 
+section.introduction img#future{
+  grid-column: 4/span 6; 
+  max-height: 400px;
+}
+
+
+
 section.introduction a{
   text-decoration: none;
   color: black;
