@@ -1,4 +1,4 @@
-$site-pink: #f3e7f1;
+$site-pink: #F2E6F1;
 $site-light-pink: #eff0ff;
 $site-green: #15524a;
 $site-white: #ffffff;
@@ -36,6 +36,13 @@ $site-grey: #dddddd;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
+    line-height: 36px;
+  }
+  h3{
+    font-family: Lato !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
     line-height: 36px;
   }
   p {

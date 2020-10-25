@@ -33,6 +33,15 @@ table#Medal {
   }
 }
 
+div.medal-title{
+  grid-column: 2/span 10; 
+  text-align: center;
+}
+
+div.medal-title img{
+  max-height: 200px;
+}
+
 section.bronze th {
   background-color: #fce5cd !important;
 }
