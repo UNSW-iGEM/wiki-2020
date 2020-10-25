@@ -21,14 +21,19 @@ section.symposium p{
   grid-column: 2/span 10;
 }
 
-div.video{
-  grid-column: 4/span 6;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 section.symposium h2{
   margin: 20px 0;
+}
+
+section.symposium ul{
+  list-style-position: inside;
+  font-size: 18px;
+  font-family: Source Sans Pro;
+  margin-bottom: 50px;
+}
+
+section.symposium li{
+  margin-bottom: 5px;
 }
 
 div.exeter{
