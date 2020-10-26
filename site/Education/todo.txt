@@ -1,8 +1,5 @@
 Things to do:
-- Interview may need the video/audio files? As well as links to social media. Maybe include minimalistic icons.
-- Remember to adjust grammar corrections
-- Ensure image sizes are cool
-- Make links to recordings and files similar to 2019 unsw igem
+- Maybe include minimalistic icons.
 
 Optional:
 - Include minimalistic icons to represent certain areas of each page, eg social media = social media icons
