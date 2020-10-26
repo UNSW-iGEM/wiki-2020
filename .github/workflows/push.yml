@@ -37,3 +37,14 @@ jobs:
 
       - name: Print Upload Map
         run: cat upload_map.yml
+
+      - name: Commit Changes
+        run: |
+          git add upload_map.yml
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "[no-ci] Successfully built and deployed to iGEM"
+      - name: Push Changes to Github
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
