@@ -1,11 +1,31 @@
 /*HP introduction*/ 
-section.hp-intro h1{
+section.hp-intro div.title{
   grid-column: 2/span 10;
   text-align: center;
+  background-color: $site-green;
+}
+
+section.hp-intro div.title h1{
+  color: white;
+  margin:32px;
+}
+
+section.hp-intro h2{
+  border-bottom: 1px solid black !important;
 }
 
 section.hp-intro p{
   grid-column: 2/ span 10;
+}
+
+section.hp-intro a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+section.hp-intro a:hover{
+  color: #fad4d6;
 }
 
 
