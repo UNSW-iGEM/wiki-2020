@@ -146,7 +146,7 @@ assets:
     upload_filename: T--UNSW_Australia--images--attributions--Dom.png
   assets/images/attributions/Josh.png:
     link_URL: https://2020.igem.org/wiki/images/6/6c/T--UNSW_Australia--images--attributions--Josh.png
-    md5: 2248a48a7be27b010c68575d590f64b3
+    md5: 0834d4af4c9272c43f827ab35a1e2dae
     upload_filename: T--UNSW_Australia--images--attributions--Josh.png
   assets/images/attributions/Justine.png:
     link_URL: https://2020.igem.org/wiki/images/1/16/T--UNSW_Australia--images--attributions--Justine.png
@@ -386,7 +386,7 @@ css:
 html:
   Attributions/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Attributions
-    md5: b296463cc3578c932fde5d7c5ddb07ee
+    md5: 6aeefd3c4a998677f911f6a14a1c6d2c
   Book/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Book
     md5: eb3dcbbb68442af037247f5b6899b896
