@@ -34,6 +34,7 @@ From the original paper the model was written base on the SBML(System Biology Ma
 
 ### Assumption of the model
 Part of the table were a replicate of the paper(cite) with slight modifications.
+- These are parameter under the normal state, the parameter change with respect to temperature change will be specify in the below section.
 ---
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
@@ -50,7 +51,7 @@ Part of the table were a replicate of the paper(cite) with slight modifications.
 | Hsp90 transcription & translation| \\(\ce{HSETriH ->[k_{16}] HSETriH + Hsp\{90}}\\) | \\(k_{16}\\)| \\(1000.0\\) | This is fast when HSE is bound
 | Hsp90 degradation | \\(\ce{Hsp\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)| Half-life of 1 day
 | ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | \\(12.0, 0.02\\) | Assume that ratio of ATP:ADP is 10:1 under normal conditions
-| ROS production and base removal | \\(\ce{\varnothing <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | \\(0.1, 0.001\\) | Assume constant production level of ROS
+| ROS production and base removal | \\(\ce{\varnothing <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | \\(1, 0.001\\) | Assume constant production level of ROS
 | ROS reduction | \\(\ce{ROS + Reduced Glutathione ->[k_{22}] Oxidised Glutathione}\\) |  \\(k_{22}\\) | \\(20.0\\) | Assuming this is a fast reaction
 | Glutathione reduction | \\(\ce{Oxidised Glutathione ->[k_{34}] Reduced Glutathione}\\) | \\(k_{34}\\) | \\(0.1\\) | Assuming this is related to the Glutathione concentration
 | sHSP binding | \\(\ce{MitosHsp + MisP <=>[k_{23}][k_{36}] MisPsHsp}\\) | \\(k_{23}, k_{36}\\) | \\(50.0, 0.2\\) |  the rate of unsuccessful binding is low compared to binding
@@ -62,16 +63,31 @@ Part of the table were a replicate of the paper(cite) with slight modifications.
 | sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate 
 | sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer 
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
-| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate 
+| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
 
 
-Since we cannot formalize a equation where the temperature relates to the rate constant(double check if Arrhenius equation applies to it), hence we decided to the temperature simulation in a qualitative manner.
-We picked a few of the parameters relating to temp change,
+## Result and Analysis
+
+Since we cannot formalize a equation where the temperature relates to the rate constant also it is not applicable to use the Arrhenius equation which we need to assume the pre-exponential factor \\(A\\) and activation energy \\(E_{a}\\) of the reaction, hence we decided to do the simulation at different temperature in a qualitative manner.
+$$\textit{k} = \textit{A}e^{\frac{-E_{a}}{RT}}\textit{}$$
+Given the euqation, if we assume the activation energy is \\(100kJmol^{-1}\\), \\(k_{293}, k_{303}\\) is the rate constant at \\(293, 303\\) kelvin respectively, we get,
+\begin{align} \frac{k_{303}}{k_{293}} & = \frac{\textit{A}e^{\frac{-E_{a}}{RT_{303}}}}{\textit{A}e^{\frac{-E_{a}}{RT_{293}}}} \\\\
+& =  \frac{e^{\frac{100000}{8.314\times 303}}}{e^{\frac{100000}{8.314\times 293}}}\\\\
+& = 3.874.
+\end{align}
+Hence, with the Arrhenius equation as guidance we decided to have a rate constant relationship as follow,
+\begin{align} 1 \leq \frac{k_{elevatedT}}{k_{nomralT}} \leq 10. \end{align}
+Moreover, we realized the model would deviate from the expected output if we assume it strictly follows the Arrhenius equation. Unlike chemical reaction biochemical reaction is extensively controlled by the enzyme, given  temperature increment in the environment which would result in different levels of protein conformational change hence disobeying the Arrhenius equation.
+
+Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes. 
     - (\\(k_{1}\\)) goes down if temperature goes up
     - (\\(k_{29}, k_{30}, k_{6}, k_{20}\\)) go up if temperature rises
     - But also have to run this comparing the base_model with the HSP22E and Glutathione model to see if the misfolding gets better as a result of the tuning of our para or its actually getting better because of the sHSP and glutathione
 
-![Figure 1)[Flow chart]
+![Baseline Model](/assets/images/Model/Baseline_model_TEMP0.png)
+![Baseline Model at Higher temp](/assets/images/Model/Baseline_model_TEMP1.png)
+
+As you can see from the graph, this is behaving 
 
 !(Figure 2)[Graph_1.jpg]
 
@@ -84,6 +100,7 @@ a bunch of graphs. rest are either stochastic or determinisitic
 ## Comparison
 
 ## Discussion
+
 ### Limitations
 We used the opensource package developed by .........(fill this in). However, we experienced some techinical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package. Thanks to Rodrigo Santibáñez(might or might not mention) a active member in the PySB community helped us ......
 Due to time contraint we choose to not use the `Expression` feature in PySB, instead we run multiple rounds of different rate contant(\\(k_{20}\\)) to represent the model behaviour at different temperature.
