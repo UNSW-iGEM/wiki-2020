@@ -1,3 +1,4 @@
 [submodule "site/_includes/UNSW_Australia"]
 	path = site/_includes/UNSW_Australia
 	url = https://github.com/igemsoftware2020/UNSW_Australia
+	branch = main
