@@ -6,6 +6,7 @@
     - name: Description
     - name: Design
     - name: Contribution
+    - name: Software
 - name: Human Practices
   children:
     - name: Overview
