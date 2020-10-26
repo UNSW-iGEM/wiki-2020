@@ -358,7 +358,7 @@ assets:
     upload_filename: T--UNSW_Australia--images--team--Rupini.jpg
   assets/images/team/Sam.jpg:
     link_URL: https://2020.igem.org/wiki/images/1/14/T--UNSW_Australia--images--team--Sam.jpg
-    md5: 6fd7b0035ddee76ac430f07fabd51754
+    md5: dd042067994dbf2f28ab4a25a059f824
     upload_filename: T--UNSW_Australia--images--team--Sam.jpg
   assets/images/team/Sayali.jpg:
     link_URL: https://2020.igem.org/wiki/images/b/bc/T--UNSW_Australia--images--team--Sayali.jpg
@@ -383,7 +383,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 7e8edd99bec1ef608fc1aa0c0ca08faf
+    md5: 6435774791590c71211a9bffc365f4bf
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -399,7 +399,7 @@ html:
     md5: 1c3fbaee24e419e3b4492766df691f5c
   Contribution/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Contribution
-    md5: 344a1a11c81085cacc258e5bb818f092
+    md5: 644503b01df8f1cf4f41148bcabc38eb
   Description/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Description
     md5: f7d69b14b67766414e3b9f0c44eb6f0f
@@ -432,10 +432,10 @@ html:
     md5: 1581cfc7badeef82b3d2431901ba26fc
   Human_Practices/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Human_Practices
-    md5: 2bdf35a50e004c8bf8f65f36e9ed45d4
+    md5: 68c208a27ac6164e68ea0dd1ef27246e
   IHP/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/IHP
-    md5: f15588d1cf4fbca7966baa644e95003b
+    md5: d2839e8e8cddb63c57bb3aa2e26946dc
   Implementation/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Implementation
     md5: d9363a5871c60a09f00c9150449da19b
@@ -465,7 +465,10 @@ html:
     md5: 17540df6fb2900eb73871f8ada84106c
   Team/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Team
-    md5: 041aea6c741e8a5b58ed3dae2da1fe6e
+    md5: defda77b379234228cca82df5c7172e7
+  Team1/index.html:
+    link_URL: https://2020.igem.org/Team:UNSW_Australia/Team1
+    md5: c617ce84452b985767bfcf38aac2fb2a
   collections/team/annabelle/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/collections/team/annabelle
     md5: 82fd0b526c8309f0dd9d77f3e7952058
@@ -519,7 +522,7 @@ html:
     md5: 8ce79731645b66422b2e2d9a85bf03ef
   index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia
-    md5: 716a3b194b0a466dc790e00ac57fef4d
+    md5: e0e526544a7d4a6704de4a738657c474
   sHSPs/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/sHSPs
     md5: 16cec9c1fcd80ce20522d291f42bcf23
