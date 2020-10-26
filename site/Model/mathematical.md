@@ -21,34 +21,36 @@ Mathematical modelling is a powerful tool for verifiying and evaluating sythetic
 The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and gluthationine would effect the cell's response under various temperatures. We further aimed to figure out the optimal condition for a cell to trigger the thermal protective response we designed for the cell.
 
 ## Implementation
+Contray to the fact that many papers have studies the structure of the heat shock protein families, studies of mathematical model on the heat shock activity remain sparse. However we were able to find a paper by Carole J. Proctor (cite) which model the activity of chaperones given that the misfolded protein by are caused by high level of ROS. 
 ### Computational Language and tool
-Our model was built using the [PySB](https://pysb.org) python package for systems biology. PySB provides a number of solvers for the system that can be swapped out. We choose to compare both deterministic and stochastic solvers.
-PySB models are written in a domain specific language that somewhat abuses pythons normal style.
+From the original paper the model was written base on the SBML(System Biology Markup Language) which is a langauge developed specifically for system biology base on XML(cite The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core
+). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(cite the pysb paper). We found this python package very user-frinedly while the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that PySB model are written in a domain specific langauge that somewhat abuses python normal style.
+
 ### Base of the Model
 1. The base of the model was inspired by a model from the *Modelling the actions of chaperones and their role in ageing*(**Citation Here**), where we adopted most of their model with a few modification added.
 2. We omitted the dimerization of the protein in our process since it does not contribute much to the effective of the holding activity in the model while the same time increase the complexity of the model.
-3. sHSP will only work while they are in the mitochondria/cholroplast(this is a simplification of the model)
+3. sHSP will only perform there function while in the mitochondria/cholroplast(this is a simplification of the model)
 4. 
 
 ### Assumption of the model
-Assumption table
+Part of the table were a replicate of the paper(cite) with slight modifications.
 ---
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
 | Protein Synthesis| \\(\ce{\varnothing ->[k_{1}] NatP}\\) | \\(k_{1}\\) | \\(10.0\\) | this should be a normal value
 | Misfolding| \\(\ce{NatP + ROS ->[k_{2}] MisP + ROS}\\) | \\(k_{2}\\) | \\(0.00002\\) | Ratio of native:misfolded proteins is 19:1 under normal conditions
-| Binding and dissociation of misfoldedprotein with Hsp90| \\(\ce{MisP + {Hsp\{90}} <=>[k_{3}][k_{4}] MCom}\\) | \\(k_{3}, k_{4}\\)| \\(50.0\\) | .
-| Protein Refolding| \\(\ce{MisP + ATP ->[k_{5}] NatP + Hsp\{90}+ADP}\\) | \\(k_{5}\\) | \\(4.0\times 10^{-6}\\)| .
-| Protein degradations|  \\(\ce{MisP + ATP ->[k_{6}] ADP}\\) | \\(k_{6}\\) | \\(6.0\times 10^{-7}\\) | .
-| Protein aggregation| \\(\ce{2MisP ->[k_{7}] AggP}\\) | \\(k_{7}\\) | \\(1.0\times 10^{-7}\\) | .
-| Binding of HSF1 and HSP90 and dissociation| \\(\ce{Hsp\{90} +HSF\{1} <=>[k_{8}][k_{9}] HCom}\\) | \\(k_{8}, k_{9}\\) | \\(500, 1.0\\) | .
-| Dimerisation of HSF1 and dissociation| \\(\ce{2HSF\{1} <=>[k_{10}][k_{13}] DiH}\\) | \\(k_{10}, k_{13}\\) | \\(0.01, 0.5\\) | .
-| Trimerisation of HSF1 and dissociation| \\(\ce{DiH + HSF\{1} <=>[k_{11}][k_{12}] TriH}\\) | \\(k_{11}, k_{12}\\) | \\(100 , 0.5\\) | .
-| Binding of HSE andHSF1-trimers and dissociation| \\(\ce{TriH + HSE <=>[k_{14}][k_{15}] HSETriH}\\) | \\(k_{14}, k_{15}\\)| \\(0.05\\) |.
-| Hsp90 transcription & translation| \\(\ce{HSETriH ->[k_{16}] HSETriH + Hsp\{90}}\\) | \\(k_{16}\\)| \\(1000.0\\) | .
-| Hsp90 degradation | \\(\ce{Hsp\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)|.
-| ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | \\(12.0, 0.02\\) | .
-| ROS production and base removal | \\(\ce{\varnothing <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | \\(0.1, 0.001\\) | .
+| Binding and dissociation of misfoldedprotein with Hsp90| \\(\ce{MisP + {Hsp\{90}} <=>[k_{3}][k_{4}] MCom}\\) | \\(k_{3}, k_{4}\\)| \\(50.0\\) | The binding affinity of misfolded protein to Hsp90 isless than that of HSF1.The rate of unsuccessful refolding is low compared to refolding under normal conditions
+| Protein Refolding| \\(\ce{MisP + ATP ->[k_{5}] NatP + Hsp\{90}+ADP}\\) | \\(k_{5}\\) | \\(4.0\times 10^{-6}\\)| Rapid reaction when bound to Hsp90
+| Protein degradations|  \\(\ce{MisP + ATP ->[k_{6}] ADP}\\) | \\(k_{6}\\) | \\(6.0\times 10^{-7}\\) | Half-life of 6–7days
+| Protein aggregation| \\(\ce{2MisP ->[k_{7}] AggP}\\) | \\(k_{7}\\) | \\(1.0\times 10^{-7}\\) | This is a slow reaction unless high levels of misfolded protein
+| Binding of HSF1 and HSP90 and dissociation| \\(\ce{Hsp\{90} +HSF\{1} <=>[k_{8}][k_{9}] HCom}\\) | \\(k_{8}, k_{9}\\) | \\(500, 1.0\\) | The affinity of HSF1for Hsp90 is 10 timesstronger than that of misfolded proteins. Under normal conditions most of HSF1 is complexed to Hsp90
+| Dimerisation of HSF1 and dissociation| \\(\ce{2HSF\{1} <=>[k_{10}][k_{13}] DiH}\\) | \\(k_{10}, k_{13}\\) | \\(0.01, 0.5\\) | This reaction is rapid only when levels of unbound HSF1 are high. \\(k_{13}\\) This is a slow reaction
+| Trimerisation of HSF1 and dissociation| \\(\ce{DiH + HSF\{1} <=>[k_{11}][k_{12}] TriH}\\) | \\(k_{11}, k_{12}\\) | \\(100 , 0.5\\) | This is a fast reaction once dimers are formed. This is a slow reaction
+| Binding of HSE andHSF1-trimers and dissociation| \\(\ce{TriH + HSE <=>[k_{14}][k_{15}] HSETriH}\\) | \\(k_{14}, k_{15}\\)| \\(0.05\\) | This reaction only proceeds when trimers are available. If all HSF1 forms trimers, the ratio of the forward to reverse reaction is about 1000:1
+| Hsp90 transcription & translation| \\(\ce{HSETriH ->[k_{16}] HSETriH + Hsp\{90}}\\) | \\(k_{16}\\)| \\(1000.0\\) | This is fast when HSE is bound
+| Hsp90 degradation | \\(\ce{Hsp\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)| Half-life of 1 day
+| ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | \\(12.0, 0.02\\) | Assume that ratio of ATP:ADP is 10:1 under normal conditions
+| ROS production and base removal | \\(\ce{\varnothing <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | \\(0.1, 0.001\\) | Assume constant production level of ROS
 | ROS reduction | \\(\ce{ROS + Reduced Glutathione ->[k_{22}] Oxidised Glutathione}\\) |  \\(k_{22}\\) | \\(20.0\\) | Assuming this is a fast reaction
 | Glutathione reduction | \\(\ce{Oxidised Glutathione ->[k_{34}] Reduced Glutathione}\\) | \\(k_{34}\\) | \\(0.1\\) | Assuming this is related to the Glutathione concentration
 | sHSP binding | \\(\ce{MitosHsp + MisP <=>[k_{23}][k_{36}] MisPsHsp}\\) | \\(k_{23}, k_{36}\\) | \\(50.0, 0.2\\) |  the rate of unsuccessful binding is low compared to binding
