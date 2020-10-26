@@ -20,6 +20,10 @@ assets:
     md5: 5d6ea80dee1efe55ffab895db47e1c35
     upload_filename: T--UNSW_Australia--images--Education--Educational Package Lecture
       Slides.pdf
+  assets/images/Education/cc1.png:
+    link_URL: https://2020.igem.org/wiki/images/8/8d/T--UNSW_Australia--images--Education--cc1.png
+    md5: 5e1ba0d4240c4f6835249b7d59bfa2c1
+    upload_filename: T--UNSW_Australia--images--Education--cc1.png
   assets/images/Education/coral conundrum banner.png:
     link_URL: https://2020.igem.org/wiki/images/a/a2/T--UNSW_Australia--images--Education--coral_conundrum_banner.png
     md5: 9ff5f41f0509401e0f36424e82d2d800
@@ -70,7 +74,7 @@ assets:
     upload_filename: T--UNSW_Australia--images--Education--talk.jpg
   assets/images/Education/teams.png:
     link_URL: https://2020.igem.org/wiki/images/9/98/T--UNSW_Australia--images--Education--teams.png
-    md5: 9dfef2a096d18a0867d2a68a81116193
+    md5: 9cdb86b0c136180142f10387525e01fd
     upload_filename: T--UNSW_Australia--images--Education--teams.png
   assets/images/Education/turtlespuzz.png:
     link_URL: https://2020.igem.org/wiki/images/f/fd/T--UNSW_Australia--images--Education--turtlespuzz.png
@@ -407,7 +411,7 @@ html:
     md5: db2ac213148d95f61eb67160786e5405
   Education/Escape_Room/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Escape_Room
-    md5: 8a2d87275ec8cbd0e0ffbd7624767261
+    md5: 10ea64b9b8f9e05a44a7cfa6d109e3e4
   Education/High_School/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/High_School
     md5: d2f50d1cdcdb096b4c82f9391658889c
