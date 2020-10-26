@@ -1,22 +1,185 @@
 ---
+title: OUR TEAM
 ---
 
-<div id="team-members">
-  {% assign sortedMembers = collections.team | sortByName %}
-  {% for member in sortedMembers %}
-    <div class="card">
-      <h1 class="card-title">{{ member.data.name }}</h1>
-      <img class="team-image" src="/assets/images/team/{{ member.fileSlug | capitalize }}.jpg" alt="photo of team member {{ member.data.name }}">
-      <div class="card-body">
-        <p>{{ member.data.year }} year</p>
-        <p>{{ member.data.degree }}</p>
-        {%- for team in member.data.teams -%}
-          <span class="badge badge-secondary"><i>{{ team | capitalize }} </i></span>
-        {%- endfor -%}
+<section>
+  <p id="team">Our team’s multidisciplinary approach to an Australian conservation problem considers the nexus of science and society. We are dedicated to conferring practical and intergenerational benefits for the Great Barrier Reef using the emerging capabilities of synthetic biology in the effort to improve global coral environments.</p>
+  <img id="team" src="/assets/images/team.jpg">
+
+  <div class="attributions-box">
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Annabelle.jpg">
       </div>
-      <div class="bio">
-        {{ member.templateContent }}
+
+      <div class="attribute-des">
+        <h2>Annabelle Lee (HP Lead)</h2>
+        <p>Annabelle is a third year Advanced Science and Law student. She joined iGEM because she was interested in understanding and exploring the societal implications of synthetic biology solutions on conservation problems. She is the HP team leader and has also been involved with writing grants. In her free time, Annabelle helps curate the iGEM party mixtape, and she, funnily enough, likes to think about and tries to relive her Year 6 disco.</p>
       </div>
     </div>
-  {%- endfor -%}
-</div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Bella.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Annabelle (Bella) Beach (Team Leader)</h2>
+        <p>Bella is in her third and final year of a Bachelor of Medical Science, with a major in Molecular Biology. She co-leads UNSW iGEM with Sayali as well as oversees the non-lab operations, including HP, wiki, design, grants, science communication and social media. Upon joining the UNSW iGEM team, she was excited to work with other students from all different backgrounds and across their university and the world. Bella is a big fan of YA fantasy novels and plays her guitar (strumming only, she never did her scales!).</p>
+      </div>
+    </div>
+    
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Caitlin.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Caitlin Ramsay (Dry Lab)</h2>
+        <p>In her third year of studying Bioinformatics Engineering and Science (Ecology), Caitlin hoped to gain more real-world dry lab experience. She wants to contribute to helping their little coral friends. Her free time consists of the following hobbies: going to the beach, op-shopping, sewing, playing Sims or Animal Crossing, and reading. She has also been consumed by her TikTok addiction.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Chelsea.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Chelsea Liang (Dry Lab Lead)</h2>
+        <p>Chelsea is currently in her third year of studying Bioinformatics and Engineering. She is the dry lab team leader, and the highlight of doing iGEM for her was learning from her hilarious and talented teammates. Chelsea says that working on a project that engages with a real problem in the world warms her - in her words - “old, undead soul”. She has recently gained an appreciation for scented candles, electric guitars, and bouldering.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Cornelius.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Cornelius Bong (Wiki, Sci Comms)</h2>
+        <p>A fourth year Science and Business, majoring in Bioinformatics, Cornelius brings in the business perspective in the team. He loves writing grants, ensuring that the team is well-funded for their activities. Cornelius is also in the wiki and science communication teams. Though, he wanted to be invited to the fun social media team. Outside of iGEM, he attempts learning how to dance and enjoys kpop and watching anime.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Deborah.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Deborah Chandra (Wiki Lead, HP, design)</h2>
+        <p>Deborah is in her fourth year of studying Biotechnology and will commence her honours year in 2021. So far in their work, she has already learned so much about how projects in the real world operate. Deb says that she could not have asked for a better group of people to be in a team with for iGEM. She leads the wiki team, while also helping the HP, design, and social media teams. Deb loves to embroider, play Animal Crossing, and spill tea with her gals.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Farnaz.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Farnaz Sedghi (Wet Lab)</h2>
+        <p>Farnaz joined iGEM because she wanted to gain more exposure to the synthetic biology field. She is a wet lab member and has really enjoyed collaborating with like-minded people to improve a current problem world problem. Farnaz is currently completing her third and final year in Medical Science with a major in Human Anatomy. In her free time, she reads philosophical books, watches Ben Shapiro’s videos on Youtube, plays the guitar whenever she feels artistic, and she’s been playing on her Nintendo to escape the reality of quarantine.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Gabby.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Gabrielle Milet (Design Lead)</h2>
+        <p>Gabrielle is in her third year of studying Bachelors of Science and Law. She is the leader of the design team and is involved with HP and wiki. In joining iGEM, Gabby wanted to work on a sustainability project to help protect our environment. During isolation, Gabby adopted a basil plant lovingly nicknamed “Mr Basil”. To contribute to the economy, Gabby bought a Nintendo Switch. She enjoys playing strategy games to keep her brain alive.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Jack.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Jack Robbers (Dry Lab)</h2>
+        <p>Jack is a second year Mechatronic Engineering and Computer Science student. He is in the dry lab and wiki teams. Through iGEM, he wanted to improve his skills in scientific computing and work on a large project that was interesting and hopefully successful. Jack has enjoyed working with his team, who are students from a broad range of disciplines. In his free time, he loves going to the beach and cycling.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Jason.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Jason Lin (Wet Lab Lead)</h2>
+        <p>Jason is in his third year of a Bachelor of Advanced Science, majoring in Genetics and Microbiology. He is the web lab team leader and also helps out the HP team whenever possible. Jason hoped to gain more lab experience and to become more comfortable communicating science when he decided to join iGEM. He often salivates whenever somebody mentions the word “HSP”, only to realise they are not referring to “Halal Snack Pack”. Observing his plant babies grow has become one of Jason’s favourite self-isolation activities.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Kelley.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Kelley Gao (Wet Lab)</h2>
+        <p>Kelley is currently completing her fourth year in Advanced Science with a major in Molecular Biology. She is in the wet lab research and HP outreach teams because she hoped to learn more about what it takes to be a good researcher as well as gain experience in the lab. Kelley’s hobbies include waterbending in the shower, ice skating until her brain is numb, and hoarding cheap artbooks that she only uses once. She also loves hiking and camping, and lives for a good cup of green tea!</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Kelly.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Kelly Varianne (Wet Lab, Sci Comms)</h2>
+        <p>A third year Biotechnology student, Kelly is science communication team leader, and she is also a wet lab and design team member. Her goals for iGEM included gaining more experience and knowledge in implementing science into current global issues. In her free time, Kelly watches movies and loves to play musical instruments</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Rupini.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Rupini Ramamurthy (Wet Lab, Sci Comms)</h2>
+        <p>Rupini is currently completing her third year in a Bachelor of Science and Law. Upon joining iGEM, she hoped to acquire a lot of knowledge, and- despite physical distancing- to enjoy every bit of the competition with her “A++++” team members. Rupini is in the wet lab, design, and science communication teams.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Sam.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Sam Hum (Wet Lab, HP, Wiki, Sci Comms)</h2>
+        <p>Sam is in his third year of studying Neuroscience and Genetics and is keen to learn more about synthetic biology and its applications. He joined iGEM because he hoped to work on an important project with others while developing essential lab and communication skills. He is in the wet lab, wiki, and science communication teams. His hobbies include learning to make cocktails, homebrewing (beer, coffee, you name it!), and DIY-ing things</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Sayali.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Sayali Gore (Team Leader)</h2>
+        <p>Sayali is a third year Advanced Science student, majoring in Molecular and Cell Biology. She is the co-leader of the team, and spends most of her time in the lab. Sayali was super excited to work together with an amazing and talented team. And with them, she hoped to develop well-rounded, multidisciplinary solutions that go beyond the lab. Sayali spends her free time hanging out with her dog as well as attempting to improve her very limited baking skills without burning down the kitchen.</p>
+      </div>
+    </div>
+
+    <div class="attribute-profile">
+      <div class="attribute-photo">
+        <img src="/assets/images/team/Zelun.jpg">
+      </div>
+
+      <div class="attribute-des">
+        <h2>Zelun Li (Dry Lab)</h2>
+        <p>As a second year student, Zelun wanted to learn more about synthetic biology. However, his main motivation for joining iGEM is to gain knowledge and experience that will help him someday clone himself. He is in the wet and dry lab teams. Zelun says that Covid-19 has turned him into a professional hairdresser that focuses on directed evolution of hairs. </p>
+      </div>
+    </div>
+</section> 

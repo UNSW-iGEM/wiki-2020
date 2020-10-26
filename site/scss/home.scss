@@ -27,7 +27,8 @@ section.introduction div.introduction-text a:hover {
 }
 
 section.introduction div.introduction-image {
-  grid-column: 8 / span 4;
+  grid-column: 8 / span 5;
+  margin: 150px 50px 0 50px;
 }
 
 /*journey section*/
@@ -59,7 +60,7 @@ section.journey div.hp-des {
 }
 
 section.journey div.hp-des p {
-  margin: 32px 0 32px 0;
+  margin: 32px 0 100px 0;
   text-align: justify;
 }
 
@@ -88,7 +89,7 @@ section.journey button:hover {
 /*Meet the team section*/
 
 section.meet-team h1 {
-  grid-column: 2 / span 6;
+  grid-column: 2 / span 10;
   text-transform: uppercase;
   text-align: center;
   margin: 54px 0 30px 0;
@@ -109,7 +110,7 @@ section.meet-team div.team-intro {
 }
 
 section.meet-team div.team-intro p {
-  margin: 126px 0 40px 0;
+  margin-bottom: 40px;
   text-align: center;
 }
 
