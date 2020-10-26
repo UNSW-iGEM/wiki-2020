@@ -67,14 +67,33 @@ section.introduction div.link {
   grid-column: 5/span 4;
 }
 
-section.introduction div.link a {
+section.introduction div.link a{
   color: white;
   font-weight: normal;
   transform: scale3d(2);
+  text-align: center;
 }
 
 section.introduction div.link a:hover{
   text-shadow: 0 0 .9px white, 0 0 .9px white, 0 0 .9px white;
+}
+
+section.introduction div.book{
+  grid-column:4 /span 6;
+}
+
+section.introduction .scale{
+  //max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+section.introduction .scalelogo{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /*category section*/
