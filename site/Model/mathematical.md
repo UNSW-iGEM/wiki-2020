@@ -65,6 +65,7 @@ Due to time contraint we choose to not use the `Expression` feature in PySB, ins
 
 Initially we attempted to use Simbiology package of Matlab but found it difficult to collaborate on due to binary file format.
 
+Initially we began by using the MATLAB SimBiology package. This proved to be obtuse to operate and difficult to collaborate on, prompting us to move to PySB (Python Systems Biology). SimBiology provided a good overview of the type of functionality and methods present in mathematical modelling tools, allowing us to quickly replicate the work done previously in SimBiology, in PySB. PySB proved to be a great learning experience due to the open code and community nature of the project.
 
 (Link to code)[code.zip]
 
