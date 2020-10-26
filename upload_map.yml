@@ -76,6 +76,22 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/e/e2/T--UNSW_Australia--images--Education--pg1.png
     md5: 854a6a9e3f35dece1ece5388f55d5d4c
     upload_filename: T--UNSW_Australia--images--Education--pg1.png
+  assets/images/Education/quoteb3.png:
+    link_URL: https://2020.igem.org/wiki/images/e/ef/T--UNSW_Australia--images--Education--quoteb3.png
+    md5: 11795f91dd2b7834a9f3bcc010dcd8ae
+    upload_filename: T--UNSW_Australia--images--Education--quoteb3.png
+  assets/images/Education/quoteb4.png:
+    link_URL: https://2020.igem.org/wiki/images/f/ff/T--UNSW_Australia--images--Education--quoteb4.png
+    md5: f28d6eeb95d22a8a2a614c96b39d1a99
+    upload_filename: T--UNSW_Australia--images--Education--quoteb4.png
+  assets/images/Education/quoteb5.png:
+    link_URL: https://2020.igem.org/wiki/images/3/30/T--UNSW_Australia--images--Education--quoteb5.png
+    md5: 60b96192e0910099d27c7c71fd54b842
+    upload_filename: T--UNSW_Australia--images--Education--quoteb5.png
+  assets/images/Education/quoteb6.png:
+    link_URL: https://2020.igem.org/wiki/images/8/8d/T--UNSW_Australia--images--Education--quoteb6.png
+    md5: 6fb64bce6a4dde3ad03b9d7a5c07be05
+    upload_filename: T--UNSW_Australia--images--Education--quoteb6.png
   assets/images/Education/slido.png:
     link_URL: https://2020.igem.org/wiki/images/9/94/T--UNSW_Australia--images--Education--slido.png
     md5: 35ac2dc9a37ddd2e1fed3dcf46f82c29
@@ -403,7 +419,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 525d32c5377f7ed056638effe00b766e
+    md5: 28f0b8a0decb67815fa64680ea33c965
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -434,7 +450,7 @@ html:
     md5: 58d87805d52c7a4013621577c91c0407
   Education/High_School/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/High_School
-    md5: c8b388766d0044785ce941fb0e089bb7
+    md5: 6c8d4f81c362ea310649959a60a3ed2c
   Education/Interview/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Interview
     md5: fc898b1753e3094d6f411647e6217130
