@@ -158,4 +158,62 @@ section.categories div.category-des p{
 /*escape room page*/ 
 section.overview img{
   grid-column: span 5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.edulogo img{
+  grid-column: span 6;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  //display: block;
+}
+
+section.edulogo p{
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 12;
+  margin-bottom: 0%;
+}
+
+section.edupanel img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+section.edupanel p{
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.overview p{
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 10;
+  margin-bottom: 0%;
+}
+
+section.edulec img{
+  grid-column: 4/span 6; 
+  max-height: 400px;
+}
+
+section.edulec p{
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 12;
 }
