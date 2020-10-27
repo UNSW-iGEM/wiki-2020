@@ -12,6 +12,9 @@
     outline-offset: 25px;
   }
   
+  h1 {
+    padding: 20px;
+  }
   
   div.box {
     background-color: $site-pink;
@@ -20,7 +23,7 @@
     text-align: justify
   }
 
-  div {
+  div.padding {
     padding: 25px
   }
 

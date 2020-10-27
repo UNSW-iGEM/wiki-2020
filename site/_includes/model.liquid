@@ -1,9 +1,8 @@
 ---
 layout: default.liquid
 ---
+
 {{ content }}
-
-
 
 <div id="model-links">
     {% for model in collections.model %}
@@ -14,7 +13,7 @@ layout: default.liquid
 
             <div class="box">
                 <p>{{ model.data.summary }}</p>
-                <div>
+                <div class="padding">
                     <a href="/Model/{{ model.data.page.fileSlug }}">
                         <button>READ MORE</button>
                     </a>
