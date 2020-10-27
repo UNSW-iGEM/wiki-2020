@@ -2,12 +2,18 @@
 layout: default.liquid
 ---
 {{ content }}
+
+
+<div class="title">
+    <h1> Protein Structure </h1>
+</div>
+
 <div id="model">
     {% for model in collections.model %}
         <a href="/Model/{{ model.data.page.fileSlug }}" class="card">
             {{ model.data.page.fileSlug | capitalize }}
             <img src="/assets/images/team/{{model.data.image | capitalize }}.jpg">
-            {{ model.data.summary }}
         </a>
+        <p>{{ model.data.summary }}</p>
     {% endfor %}
 </div>

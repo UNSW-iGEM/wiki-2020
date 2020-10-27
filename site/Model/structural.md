@@ -1,6 +1,6 @@
 ---
 tags: model
-summary: STRUCTURAL SUMMARY GOES HERE
+summary: The central dogma of proteins is that with the understanding of the structure of a protein, comes the understanding of its function. We utilised fold recognition template modelling with the i-TASSER server to impose a reasonable 3D structure onto a sequence of peptides. After the refinement of these monomer models with molecular dynamics simulations, dimers and a larger 12mer complex was constructed to lead to an atomic understanding of how heat shock proteins function.
 image: caitlin
 ---
 

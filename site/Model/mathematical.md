@@ -2,7 +2,7 @@
 title: Mathematical Modelling
 # subtitle: Modelling biochemical reactions to determine the effectiveness of PROTECC Coral
 tags: model
-summary: We modelled the main biochemical reaction happening inside Symbiodinium to determine the effectiveness of our Wet lab solution. In this model we consider the addition of sHSP and glutathionine. *WHAT WE FOUND GOES HERE*
+summary: Heat shock and ROS responses are ubiquitous in living organisms as all environments have temperature fluctuations and a need to mitigate oxidative stress. Mathematical models of the new engineered system were compared to a model of the wild type system to predict the biochemical changes on the level of the cell. Both stochastic and deterministic versions of these models were implemented using the PySB library and sensitivity analysis was conducted. 
 image: zelun
 ---
 

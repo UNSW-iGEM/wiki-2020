@@ -1,11 +1,11 @@
 /*HP introduction*/ 
-section.hp-intro div.title{
+div.title {
   grid-column: 2/span 10;
   text-align: center;
   background-color: $site-green;
 }
 
-section.hp-intro div.title h1{
+div.title h1{
   color: white;
   margin:32px;
 }
