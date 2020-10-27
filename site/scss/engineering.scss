@@ -111,11 +111,11 @@ div.figures{
 }
 
 div.figures img{
-  grid-column: 3/ span 4;
+  grid-column: span 12;
 }
 
 div.figures p{
-  grid-column: span 8;
+  grid-column: span 12;
 }
 
 b{
@@ -134,4 +134,9 @@ div.references li{
   font-weight: normal;
   font-size: 12px;
   line-height: 23px;
+}
+
+
+section.Engineering ol,ul{
+  font-size: 18px;
 }
