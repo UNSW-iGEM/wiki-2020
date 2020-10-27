@@ -13,24 +13,26 @@ $$\ce{CO2 + C -> 2 CO}$$
 
 ## Why mathematical modelling
 
-Mathematical modelling is a powerful tool for verifiying and evaluating sythetic biology solutions. Since the ultimate target chasis Symbiodinium is nigh impossible to work with, *in silico* verification comes in as a alternative to the normal *in vovo* strategy. In this mathematical model we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We hope this model was able to facilitate our understanding of how HSP22E, HSP22F and Glutathione is able to alleviate the cell condition in a quantitative manner. However as with all modelling, care must be taken to select values and parameters that reflect the real world.
+Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is nigh impossible to work with, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We hope this model was able to facilitate our understanding of how HSP22E, HSP22F and Glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
 
 <!-- We choose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution. -->
 
 ## Aim
-The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and gluthationine would effect the cell's response under various temperatures. We further aimed to figure out the optimal condition for a cell to trigger the thermal protective response we designed for the cell. 
+The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to figure out the optimal condition for a cell to trigger the thermal protective response we designed for the cell.
 
 ## Implementation
-Contray to the fact that many papers have studies the structure of the heat shock protein families, studies of mathematical model on the heat shock activity remain sparse. However we were able to find a paper by Carole J. Proctor (cite) which model the activity of chaperones given that the misfolded protein by are caused by high level of ROS. 
+Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of a mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (cite) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
+
 ### Computational Language and tool
-From the original paper the model was written base on the SBML(System Biology Markup Language) which is a langauge developed specifically for system biology base on XML(cite The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core
-). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(cite the pysb paper). We found this python package very user-frinedly while the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that PySB model are written in a domain specific langauge that somewhat abuses python normal style.
+From the original paper, the model was written base on the SBML(System Biology Markup Language) which is a language developed specifically for system biology base on XML(cite The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core
+). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(cite the pysb paper). We found this python package very user-friendly while at the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that the PySB model is written in a domain-specific language that somewhat abuses python normal style.
 
 ### Base of the Model
-1. The base of the model was inspired by a model from the *Modelling the actions of chaperones and their role in ageing*(**Citation Here**), where we adopted most of their model with a few modification added.
-2. We omitted the dimerization of the protein in our process since it does not contribute much to the effective of the holding activity in the model while the same time increase the complexity of the model.
-3. HSP22E/F will only perform their function while in the mitochondria/cholroplast(this is a simplification of the model)
-4. 
+1. The base of the model was inspired by a model from the *Modelling the actions of chaperones and their role in ageing*(**Citation Here**), where we adopted most of their models with a few modifications added.
+2. We omitted the dimerization of the protein in our process since it does not contribute much to the effectiveness of the holding activity in the model while at the same time increasing the complexity of the model.
+3. HSP22E/F will only perform their function while in the mitochondria/chloroplast(this is a simplification of the model)
+In the section below HSP22E/F will be referred to as shSP for simplicity purpose.
+
 
 ### Assumption of the model
 Part of the table were a replicate of the paper(cite) with slight modifications.
@@ -70,19 +72,16 @@ The ODEs are omitted to save up the space.
 
 Since we cannot formalize a equation where the temperature relates to the rate constant also it is not applicable to use the Arrhenius equation which we need to assume the pre-exponential factor \\(A\\) and activation energy \\(E_{a}\\) of the reaction, hence we decided to do the simulation at different temperature in a qualitative manner.
 $$\textit{k} = \textit{A}e^{\frac{-E_{a}}{RT}}\textit{}$$
-Given the euqation, if we assume the activation energy is \\(100kJmol^{-1}\\), \\(k_{293}, k_{303}\\) is the rate constant at \\(293, 303\\) kelvin respectively, we get,
+Given the equation, if we assume the activation energy is \\(100kJmol^{-1}\\), \\(k_{293}, k_{303}\\) is the rate constant at \\(293, 303\\) kelvin respectively, we get,
 \begin{align} \frac{k_{303}}{k_{293}} & = \frac{\textit{A}e^{\frac{-E_{a}}{RT_{303}}}}{\textit{A}e^{\frac{-E_{a}}{RT_{293}}}} \\\\
 & =  \frac{e^{\frac{100000}{8.314\times 303}}}{e^{\frac{100000}{8.314\times 293}}}\\\\
 & = 3.874.
 \end{align}
 Hence, with the Arrhenius equation as guidance we decided to have a rate constant relationship as follow,
 \begin{align} 1 \leq \frac{k_{elevatedT}}{k_{nomralT}} \leq 10. \end{align}
-Moreover, we realized the model would deviate from the expected output if we assume it strictly follows the Arrhenius equation. Unlike chemical reaction biochemical reaction is extensively controlled by the enzyme, given  temperature increment in the environment which would result in different levels of protein conformational change hence disobeying the Arrhenius equation.
+Moreover, we realized the model would deviate from the expected output if we assume it strictly follows the Arrhenius equation. Unlike chemical reaction, biochemical reaction is extensively controlled by the enzyme, given  temperature increment in the environment which would result in different levels of protein conformational change hence disobeying the Arrhenius equation.
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
-
-But also have to run this comparing the base_model with the HSP22E and Glutathione model to see if the misfolding gets better as a result of the tuning of our para or its actually getting better because of the sHSP and glutathione
-
 
 ![Baseline Model](/assets/images/Model/Baseline_model_TEMP00.png)
 *This is the caption, graph output under nomral condition with the baseline model*
@@ -108,26 +107,18 @@ After knowning that Glutathione is the main helper, we would also like to evalua
 Seems like it is a no to this answer, because even with a small amount of Glutahione the ROS level is already maintained at a considerable low status.
 
 
-
-Chaning the initial amount of HSP22E and see how it goes?
-## Comparison
-
 ## Discussion
-
-Our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know how that this is a feasibile solution to combat celluar heat stress for symbiodinium cell. Moreover, we figured out that Glutathione is the major force in lifting the cell from extreme thermality. 
-However, on a more negative note that most of the parameters value is choosed with our best guess, which might not be a good estimation of the real *in vitro* situation. And the actually cellular environment is way more complex than this.
+Overall, our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know that this is a feasible solution to combat cellular heat stress for Symbiodinium cells. Moreover, we figured out that Glutathione is the major force in lifting the cell from extreme thermality.
+However, on a more negative note that most of the value of the parameter is chosen at our best guess since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
+Additionally, we would like to perform a sensitivity analysis in the future to further evaluate the robustness of our model and how it responds to various parameter tweaking.
 
 ### Limitations
-We experienced some techinical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package where it seems to have some bug. Thanks to Rodrigo Santibáñez(might or might not mention) a active member in the PySB community helped us with the debugging and further pointed us to the Kappa package.
-Due to time contraint we choose to not use the `Expression` feature in PySB, instead we run multiple rounds of different rate contant(\\(k_{20}\\)) to represent the model behaviour at different temperature.
+We experienced some technical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package where it seems to have some bug. Thanks to Rodrigo Santibáñez an active member in the PySB community helped us with the debugging and further pointed us to the Kappa package.
+Due to time constraint we choose to not use the `Expression` feature in PySB, instead we try to control the parameter values outside the model to represent the model behaviour at different temperatures.
 
-## Conclusion
-
-## Future direction
-
-## Evalation and advice to future teams
-
-Initially we attempted to use Simbiology package of Matlab but found it difficult to collaborate on due to binary file format. Therefore, we reimplement our baseline model using PySB package where we find it easier to collaborate.
+## Evaluation and advice to future teams
+ 
+Initially we attempted to use the Simbiology package of Matlab but found it difficult to collaborate on due to binary file format. Therefore, we reimplement our baseline model using the PySB package where we find it easier to collaborate. PySB has a fantastic community([PySB Gitter](https://gitter.im/pysb/pysb)) for support where you can have your questions resolved.
 
 
 (Link to code)[code.zip]
