@@ -292,6 +292,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/7/7c/T--UNSW_Australia--images--homepage--bleached-coral-retro.png
     md5: 91e9fd9aa7d611f1622f934cbe36ef8e
     upload_filename: T--UNSW_Australia--images--homepage--bleached-coral-retro.png
+  assets/images/homepage/gbr.jpg:
+    link_URL: https://2020.igem.org/wiki/images/0/0e/T--UNSW_Australia--images--homepage--gbr.jpg
+    md5: 99f396ebfca33ad2a6b89b084d93f4d3
+    upload_filename: T--UNSW_Australia--images--homepage--gbr.jpg
   assets/images/homepage/team.jpg:
     link_URL: https://2020.igem.org/wiki/images/b/b4/T--UNSW_Australia--images--homepage--team.jpg
     md5: 6a97b8d28a6e99798bb37efc05643f7e
@@ -419,7 +423,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 28f0b8a0decb67815fa64680ea33c965
+    md5: d6fb9d553ff1cdade2ecfef1e8217042
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -438,7 +442,7 @@ html:
     md5: c4f008684f88202c9504633228009ef4
   Description/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Description
-    md5: 463a8ee12d6dd308e9739b963204abd6
+    md5: 03ec04553e1be78c74da0b62e3c8a3bd
   Design/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Design
     md5: 8a3a227faa2fadd975db2a270d9fc164
@@ -453,13 +457,13 @@ html:
     md5: 7d94811a6f935d853b4403d3383fd705
   Education/Interview/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Interview
-    md5: c63e1b4632a283f9893e1e0a0c77a7c9
+    md5: 479b51c177263bf00670a2341739ef25
   Education/Talk/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Talk
     md5: 8de4d3d1ce5b3f79671032604d3722b8
   Education/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education
-    md5: de6510b4f70af587215890c483c1d0be
+    md5: 71de162af7f658512434c629e8cae3c5
   Engineering/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Engineering
     md5: 15b68e3690fcf570b1bab4d3bbe4f533
@@ -498,13 +502,13 @@ html:
     md5: c203b422321cf19f434aac4de3e68415
   Software/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Software
-    md5: a0b9ed2e1db27027bc48829314da3abf
+    md5: eb3169f9f178070632f39079b5f98bff
   Stakeholders/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Stakeholders
     md5: 17540df6fb2900eb73871f8ada84106c
   Team/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Team
-    md5: 5250c028e50a193658450f4b67feaa62
+    md5: be51ef6402eeefc2d87dea3a2ea287d7
   Team1/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Team1
     md5: 0e1102367558a248234cf4a8e10036aa
@@ -561,7 +565,7 @@ html:
     md5: 9c9e69609dcf9da7400c69ad6bc8f9f4
   index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia
-    md5: 0b58a0f13790e57dbe7352f0a77fdf19
+    md5: 743c9b8c784bfaa71bd72e62e12dce3c
   sHSPs/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/sHSPs
     md5: e7baaf416328765656fd9b31d5c06828
