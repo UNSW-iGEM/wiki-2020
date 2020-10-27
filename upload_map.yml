@@ -543,6 +543,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/c/c8/T--UNSW_Australia--images--model--12_mer_colourful_image.png
     md5: a84c8cda395467752ca502bbc972aea1
     upload_filename: T--UNSW_Australia--images--model--12_mer_colourful_image.png
+  assets/images/model/Convergence_Diagram.png:
+    link_URL: https://2020.igem.org/wiki/images/6/64/T--UNSW_Australia--images--model--Convergence_Diagram.png
+    md5: 6db09f6c4cec42857564c9de6a7d3391
+    upload_filename: T--UNSW_Australia--images--model--Convergence_Diagram.png
   assets/images/model/HSP22E_itasser.png:
     link_URL: https://2020.igem.org/wiki/images/7/73/T--UNSW_Australia--images--model--HSP22E_itasser.png
     md5: 6873071a89292339e93a04a5dc6e9a25
@@ -559,6 +563,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/8/86/T--UNSW_Australia--images--model--HSP22F_postmd_molprobity.png
     md5: ac9b40a5351cb1facb3c92d96d3d0694
     upload_filename: T--UNSW_Australia--images--model--HSP22F_postmd_molprobity.png
+  assets/images/model/Protein_Friend_ Animation.gif:
+    link_URL: https://2020.igem.org/wiki/images/8/89/T--UNSW_Australia--images--model--Protein_Friend_Animation.gif
+    md5: d3c098ddc5bae65567861cc2f48cf293
+    upload_filename: T--UNSW_Australia--images--model--Protein_Friend_ Animation.gif
   assets/images/model/blank_graph.png:
     link_URL: https://2020.igem.org/wiki/images/5/59/T--UNSW_Australia--images--model--blank_graph.png
     md5: 5022c8f8af327b457b2afac927c1d677
@@ -571,10 +579,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/4/42/T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.png
     md5: 240be2abc7a76ce5bb125d0105c14c8c
     upload_filename: T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.png
+  assets/images/model/dimer_RMSD_ba_core_nojump_cent_fit.png:
+    link_URL: https://2020.igem.org/wiki/images/2/24/T--UNSW_Australia--images--model--dimer_RMSD_ba_core_nojump_cent_fit.png
+    md5: 2175797b4e25fd364bc98484d758dbe4
+    upload_filename: T--UNSW_Australia--images--model--dimer_RMSD_ba_core_nojump_cent_fit.png
   assets/images/model/dimer_all_same_colour.gif:
     link_URL: https://2020.igem.org/wiki/images/b/bc/T--UNSW_Australia--images--model--dimer_all_same_colour.gif
     md5: acfd5b6ba01c07df6abb06fffc3f2e14
     upload_filename: T--UNSW_Australia--images--model--dimer_all_same_colour.gif
+  assets/images/model/dimer_gyrate_ba_core_nojump_cent_fit.png:
+    link_URL: https://2020.igem.org/wiki/images/2/22/T--UNSW_Australia--images--model--dimer_gyrate_ba_core_nojump_cent_fit.png
+    md5: b285caeb2be37270cf5999eac11e9eff
+    upload_filename: T--UNSW_Australia--images--model--dimer_gyrate_ba_core_nojump_cent_fit.png
   assets/images/model/dimer_monomers_coloured.gif:
     link_URL: https://2020.igem.org/wiki/images/7/79/T--UNSW_Australia--images--model--dimer_monomers_coloured.gif
     md5: fcc166edf5d7409b5cc63be5fa08220f
@@ -789,7 +805,7 @@ html:
     md5: bda8981974a5b4c04cfa3f9639152f41
   Model/structural/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/structural
-    md5: 3befd513d1e1f2c3c524b6ab92e54980
+    md5: 4dfd9f1f474a82cd9549f8693823bd73
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Notebook
     md5: 305f437cea953c34aa29b70e09aa83b8
@@ -801,7 +817,7 @@ html:
     md5: c203b422321cf19f434aac4de3e68415
   Software/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Software
-    md5: 971887e3662aeb6f7be3b1adcd8d78de
+    md5: 08001ae9c9a1885baa5eca8f95238253
   Stakeholders/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Stakeholders
     md5: 17540df6fb2900eb73871f8ada84106c
