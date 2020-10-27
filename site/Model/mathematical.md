@@ -9,61 +9,82 @@ image: zelun
 {% include mathjax.html %}
 
 ## Why mathematical modelling
-
-Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is nigh impossible to work with, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We hope this model was able to facilitate our understanding of how HSP22E, HSP22F and Glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
+ 
+Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is hard to engineer, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We believe this model was able to facilitate our understanding of how HSP22E, HSP22F and glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
 
 <!-- We choose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution. -->
 
 ## Aim
-The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to figure out the optimal condition for a cell to trigger the thermal protective response we designed for the cell.
+ 
+The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to determine the optimal conditions for a cell to trigger the thermal protective response that  we designed for the cell.
+
 
 ## Implementation
-Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of a mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (cite) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
+ 
+Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of a mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (1) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
 
 ### Computational Language and tool
-From the original paper, the model was written base on the SBML(System Biology Markup Language) which is a language developed specifically for system biology base on XML(cite The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core
-). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(cite the pysb paper). We found this python package very user-friendly while at the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that the PySB model is written in a domain-specific language that somewhat abuses python normal style.
+From the original paper, the model was written base on the SBML(System Biology Markup Language) which is a language developed specifically for system biology base on XML(4). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(3). We found this python package very user-friendly while at the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that the PySB model is written in a domain-specific language that somewhat abuses python normal style.
 
 ### Base of the Model
-1. The base of the model was inspired by a model from the *Modelling the actions of chaperones and their role in ageing*(**Citation Here**), where we adopted most of their models with a few modifications added.
+1. The base of the model was inspired by a model which modelled the activity of charperone in aging(1), where we adopted most of their models with a few modifications added.
 2. We omitted the dimerization of the protein in our process since it does not contribute much to the effectiveness of the holding activity in the model while at the same time increasing the complexity of the model.
 3. HSP22E/F will only perform their function while in the mitochondria/chloroplast(this is a simplification of the model)
+---
 In the section below HSP22E/F will be referred to as shSP for simplicity purpose.
 
 
 ### Assumption of the model
-Part of the table were a replicate of the paper(cite) with slight modifications.
+Part of the table were a replicate of the paper(1) with slight modifications.
 - These are parameter under the normal state, the parameter change with respect to temperature change will be specify in the below section.
+![Protein schematic](/assets/images/Model/Protein_Section.png)
+![expression schematic](/assets/images/Model/expression_control.png)
+
+
 ---
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
-| Protein Synthesis| \\(\ce{\varnothing ->[k_{1}] NatP}\\) | \\(k_{1}\\) | \\(10.0\\) | this should be a normal value
-| Misfolding| \\(\ce{NatP + ROS ->[k_{2}] MisP + ROS}\\) | \\(k_{2}\\) | \\(0.00002\\) | Ratio of native:misfolded proteins is 19:1 under normal conditions
-| Binding and dissociation of misfoldedprotein with Hsp90| \\(\ce{MisP + {Hsp\{90}} <=>[k_{3}][k_{4}] MCom}\\) | \\(k_{3}, k_{4}\\)| \\(50.0\\) | The binding affinity of misfolded protein to Hsp90 isless than that of HSF1.The rate of unsuccessful refolding is low compared to refolding under normal conditions
-| Protein Refolding| \\(\ce{MisP + ATP ->[k_{5}] NatP + Hsp\{90}+ADP}\\) | \\(k_{5}\\) | \\(4.0\times 10^{-6}\\)| Rapid reaction when bound to Hsp90
-| Protein degradations|  \\(\ce{Proteins + ATP ->[k_{6}] ADP}\\) | \\(k_{6}\\) | \\(6.0\times 10^{-7}\\) | Half-life of 6–7days
-| Protein aggregation| \\(\ce{2MisP ->[k_{7}] AggP}\\) | \\(k_{7}\\) | \\(1.0\times 10^{-7}\\) | This is a slow reaction unless high levels of misfolded protein
-| Binding of HSF1 and HSP90 and dissociation| \\(\ce{Hsp\{90} +HSF\{1} <=>[k_{8}][k_{9}] HCom}\\) | \\(k_{8}, k_{9}\\) | \\(500, 1.0\\) | The affinity of HSF1for Hsp90 is 10 timesstronger than that of misfolded proteins. Under normal conditions most of HSF1 is complexed to Hsp90
-| Dimerisation of HSF1 and dissociation| \\(\ce{2HSF\{1} <=>[k_{10}][k_{13}] DiH}\\) | \\(k_{10}, k_{13}\\) | \\(0.01, 0.5\\) | This reaction is rapid only when levels of unbound HSF1 are high. \\(k_{13}\\) This is a slow reaction
-| Trimerisation of HSF1 and dissociation| \\(\ce{DiH + HSF\{1} <=>[k_{11}][k_{12}] TriH}\\) | \\(k_{11}, k_{12}\\) | \\(100 , 0.5\\) | This is a fast reaction once dimers are formed. This is a slow reaction
-| Binding of HSE andHSF1-trimers and dissociation| \\(\ce{TriH + HSE <=>[k_{14}][k_{15}] HSETriH}\\) | \\(k_{14}, k_{15}\\)| \\(0.05\\) | This reaction only proceeds when trimers are available. If all HSF1 forms trimers, the ratio of the forward to reverse reaction is about 1000:1
-| Hsp90 transcription & translation| \\(\ce{HSETriH ->[k_{16}] HSETriH + Hsp\{90}}\\) | \\(k_{16}\\)| \\(1000.0\\) | This is fast when HSE is bound
-| Hsp90 degradation | \\(\ce{Hsp\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)| Half-life of 1 day
-| ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | \\(12.0, 0.02\\) | Assume that ratio of ATP:ADP is 10:1 under normal conditions
+| Protein Synthesis| \\(\ce{\varnothing ->[k_{1}] NatP}\\) | \\(k_{1}\\) | \\(10.0\\) | Half-life of 6–7days(1)
+| Misfolding| \\(\ce{NatP + ROS ->[k_{2}] MisP + ROS}\\) | \\(k_{2}\\) | \\(0.00002\\) | Ratio of native:misfolded proteins is 19:1 under normal conditions(1) 
+| Binding and dissociation of misfoldedprotein with Hsp90| \\(\ce{MisP + {Hsp\{90}} <=>[k_{3}][k_{4}] MCom}\\) | \\(k_{3}, k_{4}\\)| \\(50.0\\) | The binding affinity of misfolded protein to Hsp90 isless than that of HSF1. The rate of unsuccessful refolding is low compared to refolding under normal conditions(1)
+| Protein Refolding| \\(\ce{MisP + ATP ->[k_{5}] NatP + Hsp\{90}+ADP}\\) | \\(k_{5}\\) | \\(4.0\times 10^{-6}\\)| Rapid reaction when bound to Hsp90 if ATP levels are high.(1)
+| Protein degradations|  \\(\ce{Proteins + ATP ->[k_{6}] ADP}\\) | \\(k_{6}\\) | \\(6.0\times 10^{-7}\\) | Half-life of 6–7days(1)
+| Protein aggregation| \\(\ce{2MisP ->[k_{7}] AggP}\\) | \\(k_{7}\\) | \\(1.0\times 10^{-7}\\) | This is a slow reaction unless high levels of misfolded protein(1)
+| Binding of HSF1 and HSP90 and dissociation| \\(\ce{Hsp\{90} +HSF\{1} <=>[k_{8}][k_{9}] HCom}\\) | \\(k_{8}, k_{9}\\) | \\(500, 1.0\\) | The affinity of HSF1for Hsp90 is 10 times stronger than that of misfolded proteins. Under normal conditions most of HSF1 is complexed to Hsp90(1)
+| Dimerisation of HSF1 and dissociation| \\(\ce{2HSF\{1} <=>[k_{10}][k_{13}] DiH}\\) | \\(k_{10}, k_{13}\\) | \\(0.01, 0.5\\) | This reaction is rapid only when levels of unbound HSF1 are high. \\(k_{13}\\) represents a slow reaction(1)
+| Trimerisation of HSF1 and dissociation| \\(\ce{DiH + HSF\{1} <=>[k_{11}][k_{12}] TriH}\\) | \\(k_{11}, k_{12}\\) | \\(100 , 0.5\\) | This is a fast reaction once dimers are formed. This is a slow reaction(1)
+| Binding of HSE andHSF1-trimers and dissociation| \\(\ce{TriH + HSE <=>[k_{14}][k_{15}] HSETriH}\\) | \\(k_{14}, k_{15}\\)| \\(0.05\\) | This reaction only proceeds when trimers are available. If all HSF1 forms trimers, the ratio of the forward to reverse reaction is about 1000:1(1)
+| Hsp90 transcription & translation| \\(\ce{HSETriH ->[k_{16}] HSETriH + Hsp\{90}}\\) | \\(k_{16}\\)| \\(1000.0\\) | This is fast when HSE is bound(1)
+| Hsp90 degradation | \\(\ce{Hsp\{90} + ATP ->[k_{17}] ADP}\\) | \\(k_{17}\\) | \\(8.02\times 10^{-9}\\)| Half-life of 1 day(1)
+| ATP formation and expenditure | \\(\ce{ADP <=>[k_{18}][k_{19}] ADP}\\) |  \\(k_{18}, k_{19}\\) | \\(12.0, 0.02\\) | Assume that ratio of ATP:ADP is 10:1 under normal conditions(1)
 | ROS production and base removal | \\(\ce{\varnothing <=>[k_{20}][k_{21}] ROS}\\) | \\(k_{20}, k_{21}\\) | \\(1, 0.001\\) | Assume constant production level of ROS
 | ROS reduction | \\(\ce{ROS + Reduced Glutathione ->[k_{22}] Oxidised Glutathione}\\) |  \\(k_{22}\\) | \\(20.0\\) | Assuming this is a fast reaction
 | Glutathione reduction | \\(\ce{Oxidised Glutathione ->[k_{34}] Reduced Glutathione}\\) | \\(k_{34}\\) | \\(0.1\\) | Assuming this is related to the Glutathione concentration
 | sHSP binding | \\(\ce{MitosHsp + MisP <=>[k_{23}][k_{36}] MisPsHsp}\\) | \\(k_{23}, k_{36}\\) | \\(50.0, 0.2\\) |  the rate of unsuccessful binding is low compared to binding
-| sHSP fail to hold | \\(\ce{MitosHsp + MisP <=>[k_{23}][k_{36}] MisPsHsp}\\) | \\(k_{24}\\) | \\(1.0\\) | *Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii*
+| sHSP fail to hold | \\(\ce{MitosHsp + MisP <=>[k_{23}][k_{36}] MisPsHsp}\\) | \\(k_{24}\\) | \\(1.0\\) | sHSP can be found in large protein aggregates(2)
 | HSP90 binding on MisPsHSP | \\(\ce{Hsp\{90} + MisPsHsp <=>[k_{25}][k_{26}] HspMisPsHsp}\\) | \\(k_{25}, k_{26}\\) |\\(50.0, 5.0\\) | the rate of unsuccessful binding is low compared to binding
 | Refolding with sHSP | \\(\ce{HspMisPsHsp + ATP ->[k_{27}] Hsp\{90} + MisP + sHsp + ADP}\\) | \\(k_{27}\\) | \\(10.0\\) | relatively slow since it needs energy(Double check this assumption)
 | Activation of ROS by OxyR | \\(\ce{inactivate OxyR + ROS ->[k_{28}] active OxyR + ROS}\\) | \\(k_{28}\\) | \\(20.0\\) | Relatively fast process since it need to respond relatively fast
 | Active OxyR binding DNA | \\(\ce{activate OxyR + sHspGlu <=>[k_{32}][k_{33}] OxyRsHspGlu}\\) | \\(k_{32}, k_{33}\\) | \\(20.0, 5.0\\) | the rate of unsuccessful binding is low compared to binding(Think about how to represent that part of the DNA)
-| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate
-| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer
+| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate 
+| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer 
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
 | Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
-The ODEs are omitted to save up the space.
+
+|Species | initial value (number of molecules)
+|---|---|
+| Native protein| 6000000 | 
+| Hsp90–HSF1 complex| 5900
+| Hsp90 | 300000
+| HSF1 | 100
+| ROS | 100
+| ATP | 10000
+| ADP | 1000
+| HSE | 1
+| sHSP| 200
+| Glutathione | 100
+| sHSPGluE | 1
+| OxyR | 10
 
 ## Result and Analysis
 
@@ -90,7 +111,7 @@ This group of graph is the comparision of the baseline condition under different
 *graph output under higher temp with the baseline model* -->
 
 
-After comparing the baseline model at different temprature, we want to see how the model with sHSP and Glutathione behave which we will be refering as the add on model.
+After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referencing as the sHSP with Glutathione model afterwards.
 
 {{ '/assets/images/Model/AddOn_model_TEMP0.png#graph_output_under_nomral_temperature_with_the_add_on_model /assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_the_add_on_model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
@@ -98,21 +119,20 @@ After comparing the baseline model at different temprature, we want to see how t
 
 As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in the add on model is delepting at a significantly lower rate than the Natural Protein in the baseline model.
 
-The above comparison showed a promising result, however it is still unclean whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, a plot of the model with only sHSP or Glutathione is plotted below.
-
+The above comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
 ![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
 ![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png)
-From the graph, we can conclude that Glutathione is the main helper, which is expected since its main function is to reduce the ROS level inside the cell which is known as the main cause of protein misfolding.
+From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which is the main cause of protein misfolding.
 
-After knowning that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione prior to the actual ROS level surge would be helpful for the cell to increase its survivability.
+After knowing that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione before the actual ROS level surge would be helpful for the cell to increase its survivability.
 ![Without Glutathione frontload at higher temp](/assets/images/Model/AddOn_model_TEMP1.png)
 ![With Glutathione frontload at higher temp](/assets/images/Model/Glut_FrontLoad_model_TEMP1.png)
-Seems like it is a no to this answer, because even with a small amount of Glutahione the ROS level is already maintained at a considerable low status.
+The graph above suggested that 10 times initial frontloading of the Glutathione is not improving the state of cell further. This is largely due to the setting of the model, where a small amount of Glutathione is sufficient to oppress the ROS level inside the cell.
 
 
 ## Discussion
 Overall, our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know that this is a feasible solution to combat cellular heat stress for Symbiodinium cells. Moreover, we figured out that Glutathione is the major force in lifting the cell from extreme thermality.
-However, on a more negative note that most of the value of the parameter is chosen at our best guess since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
+However, on a more negative note that most of the value of the parameter is chosen at our best estimation since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
 Additionally, we would like to perform a sensitivity analysis in the future to further evaluate the robustness of our model and how it responds to various parameter tweaking.
 
 ### Limitations
