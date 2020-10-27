@@ -73,7 +73,7 @@ The details of the reaction and parameter values in the diagram above are specif
 | sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | This is a fast reaction when OxyR binds to it
 | sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | This is a fast reaction
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | This is a fast reaction when OxyR binds to it
-| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) |  
+| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) |
 This is a relatively fast reaction
 |Species | initial value (number of molecules)
 |---|---|
@@ -145,7 +145,7 @@ Overall, our mathematical modelling shed some insights into how our PROTECC cora
 However, on a more negative note that most of the value of the parameter is chosen at our best estimation since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
 Additionally, we would like to perform a sensitivity analysis in the future to evaluate further the robustness of our model and how it responds to various parameter tweaking.
 
-### Limitations and difficulties 
+### Limitations and difficulties
 We experienced some technical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package where it seems to have some bug. Thanks to Rodrigo Santibáñez an active member in the PySB community helped us with the debugging and further pointed us to the Kappa package.
 Due to time constraint we choose to not use the `Expression` feature in PySB, instead we try to control the parameter values outside the model to represent the model behaviour at different temperatures.
 
