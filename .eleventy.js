@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("sideBySide", function(values) {
         console.log(values);
         buffer = '<div class="side-by-side">';
-        for (part of values.split(' ')) {
+        for (part of values.split('SPLIT')) {
             caption = '';
             if (part.includes("#")) {
                 [link, caption] = part.split('#');

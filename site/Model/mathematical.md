@@ -9,18 +9,18 @@ image: zelun
 {% include mathjax.html %}
 
 ## Why mathematical modelling
- 
+
 Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is hard to engineer, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We believe this model was able to facilitate our understanding of how HSP22E, HSP22F and glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
 
 <!-- We choose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution. -->
 
 ## Aim
- 
+
 The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to determine the optimal conditions for a cell to trigger the thermal protective response that  we designed for the cell.
 
 
 ## Implementation
- 
+
 Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of a mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (1) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
 
 ### Computational Language and tool
@@ -45,7 +45,7 @@ Part of the table were a replicate of the paper(1) with slight modifications.
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
 | Protein Synthesis| \\(\ce{\varnothing ->[k_{1}] NatP}\\) | \\(k_{1}\\) | \\(10.0\\) | Half-life of 6–7days(1)
-| Misfolding| \\(\ce{NatP + ROS ->[k_{2}] MisP + ROS}\\) | \\(k_{2}\\) | \\(0.00002\\) | Ratio of native:misfolded proteins is 19:1 under normal conditions(1) 
+| Misfolding| \\(\ce{NatP + ROS ->[k_{2}] MisP + ROS}\\) | \\(k_{2}\\) | \\(0.00002\\) | Ratio of native:misfolded proteins is 19:1 under normal conditions(1)
 | Binding and dissociation of misfoldedprotein with Hsp90| \\(\ce{MisP + {Hsp\{90}} <=>[k_{3}][k_{4}] MCom}\\) | \\(k_{3}, k_{4}\\)| \\(50.0\\) | The binding affinity of misfolded protein to Hsp90 isless than that of HSF1. The rate of unsuccessful refolding is low compared to refolding under normal conditions(1)
 | Protein Refolding| \\(\ce{MisP + ATP ->[k_{5}] NatP + Hsp\{90}+ADP}\\) | \\(k_{5}\\) | \\(4.0\times 10^{-6}\\)| Rapid reaction when bound to Hsp90 if ATP levels are high.(1)
 | Protein degradations|  \\(\ce{Proteins + ATP ->[k_{6}] ADP}\\) | \\(k_{6}\\) | \\(6.0\times 10^{-7}\\) | Half-life of 6–7days(1)
@@ -66,14 +66,14 @@ Part of the table were a replicate of the paper(1) with slight modifications.
 | Refolding with sHSP | \\(\ce{HspMisPsHsp + ATP ->[k_{27}] Hsp\{90} + MisP + sHsp + ADP}\\) | \\(k_{27}\\) | \\(10.0\\) | relatively slow since it needs energy(Double check this assumption)
 | Activation of ROS by OxyR | \\(\ce{inactivate OxyR + ROS ->[k_{28}] active OxyR + ROS}\\) | \\(k_{28}\\) | \\(20.0\\) | Relatively fast process since it need to respond relatively fast
 | Active OxyR binding DNA | \\(\ce{activate OxyR + sHspGlu <=>[k_{32}][k_{33}] OxyRsHspGlu}\\) | \\(k_{32}, k_{33}\\) | \\(20.0, 5.0\\) | the rate of unsuccessful binding is low compared to binding(Think about how to represent that part of the DNA)
-| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate 
-| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer 
+| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate
+| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
 | Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
 
 |Species | initial value (number of molecules)
 |---|---|
-| Native protein| 6000000 | 
+| Native protein| 6000000 |
 | Hsp90–HSF1 complex| 5900
 | Hsp90 | 300000
 | HSF1 | 100
@@ -101,10 +101,10 @@ Moreover, we realized the model would deviate from the expected output if we ass
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
 
-{{ '/assets/images/Model/Baseline_model_TEMP00.png#graph_output_under_nomral_temperature_with_the_baseline_model /assets/images/Model/Baseline_model_TEMP1.png#graph_output_under_higher_temperature_with_the_baseline_model' | sideBySide }}
+{{ '/assets/images/Model/Baseline_model_TEMP00.png#graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#graph output under higher temperature with the baseline model' | sideBySide }}
 
 This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
-<!-- 
+<!--
 ![Baseline Model](/assets/images/Model/Baseline_model_TEMP00.png)
 *This is the caption, graph output under nomral condition with the baseline model*
 ![Baseline Model at Higher temp](/assets/images/Model/Baseline_model_TEMP1.png)
@@ -113,7 +113,7 @@ This group of graph is the comparision of the baseline condition under different
 
 After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referencing as the sHSP with Glutathione model afterwards.
 
-{{ '/assets/images/Model/AddOn_model_TEMP0.png#graph_output_under_nomral_temperature_with_the_add_on_model /assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_the_add_on_model' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#graph output under nomral temperature with the add on modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#graph output under high temperature with the add on model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
 <!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
 
