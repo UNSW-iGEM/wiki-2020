@@ -170,6 +170,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/2/24/T--UNSW_Australia--images--IDT-logo.png
     md5: f11e54d837292c85872a78c9ddb7f11e
     upload_filename: T--UNSW_Australia--images--IDT-logo.png
+  assets/images/Implementation/Kill Switch.png:
+    link_URL: https://2020.igem.org/wiki/images/7/7f/T--UNSW_Australia--images--Implementation--Kill_Switch.png
+    md5: cf73567e3a7d33b692bb34aac2a0e331
+    upload_filename: T--UNSW_Australia--images--Implementation--Kill Switch.png
   assets/images/Medals/Bronze Medal.svg:
     link_URL: https://2020.igem.org/wiki/images/5/59/T--UNSW_Australia--images--Medals--Bronze_Medal.svg
     md5: 7d4f218c0f9b778020a72ddccd25fe92
@@ -516,7 +520,7 @@ html:
     md5: 5ace424e7aa3c2065eea739450ebba3c
   Implementation/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Implementation
-    md5: 5ac033cce24f8e3029fe8f02182dba0c
+    md5: 40d23b42b6b498dc76d7e5e486a46420
   Medals/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Medals
     md5: 2bb8b6abcb0828e835fc60c6ea40e944
