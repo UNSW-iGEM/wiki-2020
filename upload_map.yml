@@ -426,6 +426,90 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/9/94/T--UNSW_Australia--images--hp-overview--traditional-owners.jpg
     md5: 7273b4b13a8a4676c7eac61f14139d57
     upload_filename: T--UNSW_Australia--images--hp-overview--traditional-owners.jpg
+  assets/images/model/HSP22E_itasser.png:
+    link_URL: https://2020.igem.org/wiki/images/7/73/T--UNSW_Australia--images--model--HSP22E_itasser.png
+    md5: 6873071a89292339e93a04a5dc6e9a25
+    upload_filename: T--UNSW_Australia--images--model--HSP22E_itasser.png
+  assets/images/model/HSP22E_postmd_molprobity.png:
+    link_URL: https://2020.igem.org/wiki/images/e/e5/T--UNSW_Australia--images--model--HSP22E_postmd_molprobity.png
+    md5: 9ee3e8509f40c270e717b931f4b1456e
+    upload_filename: T--UNSW_Australia--images--model--HSP22E_postmd_molprobity.png
+  assets/images/model/HSP22F_itasser.png:
+    link_URL: https://2020.igem.org/wiki/images/6/6c/T--UNSW_Australia--images--model--HSP22F_itasser.png
+    md5: 51672249d3e8569fa3e47ee0f3376f2c
+    upload_filename: T--UNSW_Australia--images--model--HSP22F_itasser.png
+  assets/images/model/HSP22F_postmd_molprobity.png:
+    link_URL: https://2020.igem.org/wiki/images/8/86/T--UNSW_Australia--images--model--HSP22F_postmd_molprobity.png
+    md5: ac9b40a5351cb1facb3c92d96d3d0694
+    upload_filename: T--UNSW_Australia--images--model--HSP22F_postmd_molprobity.png
+  assets/images/model/blank_graph.png:
+    link_URL: https://2020.igem.org/wiki/images/5/59/T--UNSW_Australia--images--model--blank_graph.png
+    md5: 5022c8f8af327b457b2afac927c1d677
+    upload_filename: T--UNSW_Australia--images--model--blank_graph.png
+  assets/images/model/cluspro_dimer_aligned_1gme.gif:
+    link_URL: https://2020.igem.org/wiki/images/6/62/T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.gif
+    md5: 51b8f10e71adaa41e0f61d21ae89f203
+    upload_filename: T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.gif
+  assets/images/model/cluspro_dimer_aligned_1gme.png:
+    link_URL: https://2020.igem.org/wiki/images/4/42/T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.png
+    md5: 240be2abc7a76ce5bb125d0105c14c8c
+    upload_filename: T--UNSW_Australia--images--model--cluspro_dimer_aligned_1gme.png
+  assets/images/model/dimer_all_same_colour.gif:
+    link_URL: https://2020.igem.org/wiki/images/b/bc/T--UNSW_Australia--images--model--dimer_all_same_colour.gif
+    md5: acfd5b6ba01c07df6abb06fffc3f2e14
+    upload_filename: T--UNSW_Australia--images--model--dimer_all_same_colour.gif
+  assets/images/model/dimer_monomers_coloured.gif:
+    link_URL: https://2020.igem.org/wiki/images/7/79/T--UNSW_Australia--images--model--dimer_monomers_coloured.gif
+    md5: fcc166edf5d7409b5cc63be5fa08220f
+    upload_filename: T--UNSW_Australia--images--model--dimer_monomers_coloured.gif
+  assets/images/model/dimer_superimposition.gif:
+    link_URL: https://2020.igem.org/wiki/images/1/15/T--UNSW_Australia--images--model--dimer_superimposition.gif
+    md5: 8f876bccbcb7735c99dfb537dfa9f2da
+    upload_filename: T--UNSW_Australia--images--model--dimer_superimposition.gif
+  assets/images/model/modeller_dimer.gif:
+    link_URL: https://2020.igem.org/wiki/images/f/f4/T--UNSW_Australia--images--model--modeller_dimer.gif
+    md5: 1a2c3373183d20202f1d2922b2379ef5
+    upload_filename: T--UNSW_Australia--images--model--modeller_dimer.gif
+  assets/images/model/modeller_dimer_aligned_1gme.gif:
+    link_URL: https://2020.igem.org/wiki/images/6/6b/T--UNSW_Australia--images--model--modeller_dimer_aligned_1gme.gif
+    md5: 22121371feef531276a6a7174cc069bc
+    upload_filename: T--UNSW_Australia--images--model--modeller_dimer_aligned_1gme.gif
+  assets/images/model/modeller_dimer_close_segments.gif:
+    link_URL: https://2020.igem.org/wiki/images/6/66/T--UNSW_Australia--images--model--modeller_dimer_close_segments.gif
+    md5: 9424d6f15e0e71827a485d9864db7256
+    upload_filename: T--UNSW_Australia--images--model--modeller_dimer_close_segments.gif
+  assets/images/model/rsz_12_mer_colourful_image.png:
+    link_URL: https://2020.igem.org/wiki/images/7/78/T--UNSW_Australia--images--model--rsz_12_mer_colourful_image.png
+    md5: c5644677f10db549d8fc25543d6dbb93
+    upload_filename: T--UNSW_Australia--images--model--rsz_12_mer_colourful_image.png
+  assets/images/model/sHSP22E_molprobity_prefinement.png:
+    link_URL: https://2020.igem.org/wiki/images/0/0b/T--UNSW_Australia--images--model--sHSP22E_molprobity_prefinement.png
+    md5: 5d29ff86aad49481651b19604c8c1ba9
+    upload_filename: T--UNSW_Australia--images--model--sHSP22E_molprobity_prefinement.png
+  assets/images/model/sHSP22E_refine_molprobity.png:
+    link_URL: https://2020.igem.org/wiki/images/3/37/T--UNSW_Australia--images--model--sHSP22E_refine_molprobity.png
+    md5: 5d6bac94e5705a99fea5f1a50ab83105
+    upload_filename: T--UNSW_Australia--images--model--sHSP22E_refine_molprobity.png
+  assets/images/model/sHSP22E_refine_stats.png:
+    link_URL: https://2020.igem.org/wiki/images/5/52/T--UNSW_Australia--images--model--sHSP22E_refine_stats.png
+    md5: 5825e75f86c8d8eab51d556b451a2c1a
+    upload_filename: T--UNSW_Australia--images--model--sHSP22E_refine_stats.png
+  assets/images/model/sHSP22F_molprobity_prerefinement.png:
+    link_URL: https://2020.igem.org/wiki/images/6/60/T--UNSW_Australia--images--model--sHSP22F_molprobity_prerefinement.png
+    md5: 6698c32d4eedc587f05f8b62e08d467c
+    upload_filename: T--UNSW_Australia--images--model--sHSP22F_molprobity_prerefinement.png
+  assets/images/model/sHSP22F_refine_molprobity.png:
+    link_URL: https://2020.igem.org/wiki/images/7/7f/T--UNSW_Australia--images--model--sHSP22F_refine_molprobity.png
+    md5: f70d37979b3113fa76622bd715f98522
+    upload_filename: T--UNSW_Australia--images--model--sHSP22F_refine_molprobity.png
+  assets/images/model/sHSP22F_refine_stats.png:
+    link_URL: https://2020.igem.org/wiki/images/e/e0/T--UNSW_Australia--images--model--sHSP22F_refine_stats.png
+    md5: fc4b2dedb2af0dbfc54475225d62f5c7
+    upload_filename: T--UNSW_Australia--images--model--sHSP22F_refine_stats.png
+  assets/images/model/structural_modelling_scripts.zip:
+    link_URL: https://2020.igem.org/wiki/images/5/5e/T--UNSW_Australia--images--model--structural_modelling_scripts.zip
+    md5: d1b61c9c20d67e824e8e152ae58757fa
+    upload_filename: T--UNSW_Australia--images--model--structural_modelling_scripts.zip
   assets/images/rr-logo.png:
     link_URL: https://2020.igem.org/wiki/images/c/cf/T--UNSW_Australia--images--rr-logo.png
     md5: 4e6536e730065d03e07a85e2b1553de7
@@ -521,7 +605,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 6731f3e89ff9cfee59d7d3ed0108b121
+    md5: 39a1b37a042f001b218cb29ceb53f63d
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -582,13 +666,13 @@ html:
     md5: 2bb8b6abcb0828e835fc60c6ea40e944
   Model/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model
-    md5: 439cb8b96a0f47d3f3077255a26d5793
+    md5: dd3e966f54a1f3fa2773873609e4c928
   Model/mathematical/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/mathematical
     md5: aaea1c3472752bd77aeab9793562551b
   Model/structural/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/structural
-    md5: 35cae4f94bcbb01f6e86894fccc4169a
+    md5: 1dc7eb0ce7bca2b7c4864c3d3313dd06
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Notebook
     md5: 0624bc9c8b53468cc407477e0182710e
