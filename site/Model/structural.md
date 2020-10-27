@@ -116,14 +116,13 @@ In [Phase II](/Design#Phase_Two), if the wet lab’s experiments find that the b
 
 Additionally, the team was limited by time and therefore could not create a fully refined HSP22E/F 12-mer model (Figure 17). We simply aligned six of the HSP22E/F dimers onto a 12-mer assembly of 1GME to generate a physically impossible 12-mer configuration. There are obvious clashes between the six different dimers that model needs to be adjusted for. This would most likely require loop remodelling as well as the transposition of each dimer a bit further away from each other in order to let them fall naturally into place through a molecular dynamics simulation.
 
-
-'/assets/images/model/12_mer_colourful.gif#Figure 17: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
-
-
-
+{{
+'/assets/images/model/rsz_12_mer_colourful_image.png#Figure 17: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
+}}
 
 
-## Bibliography
+
+## Reference
 
 1. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 Dec 1;95(6):579–91.
 2. Kubelka J, Hofrichter J, Eaton WA. The protein folding ‘speed limit.’ Curr Opin Struct Biol. 2004 Feb 1;14(1):76–88.
