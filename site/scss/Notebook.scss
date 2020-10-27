@@ -18,6 +18,7 @@ section.notebook div.weeks h1 {
   text-align: center;
   color: white;
   margin: 32px;
+  text-transform: uppercase;
 }
 
 section.notebook ul {
@@ -146,4 +147,9 @@ section.protocols a {
 
 div.protocol-title a {
   color: white;
+}
+
+/*implementation*/ 
+section.notebook img#Kill_Switch{
+  grid-column: 3/span 8;
 }
