@@ -14,7 +14,7 @@ A protein’s structure determines its function. A peptide sequence is composed 
 There are no known heat shock protein structures from *C. reinhardtii* that have been experimentally determined. However, the amino acid sequences of *C. reinhardtii* heat shock proteins are known, specifically - HSP22E, HSP22F and HSP22G - which our team decided to predict the structure of to help with the understanding of their function. These heat shock proteins were chosen as HSP22G was predicted to localise to mitochondria and while HSP22E and HSP22F localised to chloroplasts. (1) After running a blastp (3) search on all of these proteins with the PDB database, (4) it was found that HSP22G had quite low sequence identity of ~25%, insignificant E values and low query coverage with the other known structural PDB hits. In contrast, HSP22E and HSP22F both had higher percentage identities ranging from ~28-50%, significant E values and higher percentage coverage. For this reason, the team changed to predict the structures of HSP22E and HSP22F instead of HSP22G. Even though the hits for HSP22E and HSP22F were better than the hits for HSP22G, they were all very similar and it was hard to definitively select one to be used as a template for homology modelling. A fold recognition and template modelling server, I-TASSER (5–7), was used to create models for HSP22E and HSP22F based on the best templates found by I-TASSER using a threading approach. The highest ranking models for both the HSP22E and HSP22F sequences were chosen as the starting structural models to be further refined and used in future molecular dynamic simulations (Figures 1 and 2). Both the I-TASSER models were based on the same PDB template structure 1GME (8) which is another eukaryotic small heat shock protein that forms a 12-mer complex made up of 6 dimers bound together. Interestingly, the literature on *C. reinhardtii* small heat shock proteins propose that they form dimers and further form larger oligomers ranging from 12 to 32 subunits (1).
 
 {{
-'/assets/images/model/HSP22E_itasser.png#[Figure 1 - the best scoring I-TASSER model for HSP22E]() ![Figure 2 - the best scoring I-TASSER model for HSP22F](HSP22F_itasser.png)'
+'/assets/images/model/HSP22E_itasser.png#Figure 1: the best scoring I-TASSER model for HSP22E SPLIT /assets/images/model/HSP22F_itasser.png#Figure 2: the best scoring I-TASSER model for HSP22F' | sideBySide 
 }}
 
 
@@ -33,6 +33,15 @@ We hope that our exercise in refinement will shed some light on rather opaque me
     - Log-weighted combination of clashscore, percentage Ramachandran not favored and percentage bad side-chain rotamers
     - Lower is better
 
+
+### Pre-refinement MolProbity
+
+{{
+'/assets/images/model/sHSP22E_molprobity_prefinement.png#Figure 3: MolProbity Scoring for prerefinement HSP22E' | sideBySide
+}}
+{{
+'/assets/images/model/sHSP22F_molprobity_prerefinement.png#Figure 4: MolProbity Scoring for prerefinement HSP22F' | sideBySide
+}}
 
 
 
