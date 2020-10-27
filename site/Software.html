@@ -1,5 +1,7 @@
 <section>
     <style>{% include UNSW_Australia/index.css %}</style>
     <script>{% include UNSW_Australia/index.js %}</script>
-    {% include UNSW_Australia/index.html %}
+    {% capture wikimate %}{% include UNSW_Australia/index.html %}{% endcapture %}
+
+    {{ wikimate | betweenBody }}
 </section>
