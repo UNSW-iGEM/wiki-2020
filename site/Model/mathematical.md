@@ -73,8 +73,8 @@ The details of the reaction and parameter values in the diagram above are specif
 | sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | This is a fast reaction when OxyR binds to it
 | sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | This is a fast reaction
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | This is a fast reaction when OxyR binds to it
-| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) |
-This is a relatively fast reaction
+| Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) |    This is a relatively fast reaction
+
 |Species | initial value (number of molecules)
 |---|---|
 | Native protein| 6000000 |

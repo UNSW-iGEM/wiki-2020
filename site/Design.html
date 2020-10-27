@@ -1,13 +1,96 @@
   <section class="notebook">
+    <p>Our project aims to use synthetic biology to engineer thermo-tolerant <i>Symbiodinium</i> coral hosts. This design process for our two-phase project occurred at two levels: Our Solution and Our Project. Our Solution delves into the molecular and biological mechanisms behind bleaching, and defines how we can feasibly target these to protect reefs from rising sea temperatures. In designing our desired approach, we have ensured that it has been carefully considered and founded on sound scientific understanding alongside feedback from experts. Our Project takes the first steps towards achieving our solution. It encompasses the development of the experimental approaches taken to characterise our proposed system. It details what we have achieved this year in Phase I of our projects, and outlines future design for Phase II.</p>
     <div class="weeks">
-      <h1>sHSPs</h1>
+      <h1>Ous Solution</h1>
     </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>Choosing Symbiodinium</h2>
+
+    <p> What is colloquially referred to as Coral is actually an assemblage of the reef-building Coral host and the symbiotic species living in and on it. This coral holobiont is a system of interdependent coral, symbiodinium, bacteria, endolith, archaea and virus species that together result in the natural wonder that are coral reefs. (1) As such, much thought was put into which species of the holobiont would be best to engineer to increase the tolerance of the whole holobiont. For practical reasons, the coral animal was considered too difficult because it would be time consuming to grow and there was no existing research on engineering the coral genome. Similarly, the understanding of the role of specific microbes of the holobiont was still preliminary. (2) The team therefore decided to investigate the Symbiodinium symbiont and found literature on Symbiodinium transformation methods, selective breeding for heat tolerance and transcriptomics from Australian researchers. (3–5) This gave the team confidence that recombinant engineering Symbiodinium could improve thermal tolerance and revealed clear gaps where modelling could contribute new insight. In particular <i>Symbiodinium goreaui</i> was selected as our final chassis due to its abundance in Great Barrier Reef coral. (6)</p>
+
+    <h2>Enzyme level: Glutathione</h2>
+    <p>The molecular cause of coral bleaching originates from the production of reactive oxygen species (ROS) by damaged photosynthetic machinery in the symbiont. The toxic ROS can leach into host coral cells, triggering the ejection of Symbiodinium. The loss of symbiosis means corals are left nutrient deprived and bleached.(7)</p>
+
+    <p>Glutathione (GSH) is a ubiquitous primary antioxidant important for neutralising ROS into less harmful products. It prevents the oxidation of biological molecules by donating available electrons to ROS in its reduced thiol form. (8) Glutathione was chosen as a candidate to neutralise the excess ROS produced within Symbiodinium during thermal stress as it would be able to target the root cause of coral bleaching by preventing expulsion of the microalgae.</p> 
+
+    <p>Our project aimed to create a biosynthetic system upregulating glutathione production. The bifunctional glutathione synthetase (<i>gshF</i>) gene was selected over <i>gshA</i> and <i>gshB</i> genes encoding for glutamate cysteine ligase (GCL) and glutathione synthetase (GS) as our focus enzyme to synthesise GSH. This was due to the fact gshF is not affected by product inhibition, enabling greater concentrations of GSH to be produced. (9) Though initially only one enzyme was selected, review of literature highlighted that when GSH neutralises ROS by donating an electron, it itself becomes a radical. Though this is less harmful to the cell, it is an inefficient system as usable GSH levels can be rapidly diminished. To further increase antioxidant capacity, we proposed to include the enzyme glutathione reductase into our system. This will allow for efficient recycling of oxidised glutathione disulfide (GSSG) into reduced GSH. (9)</p>
+
+    <h2>Chaperone level: small heat shock proteins</h2>
+
+    <p>Small heat shock proteins (sHSP) are protein chaperones that prevent the formation of insoluble protein aggregates through their holdase activity. (10) sHSP are ATP independent and spontaneously binds to the hydrophobic core of denaturing proteins preventing its exposure to the intracellular environment. (10) This prevents the protein from precipitating and aggregating. The non-specific nature of this interaction also allows sHSP to have a high capacity for a variety of substrates. (10) This combined with the increased chaperone refolding activity provided for sHSP makes it an ideal protein to introduce to Symbiodinium in order to prevent thermal denaturation and supplement the glutathione system.</p> 
+
+    <p>sHSP are also known for their role as the “first responders” to misfolding proteins. As ATP-independent chaperones, they are able to halt protein unfolding without taking up cellular resources. This is highly beneficial in the context of oxidative stress as overworked mitochondria attempting to meet cellular energy requirements inadvertently produce more ROS. (11) Furthermore, sHSPs also have the ability to  recruit other ATP dependent chaperones, subsequently increasing chaperone refolding by more than 80%. (12)  Genes for sHSP are upregulated more than 1000 fold when the cell is under thermal stress in comparison to HSP of larger molecular weights e.g. HSP70 which only increases expression by 1.17-1.5 fold.</p>
+
+    <p>sHSPs from the protein family HSP22 in <i>Chlamydomonas reinhardtii (C. reinhardtii)</i> have been chosen due to its holdase activity exceeding temperatures above 42oC. This is well above the sea surface temperatures that cause coral bleaching. In particular, HSP22E and HSP22F are 2 members of the protein family that work together and target proteins in the chloroplast through their transit peptide. HSP22E and 22F were chosen as chloroplasts are a major source of ROS leakage into the cell. HSP22G is another member of the family that have transient peptides that target the mitochondria. However, due to the lack of information of HSP22G from literature and modelling, the team decided to abandon the idea and instead focus on designing transmit peptides specific to Symbiodinium for mitochondria in Phase II. Regardless, it is crucial for enzymes that are involved in neutralisation of ROS such as superoxide dismutase to remain stable under thermal stress.</p>
+
+    <h2>Defining The Solution: Plasmid Design</h2> 
+
+    <p>Both chaperone and enzyme level solutions will be implemented within Symbiodinium through a plasmid system. In Phase I, the focus was on plasmid and methodological design, laying the foundations for experimental work in Phase II.</p> 
+
+    <p>The proposed plasmid construct was designed to express our Parts HSP22E and HSP22F at similar quantities. This was necessary as dimers and higher order complexes formed between HSP22E and HSP22F are hypothesised to confer more efficient holdase activity. (13) The construct is regulated by increased intracellular concentrations of ROS. A constitutive promoter produces the Yap1 transcription factor, found in yeast, which is activated in the presence of peroxides and can attach to a Yap1 inducible promoter such as CCP1 promoter (BBa_K1907005). (14) The CCP1 promoter will be redesigned to form a bidirectional promoter which will allow the assembly of cellular machinery to transcribe both HSP22E and 22F. This new bidirectional promoter will be designed as part of our Phase II project in 2021 and will allow the even expression of both proteins. It’s effectiveness can be tested by the relative expression of the reporter genes cyan fluorescent protein (CFP) and yellow fluorescent protein (YFP) on either side of the promoter. The relative intensity of the colours produced can help inform our design of the new bidirectional promoter and help model the expression of our desired inserts.</p>
+
+    <p>This construct will then be transformed into <i>Synbiodinium goreaui</i>. Literature on this topic indicated a number of methods of transformation. Ranging from biolistics, electroporation, glass beads and angro-bacterium mediated transfer, all methods were attempted with very limited success (15). Our project plan addresses this by employing a fast fail approach. This evaluates multiple methods conducted in combination with another to identify those with most significant results. </p> 
+
+
+    <p>However, since we are initially expressing sHSP in an E. coli chassis, our plasmid design must be modified for a prokaryotic organism. The OxyR transcription factor is the equivalent prokaryotic transcription factor and is activated when intracellular concentrations of H2O2, a type of ROS, rise above 200nM. The OxyR can then bind to the bidirectional promoter AhpCpD1 (Part BBa_K1104206) allowing the assembly of cellular machinery to promote the transcription of both HSP22E and HSP22F.</p> 
 
     <div class="weeks">
-      <h1>Glutathione</h1>
+      <h1>OUR PROJECT</h1>
     </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </section>
+    <h2 id="Phase_One"> Phase I </h2>
+    <p>Due to COVID-19 restrictions, our project decided to solely focus on the less studied component of our system: small heat shock proteins to limit irreversible protein denaturation and aggregation. Both wet and dry lab teams aimed to further characterise these novel molecular chaperones, elucidating key structural, functional and environmental characteristics of HSP22E and HSP22F through integrated modelling and experimental design.  Phase I of our project was developing surrounding this key aim.</p>
+    <h3> Wet Lab </h3>
+    <ul>
+    <li>In Phase I, E. coli was used as our chassis as it is standard biological workhorse and can express proteins at high quantities quickly. Given current laboratory access limits, this allowed for streamlined characterisation processes. The key findings can be used to inform future lab work with this system.</li>
+    <li>In order to characterise HSP22E and 22F, genes were cloned into a simple expression plasmid and transformed into E. coli. Expressed protein was purified and chaperone activity assays were conducted to validate it’s holdase activity and role in preventing protein aggregation.</li>
+    <li>HSP22E and 22F interactions in forming homodimers and higher order complexes through cysteine and hydrophobic residues were investigated.</li> 
+    </ul>
+
+    <h3> Dry Lab </h3>
+    <ul>
+    <li>Structural modelling was conducted to build novel protein structures to understand the mechanisms behind the holdase function of the HSP22 complex.</li>
+    <li>Mathematical modelling enabled the comparison between wild type and engineered Symbiodinium metabolome models to have a better understanding the system at the level of the cell.</li>
+    </ul>
+
+    <h2 id="Phase_Two"> Phase II </h2>
+    <p>Phase II focuses on building upon Phase I findings to further characterise and validate our solution. This will occur at multiple levels in both wet and dry lab as outlined below. These were all project aspects that we considered in an attempt to adhere to a flexible and broad project design that still employs a specific aim.</p>
+    <h3> Wet Lab </h3>
+    <ul>
+    <li>Characterisation of the bifunctional glutathione synthetase and glutathione reductase.</li>
+    <li>Redesign of constructs for movement into other chassis such as the cyanobacteria Synechocystis spp. PCC 6803 which is a photosynthetic model organism.  After that it can be moved into S. cerevisiae the model organism for eukaryotes and eventually moved into Symbiodinium goreaui.</li>
+    <li>Engineer our gene constructs so that they are under the control of an ROS inducible transcription factor e.g. Yap1 and respective promoter sequences.</li> 
+    <li>Characterise the transit peptide sequence to allow HSP 22E and 22F to also localise to the mitochondria in S. cerevisiae then Symbiodinium goreaui.</li>
+    <li>Investigating Symbiodinium transformation techniques, combining Symbiodinium protoplast and transformation techniques such as electroporation.</li>
+    </ul>
+
+
+    <h3> Dry Lab </h3>
+    <ul>
+    <li>Using models generated in Phase I, molecular dynamics simulations would be performed to build and refine a 12mer structure.</li>
+    <li>Molecular dynamics simulations to investigate if the HSP22 complex is active as a dimer or as an oligomer with the presence of a denatured protein.</li>
+    <li>Molecular dynamics simulations of glutathione synthetase and reductase if documentation of function in literature is insufficiently clear.</li>
+    <li>Extending mathematical model to find out the optimal conditions to trigger the synthesis of HSP22E/F and glutathione synthetase.</li>
+    Continue functional and structural modelling of chaperone and enzyme level solutions to complement laboratory work</li>
+    </ul>
+</section>
+
+<section class="contributions">
+  <p>References</p>
+  <ol id="references">
+    <li>Peixoto RS, Rosado PM, Leite DC de A, Rosado AS, Bourne DG. Beneficial Microorganisms for Corals (BMC): Proposed Mechanisms for Coral Health and Resilience. Front Microbiol [Internet]. 2017 [cited 2020 Oct 25];8. Available from: https://www.frontiersin.org/articles/10.3389/fmicb.2017.00341/full</li>
+    <li>Epstein HE, Smith HA, Torda G, Oppen MJ van. Microbiome engineering: enhancing climate resilience in corals. Front Ecol Environ. 2019;17(2):100–8.</li>
+    <li>Levin RA, Voolstra CR, Agrawal S, Steinberg PD, Suggett DJ, van Oppen MJH. Engineering Strategies to Decode and Enhance the Genomes of Coral Symbionts. Front Microbiol [Internet]. 2017 [cited 2020 Apr 23];8. Available from: https://www.frontiersin.org/articles/10.3389/fmicb.2017.01220/full</li>
+    <li>Levin RA, Beltran VH, Hill R, Kjelleberg S, McDougald D, Steinberg PD, et al. Sex, Scavengers, and Chaperones: Transcriptome Secrets of Divergent Symbiodinium Thermal Tolerances. Mol Biol Evol. 2016 Sep 1;33(9):2201–15.</li>
+    <li>Buerger P, Alvarez-Roa C, Coppin CW, Pearce SL, Chakravarti LJ, Oakeshott JG, et al. Heat-evolved microalgal symbionts increase coral bleaching tolerance. Sci Adv. 2020 May 1;6(20):eaba2498.</li>
+    <li> Liu H, Stephens TG, González-Pech RA, Beltran VH, Lapeyre B, Bongaerts P, et al. Symbiodinium genomes reveal adaptive evolution of functions related to coral-dinoflagellate symbiosis. Communications Biology. 2018 Jul 17;1(1):1–11.</li>
+    <li>Nielsen DA, Petrou K, Gates RD. Coral bleaching from a single cell perspective. ISME J. 2018;12(6):1558-67.</li>
+    <li>Wang Y, Li H, Li T, Du X, Zhang X, Guo T, Kong J. Glutathione biosynthesis is essential for antioxidant and anti-inflammatory effects of Streptococcus thermophilus. International Dairy Journal. 2019 Feb 1;89:31-6.</li>
+    <li>Forman HJ, Zhang H, Rinna A. Glutathione: overview of its protective roles, measurement, and biosynthesis. Mol Aspects Med. 2009;30(1-2):1-12.</li>
+    <li> Mogk A, Ruger-Herreros C, Bukau B. Cellular Functions and Mechanisms of Action of Small Heat Shock Proteins. Annu Rev Microbiol. 2019;73:89-110.</li>
+    <li>Kobayashi Y, Harada N, Nishimura Y, Saito T, Nakamura M, Fujiwara T, et al. Algae sense exact temperatures: small heat shock proteins are expressed at the survival threshold temperature in Cyanidioschyzon merolae and Chlamydomonas reinhardtii. Genome Biol Evol. 2014;6(10):2731-40.</li>
+    <li>Lee GJ, Vierling E. A small heat shock protein cooperates with heat shock protein 70 systems to reactivate a heat-denatured protein. Plant Physiol. 2000;122(1):189-98.</li>
+    <li> Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 Dec 1;95(6):579–91.</li>
+    <li>Delaunay A, Isnard AD, Toledano MB. H2O2 sensing through oxidation of the Yap1 transcription factor. EMBO J. 2000;19(19):5157-66.</li>
+    <li> Chen JE, Barbrook AC, Cui G, Howe CJ, Aranda M. The genetic intractability of Symbiodinium microadriaticum to standard algal transformation methods. PLOS ONE. 2019 Feb 19;14(2):e0211936.</li>
+  </ol>
+</section>
+
