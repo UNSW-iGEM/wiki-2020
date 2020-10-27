@@ -74,7 +74,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   th {
-    background-color: $site-pink;
+    background-color: $site-pink !important;
   }
 
   tr,
