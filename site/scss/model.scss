@@ -1,6 +1,7 @@
 #model-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
   ul {
     list-style: disc;
   }
@@ -8,9 +9,26 @@
     text-align: center;
     color: $site-black;
     display: block;
+    outline-offset: 25px;
+  }
+
+  h1 {
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  div.box {
+    background-color: $site-pink;
+    border-radius: 0;
+    padding: 25px;
+    text-align: justify
     div {
       background-color: $site-pink;
     }
+  }
+
+  div.padding {
+    padding: 25px
   }
 }
 
@@ -36,11 +54,18 @@
   }
 }
 
-div#structural h3,
-div#mathematical h3 {
-  font-family: Lato !important;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 36px;
+div#structural,
+div#mathematical {
+  h3 {
+    font-family: Lato !important;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  ul {
+    margin-left: 1em;
+    font-family: Source Sans Pro;
+  }
 }
