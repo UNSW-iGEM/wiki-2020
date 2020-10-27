@@ -571,6 +571,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/c/c8/T--UNSW_Australia--images--model--12_mer_colourful_image.png
     md5: a84c8cda395467752ca502bbc972aea1
     upload_filename: T--UNSW_Australia--images--model--12_mer_colourful_image.png
+  assets/images/model/12mer_colourful_lowres.gif:
+    link_URL: https://2020.igem.org/wiki/images/1/19/T--UNSW_Australia--images--model--12mer_colourful_lowres.gif
+    md5: 832fe67f16787b9734573f14b7855b66
+    upload_filename: T--UNSW_Australia--images--model--12mer_colourful_lowres.gif
   assets/images/model/Convergence_Diagram.png:
     link_URL: https://2020.igem.org/wiki/images/6/64/T--UNSW_Australia--images--model--Convergence_Diagram.png
     md5: 6db09f6c4cec42857564c9de6a7d3391
@@ -833,7 +837,7 @@ html:
     md5: e527e3605f8a2a05d656dcd98cb2420f
   Model/structural/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/structural
-    md5: 62b74422cfe1fb10329a5c94c193d3e5
+    md5: e819434de7181a5600d8e2c1507dfaaa
   Notebook/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Notebook
     md5: 305f437cea953c34aa29b70e09aa83b8
