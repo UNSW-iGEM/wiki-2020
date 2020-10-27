@@ -1,13 +1,118 @@
-/*HP introduction*/
-section.hp-intro h1 {
-  grid-column: 2 / span 10;
+/*HP introduction*/ 
+section.hp-intro div.title{
+  grid-column: 2/span 10;
+  text-align: center;
+  background-color: $site-green;
+}
+
+section.hp-intro div.title h1{
+  color: white;
+  margin:32px;
+}
+
+section.hp-intro h2{
+  border-bottom: 1px solid black !important;
   text-align: center;
 }
 
-section.hp-intro p {
-  grid-column: 2 / span 10;
+section.hp-intro h3{
+  border-bottom: 1px dotted black !important;
+  text-align: center;
 }
 
+section.hp-intro p{
+  grid-column: 2/ span 10;
+}
+
+section.hp-intro a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+section.hp-intro a:hover{
+  color: #fad4d6;
+}
+
+section.hp-intro ol{
+  font-size: 18px;
+}
+
+section.hp-intro ul{
+  font-size: 18px;
+  font-family: Source Sans Pro;
+  list-style-position: inside;
+}
+
+section.hp-intro ol.references {
+  font-size: 12px;
+}
+
+img#good-solution{
+  grid-column: 4/span 9;
+  max-height: 550px;
+}
+
+/*Design*/
+div.design{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+div.design div.text {
+  grid-column: 1/span 6;
+}
+
+div.text p{
+  margin-bottom: 70px;
+}
+
+div.design img{
+  grid-column: 7/span 6;
+}
+
+/*understanding*/ 
+img#RR{
+  grid-column: 5/span 8;
+}
+
+div.understand-ppl{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+div.understand-ppl div.text{
+  grid-column: 3/span 8;
+}
+
+div.understand-ppl div.text h4{
+  margin-bottom: 32px;
+}
+
+div.understand-ppl div.text p{
+  margin-bottom: 32px;
+}
+
+div.understand-ppl p{
+  grid-column: 3/ span 8;
+}
+
+div.understand-ppl ul{
+  grid-column: 3/span 8;
+}
+
+img#understand-ppl{
+  grid-column: 1/span 2;
+}
+
+
+/*stakeholder grid
 section.overview {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -36,4 +141,4 @@ section.overview div.stakeholders a {
 
 section.overview div.stakeholders a:hover {
   color: #39857b;
-}
+}*/
