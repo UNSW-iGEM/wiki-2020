@@ -19,6 +19,26 @@ module.exports = function(eleventyConfig) {
         return values.split('<body>')[1].split('</body>')[0];
     });
 
+    eleventyConfig.addFilter("sideBySide", function(values) {
+        buffer = '<div class="side-by-side">';
+        for (part of values.split('SPLIT')) {
+            caption = '';
+            if (part.includes("#")) {
+                [link, caption] = part.split('#');
+            } else {
+                link = part;
+            }
+            buffer += '<figure>'
+            buffer += `<img src="${link}">`
+            if (caption) {
+                buffer += `<figcaption>${caption}</figcaption>`
+            }
+            buffer += '</figure>'
+        }
+        buffer += '</div>';
+        return buffer;
+    })
+
     eleventyConfig.addPassthroughCopy('site/assets')
     return {
         dir: {
