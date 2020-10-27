@@ -168,7 +168,7 @@ assets:
     upload_filename: T--UNSW_Australia--images--Footer.svg
   assets/images/Home Banner.svg:
     link_URL: https://2020.igem.org/wiki/images/b/b3/T--UNSW_Australia--images--Home_Banner.svg
-    md5: 76f13e4972a2fb7f1261473ea9433b1c
+    md5: 3420f52bd90604c6f32514b10516e56f
     upload_filename: T--UNSW_Australia--images--Home Banner.svg
   assets/images/IDT-logo.png:
     link_URL: https://2020.igem.org/wiki/images/2/24/T--UNSW_Australia--images--IDT-logo.png
@@ -617,7 +617,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 856f5df696ea015ace88c863125d4609
+    md5: 9d6d429e777c6d3ffbc576d16b8c5eda
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
