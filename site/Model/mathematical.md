@@ -10,38 +10,42 @@ image: zelun
 
 ## Why mathematical modelling
 
-Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is hard to engineer, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We believe this model was able to facilitate our understanding of how HSP22E, HSP22F and glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
+Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is hard to engineer, *in silico* verification comes in as an alternative to the common *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We believe this model was able to facilitate our understanding of how HSP22E, HSP22F and glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
 
 <!-- We choose to use mathematical modelling to simulate the in-vitro conditions of symbiodinium that would result from the PROTECC Coral solution. -->
 
 ## Aim
 
-The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to determine the optimal conditions for a cell to trigger the thermal protective response that  we designed for the cell.
+The aim was to produce a model that shows the effectiveness of the solution and provides insight into how varying the quantities of HSP22E, HSP22F and Glutathione would affect the cell's response under various temperatures. We further aimed to determine the optimal conditions for a cell to trigger the thermal protective response that we designed for the cell.
 
 
 ## Implementation
 
-Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of a mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (1) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
+Contrary to the fact that many papers have studied the structure of the heat shock protein families, studies of mathematical model on the heat shock activity remain sparse. However, we were able to find a paper by Carole J. Proctor (1) which models the activity of chaperones on misfolded proteins that are caused by the high level of ROS.
 
 ### Computational Language and tool
-From the original paper, the model was written base on the SBML(System Biology Markup Language) which is a language developed specifically for system biology base on XML(4). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(3). We found this python package very user-friendly while at the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that the PySB model is written in a domain-specific language that somewhat abuses python normal style.
+From the original paper, the model was written base on the SBML(System Biology Markup Language), which is a language developed specifically for system biology base on XML(4). However, due to the unfamiliarity of the language, we decided to switch another software package [PySB](https://pysb.org) developed by members of the Lopez Lab at Vanderbilt University and the Sorger Lab at Harvard Medical School(3). We found this python package very user-friendly while at the same time provides powerful solvers for the system both deterministic and stochastic. One thing to note is that the PySB model is written in a domain-specific language that somewhat abuses regular python style.
 
 ### Base of the Model
-1. The base of the model was inspired by a model which modelled the activity of charperone in aging(1), where we adopted most of their models with a few modifications added.
-2. We omitted the dimerization of the protein in our process since it does not contribute much to the effectiveness of the holding activity in the model while at the same time increasing the complexity of the model.
-3. HSP22E/F will only perform their function while in the mitochondria/chloroplast(this is a simplification of the model)
----
-In the section below HSP22E/F will be referred to as shSP for simplicity purpose.
+- The baseline of the model was inspired by a model which modelled the activity of charperone in aging(1), where we adopted most of their models with a few modifications added.
+- We omitted the dimerization of the protein in our process since it does not contribute much to the effectiveness of the holding activity in the model while at the same time increasing the complexity of the model.
+- HSP22E/F will only perform their function while in the mitochondria/chloroplast(this is a simplification of the model)
+
+Note: in the section below HSP22E/F will be referred to as sHSP for simplicity purpose.
 
 
-### Assumption of the model
-Part of the table were a replicate of the paper(1) with slight modifications.
-- These are parameter under the normal state, the parameter change with respect to temperature change will be specify in the below section.
-![Protein schematic](/assets/images/Model/Protein_Section.png)
-![expression schematic](/assets/images/Model/expression_control.png)
+### Assumptions and reaction of the model
 
 
----
+
+Below is the network diagram of the model which was drawn using iPad since other graphic design applications are not convenient in producing a schematic diagram like this. Figure 1 is a diagram illustrating the reaction happening between the major proteins involved in the folding and unfolding process. Figure 2 shows the regulation of Hsp90, which is the native regulation in many eukaryotic cells. Moreover, it also includes the regulation of sHSP and Glutathione Synthetase, which are controlled by OxyR transcription factor.
+
+{{ '/assets/images/Model/Protein_Section.png#Figure 1: Protein turnover' | sideBySide}}
+{{ '/assets/images/Model/expression_control.png#Figure 2: Autoregulation of Hsp90 and OxyR controlled expression' | sideBySide}}
+
+The details of the reaction and parameter values in the diagram above are specified in the following table.
+
+-----
 |Reaction Name | Reaction | Parameter | Default value | Assumption
 |---|---|---|---|---|
 | Protein Synthesis| \\(\ce{\varnothing ->[k_{1}] NatP}\\) | \\(k_{1}\\) | \\(10.0\\) | Half-life of 6–7days(1)
@@ -70,7 +74,7 @@ Part of the table were a replicate of the paper(1) with slight modifications.
 | sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | This is a fast reaction
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
 | Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
-
+The initial value of the reaction is specified in the following table.
 |Species | initial value (number of molecules)
 |---|---|
 | Native protein| 6000000 |
@@ -101,7 +105,7 @@ Moreover, we realized the model would deviate from the expected output if we ass
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
 
-{{ '/assets/images/Model/Baseline_model_TEMP00.png#Figure 1: graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#Figure 2: graph output under higher temperature with the baseline model' | sideBySide }}
+{{ '/assets/images/Model/Baseline_model_TEMP00.png#Figure 3: graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#Figure 4: graph output under higher temperature with the baseline model' | sideBySide }}
 
 This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
 
@@ -111,26 +115,24 @@ This group of graph is the comparision of the baseline condition under different
 ![Baseline Model at Higher temp](/assets/images/Model/Baseline_model_TEMP1.png)
 *graph output under higher temp with the baseline model* -->
 
-After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referencing as the sHSP with Glutathione model afterwards.
+After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referring to as the sHSP with Glutathione model afterwards.
 
-{{ '/assets/images/Model/AddOn_model_TEMP0.png#Figure 3: graph output under nomral temperature with the add on modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#Figure 4: graph output under high temperature with the add on model' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#Figure 5: graph output under nomral temperature with the sHSP and Glutathione model modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#Figure 6: graph output under high temperature with the sHSP and Glutathione model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
 <!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
 
-As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in the add on model is delepting at a significantly lower rate than the Natural Protein in the baseline model.
+As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in Figure 6 is delepting at a significantly lower rate than the Natural Protein in Figure 5. This comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
 
-The above comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
+{{ '/assets/images/Model/sHSP_model_TEMP1.png#Figure 7: graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#Figure 8: graph output under high temperature with only Glutathione added' | sideBySide }}
 
-{{ '/assets/images/Model/sHSP_model_TEMP1.png#Figure 5: graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#Figure 6: graph output under high temperature with only Glutathione added' | sideBySide }}
-
-From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which is the main cause of protein misfolding.
+From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which acts as the main cause of protein misfolding.
 
 <!-- ![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
 ![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png) -->
 
 After knowing that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione before the actual ROS level surge would be helpful for the cell to increase its survivability.
 
-{{ '/assets/images/Model/AddOn_model_TEMP1.png#Figure 7: graph output under high temperature with Glutathione frontloadSPLIT/assets/images/Model/Glut_FrontLoad_model_TEMP1.png#Figure 8: graph output under high temperature without Glutathione frontload' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP1.png#Figure 9: graph output under high temperature with Glutathione frontloadSPLIT/assets/images/Model/Glut_FrontLoad_model_TEMP1.png#Figure 10: graph output under high temperature without Glutathione frontload' | sideBySide }}
 
 The graph above suggested that 10 times initial frontloading of the Glutathione is not improving the state of cell further. This is largely due to the setting of the model, where a small amount of Glutathione is sufficient to oppress the ROS level inside the cell.
 
@@ -139,11 +141,11 @@ The graph above suggested that 10 times initial frontloading of the Glutathione 
 
 
 ## Discussion
-Overall, our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know that this is a feasible solution to combat cellular heat stress for Symbiodinium cells. Moreover, we figured out that Glutathione is the major force in lifting the cell from extreme thermality.
+Overall, our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know that this is a feasible solution to combat cellular heat stress for Symbiodinium cells. Moreover, we figured out that Glutathione is the primary force in lifting the cell from extreme thermality.
 However, on a more negative note that most of the value of the parameter is chosen at our best estimation since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
-Additionally, we would like to perform a sensitivity analysis in the future to further evaluate the robustness of our model and how it responds to various parameter tweaking.
+Additionally, we would like to perform a sensitivity analysis in the future to evaluate further the robustness of our model and how it responds to various parameter tweaking.
 
-### Limitations
+### Limitations and difficulties 
 We experienced some technical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package where it seems to have some bug. Thanks to Rodrigo Santibáñez an active member in the PySB community helped us with the debugging and further pointed us to the Kappa package.
 Due to time constraint we choose to not use the `Expression` feature in PySB, instead we try to control the parameter values outside the model to represent the model behaviour at different temperatures.
 
@@ -153,7 +155,8 @@ Initially we attempted to use the Simbiology package of Matlab but found it diff
 
 Initially we began by using the MATLAB SimBiology package. This proved to be obtuse to operate and difficult to collaborate on, prompting us to move to PySB (Python Systems Biology). SimBiology provided a good overview of the type of functionality and methods present in mathematical modelling tools, allowing us to quickly replicate the work done previously in SimBiology, in PySB. PySB proved to be a great learning experience due to the open code and community nature of the project.
 
-(Link to code)[code.zip]
+## Code
+[Link to code](/assets/code/math/math_modelling_2020.zip)
 
 
 ## Reference
