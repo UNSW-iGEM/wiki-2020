@@ -20,7 +20,6 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("sideBySide", function(values) {
-        console.log(values);
         buffer = '<div class="side-by-side">';
         for (part of values.split('SPLIT')) {
             caption = '';
@@ -37,7 +36,6 @@ module.exports = function(eleventyConfig) {
             buffer += '</figure>'
         }
         buffer += '</div>';
-        console.log(buffer);
         return buffer;
     })
 

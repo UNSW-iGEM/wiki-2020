@@ -39,7 +39,7 @@ $site-grey: #dddddd;
     font-size: 30px;
     line-height: 36px;
   }
-  h3{
+  h3 {
     font-family: Lato !important;
     font-style: normal;
     font-weight: 500;
@@ -293,7 +293,7 @@ img#second{
   line-height: 36px;
 }
 
-div.references li, ol{
+div.references li, div.references ol{
   list-style-position: inside;
   font-family: Source Sans Pro;
   font-style: normal;
