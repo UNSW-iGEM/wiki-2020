@@ -161,11 +161,8 @@ Initially we began by using the MATLAB SimBiology package. This proved to be obt
 1. Proctor CJ, Sőti C, Boys RJ, Gillespie CS, Shanley DP, Wilkinson DJ, et al. Modelling the actions of chaperones and their role in ageing. Mechanisms of Ageing and Development. 2005;126(1):119–31. Available from: https://linkinghub.elsevier.com/retrieve/pii/S0047637404002337
 
 2. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 95(6):579–91. Available from: http://link.springer.com/10.1007/s11103-017-0672-y
-  
-3. Lopez CF, Muhlich JL, Bachman JA, Sorger PK. Programming biological models in Python using PySB. Mol Syst Biol. 2013; 9(1):646. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1038/msb.2013.1
-  
-  
-4. Hucka M, Bergmann FT, Hoops S, Keating SM, Sahle S, Schaff JC, et al. The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core. Journal of Integrative Bioinformatics. 2015 Jun 1;12(2):382–549. Available from: https://www.degruyter.com/view/journals/jib/12/2/article-p382.xml
-  
 
-  
+3. Lopez CF, Muhlich JL, Bachman JA, Sorger PK. Programming biological models in Python using PySB. Mol Syst Biol. 2013; 9(1):646. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1038/msb.2013.1
+
+
+4. Hucka M, Bergmann FT, Hoops S, Keating SM, Sahle S, Schaff JC, et al. The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core. Journal of Integrative Bioinformatics. 2015 Jun 1;12(2):382–549. Available from: https://www.degruyter.com/view/journals/jib/12/2/article-p382.xml
