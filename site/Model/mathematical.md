@@ -66,8 +66,8 @@ Part of the table were a replicate of the paper(1) with slight modifications.
 | Refolding with sHSP | \\(\ce{HspMisPsHsp + ATP ->[k_{27}] Hsp\{90} + MisP + sHsp + ADP}\\) | \\(k_{27}\\) | \\(10.0\\) | relatively slow since it needs energy(Double check this assumption)
 | Activation of ROS by OxyR | \\(\ce{inactivate OxyR + ROS ->[k_{28}] active OxyR + ROS}\\) | \\(k_{28}\\) | \\(20.0\\) | Relatively fast process since it need to respond relatively fast
 | Active OxyR binding DNA | \\(\ce{activate OxyR + sHspGlu <=>[k_{32}][k_{33}] OxyRsHspGlu}\\) | \\(k_{32}, k_{33}\\) | \\(20.0, 5.0\\) | the rate of unsuccessful binding is low compared to binding(Think about how to represent that part of the DNA)
-| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate
-| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer
+| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(100.0\\) | This is a fast reaction when OxyR binds to it
+| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | This is a fast reaction
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
 | Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
 
@@ -83,7 +83,7 @@ Part of the table were a replicate of the paper(1) with slight modifications.
 | HSE | 1
 | sHSP| 200
 | Glutathione | 100
-| sHSPGluE | 1
+| sHSPGlu | 1
 | OxyR | 10
 
 ## Result and Analysis
@@ -101,7 +101,7 @@ Moreover, we realized the model would deviate from the expected output if we ass
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
 
-{{ '/assets/images/Model/Baseline_model_TEMP00.png#graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#graph output under higher temperature with the baseline model' | sideBySide }}
+{{ '/assets/images/Model/Baseline_model_TEMP00.png#Figure 1: graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#Figure 2: graph output under higher temperature with the baseline model' | sideBySide }}
 
 This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
 
@@ -113,7 +113,7 @@ This group of graph is the comparision of the baseline condition under different
 
 After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referencing as the sHSP with Glutathione model afterwards.
 
-{{ '/assets/images/Model/AddOn_model_TEMP0.png#graph output under nomral temperature with the add on modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#graph output under high temperature with the add on model' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#Figure 3: graph output under nomral temperature with the add on modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#Figure 4: graph output under high temperature with the add on model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
 <!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
 
@@ -121,7 +121,7 @@ As you can see by comparing the baseline and add on model at higher temp, we can
 
 The above comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
 
-{{ '/assets/images/Model/sHSP_model_TEMP1.png#graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#graph output under high temperature with only Glutathione added' | sideBySide }}
+{{ '/assets/images/Model/sHSP_model_TEMP1.png#Figure 5: graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#Figure 6: graph output under high temperature with only Glutathione added' | sideBySide }}
 
 From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which is the main cause of protein misfolding.
 
@@ -130,7 +130,7 @@ From the graph, we can conclude that Glutathione is the main helper as expected 
 
 After knowing that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione before the actual ROS level surge would be helpful for the cell to increase its survivability.
 
-{{ '/assets/images/Model/AddOn_model_TEMP1.png#graph output under high temperature with Glutathione frontloadSPLIT/assets/images/Model/Glut_FrontLoad_model_TEMP1.png#graph output under high temperature without Glutathione frontload' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP1.png#Figure 7: graph output under high temperature with Glutathione frontloadSPLIT/assets/images/Model/Glut_FrontLoad_model_TEMP1.png#Figure 8: graph output under high temperature without Glutathione frontload' | sideBySide }}
 
 The graph above suggested that 10 times initial frontloading of the Glutathione is not improving the state of cell further. This is largely due to the setting of the model, where a small amount of Glutathione is sufficient to oppress the ROS level inside the cell.
 
