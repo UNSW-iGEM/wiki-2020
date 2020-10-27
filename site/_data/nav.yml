@@ -34,15 +34,15 @@
     - name: Overview
       url: Education
     - name: Children's Book
-      url: Book
+      url: Education/Book
     - name: Education Package
-      url: High_School
+      url: Education/High_School
     - name: Virtual Escape Room
-      url: Escape_Room
+      url: Education/Escape_Room
     - name: Molecular Cloud Interview
-      url: Interview
+      url: Education/Interview
     - name: Presenting to the Public
-      url: Talk
+      url: Education/Talk
 - name: People
   children:
     - name: Team Members

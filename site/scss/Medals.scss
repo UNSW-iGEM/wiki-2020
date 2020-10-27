@@ -1,18 +1,45 @@
 /*Table*/
-section.bronze {
-  margin: 150px;
+table#Medal {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  tr,
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-family: Source Sans Pro !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  ul,
+  ol {
+    list-style-position: inside;
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    font-weight: bold;
+    padding-right: 0px !important;
+  }
+
+  a:hover {
+    color: #fad4d6;
+  }
 }
 
-section.silver {
-  margin: 150px;
+div.medal-title{
+  grid-column: 2/span 10; 
+  text-align: center;
 }
 
-section.gold {
-  margin: 150px;
-}
-
-section.special {
-  margin: 150px;
+div.medal-title img{
+  max-height: 200px;
 }
 
 section.bronze th {
