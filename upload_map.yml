@@ -465,7 +465,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 0c4a215ad7ec6cf1f1cdba51b1aa5fbc
+    md5: 20c41b90b150c466484dbc86e01709ee
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
