@@ -62,17 +62,18 @@ $site-grey: #dddddd;
     font-size: 18px;
     line-height: 23px;
   }
+}
 
-  button {
+button {
     box-shadow: inset 0px 0px 0px 0px #276873;
     background-color: $site-grey;
     border: none;
     display: inline-block;
     cursor: pointer;
     color: #000000;
-    font-family: Josefin Sans;
+    font-family: Lato;
     font-size: 14px;
-    font-weight: bold;
+    /*font-weight: bold; affected the back to top button D:*/
     line-height: 23px;
     padding: 16px 32px;
     text-decoration: none;
@@ -82,7 +83,6 @@ $site-grey: #dddddd;
       background-color: $site-green;
       color: white;
     }
-  }
 
   .button-pink {
     background-color: $site-pink;
@@ -124,6 +124,10 @@ body {
   overflow: hidden;
   font-family: Josefin Sans;
   margin-top: 35px;
+}
+
+.dropdown button{
+  font-weight: normal;
 }
 
 .dropdown .dropbtn {
