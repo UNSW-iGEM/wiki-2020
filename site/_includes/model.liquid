@@ -10,7 +10,6 @@ layout: default.liquid
             <div class="title">
                 <h1> {{ model.data.page.fileSlug | capitalize }} </h1>
             </div>
-
             <div class="box">
                 <p>{{ model.data.summary }}</p>
                 <div class="padding">
@@ -20,9 +19,6 @@ layout: default.liquid
                 </div>
                 <img src="/assets/images/model/{{model.data.image }}">
             </div>
-
         </div>
-
-
     {% endfor %}
 </div>
