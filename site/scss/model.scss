@@ -37,15 +37,17 @@
     display: block;
     margin: 1em;
     img {
-      width: 95%;
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 1em;
+      margin-top: 1.5em;
       display: block;
     }
     figcaption {
       font-family: Source Sans Pro;
       text-align: center;
+      padding: 0.5em;
+      font-size: 1em;
     }
   }
 }
