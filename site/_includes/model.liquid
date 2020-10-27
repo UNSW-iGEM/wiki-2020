@@ -1,7 +1,9 @@
 ---
 layout: default.liquid
 ---
+
 {{ content }}
+
 <div id="model-links">
     {% for model in collections.model %}
         <a href="/Model/{{ model.data.page.fileSlug }}" class="card">

@@ -8,9 +8,6 @@ image: zelun
 
 {% include mathjax.html %}
 
-$$k = \frac{1}{2}$$
-$$\ce{CO2 + C -> 2 CO}$$
-
 ## Why mathematical modelling
 
 Mathematical modelling is a powerful tool for verifying and evaluating synthetic biology solutions. Since the ultimate target chassis Symbiodinium is nigh impossible to work with, *in silico* verification comes in as an alternative to the normal *in vivo* strategy. In this mathematical model, we will consider the effect of the introduction of HSP22E, HSP22F and Glutathione into the system. We hope this model was able to facilitate our understanding of how HSP22E, HSP22F and Glutathione can alleviate the cell condition quantitatively. However, as with all modelling, care must be taken to select values and parameters that reflect the real world.
@@ -62,8 +59,8 @@ Part of the table were a replicate of the paper(cite) with slight modifications.
 | Refolding with sHSP | \\(\ce{HspMisPsHsp + ATP ->[k_{27}] Hsp\{90} + MisP + sHsp + ADP}\\) | \\(k_{27}\\) | \\(10.0\\) | relatively slow since it needs energy(Double check this assumption)
 | Activation of ROS by OxyR | \\(\ce{inactivate OxyR + ROS ->[k_{28}] active OxyR + ROS}\\) | \\(k_{28}\\) | \\(20.0\\) | Relatively fast process since it need to respond relatively fast
 | Active OxyR binding DNA | \\(\ce{activate OxyR + sHspGlu <=>[k_{32}][k_{33}] OxyRsHspGlu}\\) | \\(k_{32}, k_{33}\\) | \\(20.0, 5.0\\) | the rate of unsuccessful binding is low compared to binding(Think about how to represent that part of the DNA)
-| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate 
-| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer 
+| sHSP synthesis | \\(\ce{OxyRsHspGlu ->[k_{29}] NonMitosHsp + active OxyR + sHspGlu}\\) | \\(k_{29}\\) | \\(10.0\\) | normal synthesis rate
+| sHSP transfer | \\(\ce{MitosHsp ->[k_{35}] NonMitosHsp}\\) | \\(k_{35}\\) | \\(10.0\\) | normal rate of transfer
 | Glutathione Synthetase production Synthesis | \\(\ce{OxyRsHspGlu ->[k_{30}] active OxyR + sHspGlu}\\) | \\(k_{30}\\) | \\(10.0\\) | normal synthesis rate
 | Glutathione Production | \\(\ce{OxyRsHspGlu ->[k_{31}] active OxyR + sHspGlu}\\) | \\(k_{31}\\) | \\(5.0\\) | normal synthesis rate
 The ODEs are omitted to save up the space.
@@ -92,11 +89,15 @@ Make this the figure comment
 This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
 
 After comparing the baseline model at different temprature, we want to see how the model with HSP22E/F and Glutathione behave which we will be referecing as the add on model afterwards.
-![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png)
-![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png)
+
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#caption /assets/images/Model/AddOn_model_TEMP1.png' | sideBySide }}
+<!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
+<!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
+
 As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in the add on model is delepting at a significantly lower rate than the Natural Protein in the baseline model.
 
 The above comparison showed a promising result, however it is still unclean whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, a plot of the model with only sHSP or Glutathione is plotted below.
+
 ![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
 ![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png)
 From the graph, we can conclude that Glutathione is the main helper, which is expected since its main function is to reduce the ROS level inside the cell which is known as the main cause of protein misfolding.
@@ -117,7 +118,7 @@ We experienced some technical difficulties in incorporating the temperature feat
 Due to time constraint we choose to not use the `Expression` feature in PySB, instead we try to control the parameter values outside the model to represent the model behaviour at different temperatures.
 
 ## Evaluation and advice to future teams
- 
+
 Initially we attempted to use the Simbiology package of Matlab but found it difficult to collaborate on due to binary file format. Therefore, we reimplement our baseline model using the PySB package where we find it easier to collaborate. PySB has a fantastic community([PySB Gitter](https://gitter.im/pysb/pysb)) for support where you can have your questions resolved.
 
 Initially we began by using the MATLAB SimBiology package. This proved to be obtuse to operate and difficult to collaborate on, prompting us to move to PySB (Python Systems Biology). SimBiology provided a good overview of the type of functionality and methods present in mathematical modelling tools, allowing us to quickly replicate the work done previously in SimBiology, in PySB. PySB proved to be a great learning experience due to the open code and community nature of the project.
@@ -127,4 +128,3 @@ Initially we began by using the MATLAB SimBiology package. This proved to be obt
 
 
 ## Reference
-
