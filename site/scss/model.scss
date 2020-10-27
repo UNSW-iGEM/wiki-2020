@@ -11,23 +11,26 @@
     display: block;
     outline-offset: 25px;
   }
-  
+
   h1 {
     padding: 20px;
   }
-  
+
   div.box {
     background-color: $site-pink;
     border-radius: 0;
     padding: 25px;
     text-align: justify
+    div {
+      background-color: $site-pink;
+    }
   }
 
   div.padding {
     padding: 25px
   }
 
-    
+
 }
 
 .side-by-side {
@@ -37,15 +40,32 @@
     display: block;
     margin: 1em;
     img {
-      width: 95%;
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 1em;
+      margin-top: 1.5em;
       display: block;
     }
     figcaption {
       font-family: Source Sans Pro;
       text-align: center;
+      padding: 0.5em;
+      font-size: 1em;
     }
+  }
+}
+
+div#structural,
+div#mathematical {
+  h3 {
+    font-family: Lato !important;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  ul {
+    margin-left: 1em;
   }
 }
