@@ -9,7 +9,7 @@
     color: $site-black;
     display: block;
     div {
-        background-color: $site-pink;
+      background-color: $site-pink;
     }
   }
 }
@@ -34,4 +34,13 @@
       font-size: 1em;
     }
   }
+}
+
+div#structural h3,
+div#mathematical h3 {
+  font-family: Lato !important;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 36px;
 }
