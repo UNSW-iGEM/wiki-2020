@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section>
+    <style>{% include UNSW_Australia/index.css %}</style>
+    <script>{% include UNSW_Australia/index.js %}</script>
+    {% capture wikimate %}{% include UNSW_Australia/index.html %}{% endcapture %}
+
+    {{ wikimate | betweenBody }}
+</section>
+<section>
+    {{ content }}
+
+</section>
