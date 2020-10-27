@@ -3,21 +3,28 @@ layout: default.liquid
 ---
 {{ content }}
 
-<div class="card">
-    <div class="title">
-        <h1> Protein Structure </h1>
-    </div>
-    <div class="title">
-        <h1> Mathematical </h1>
-    </div>
-</div>    
+
 
 <div id="model-links">
     {% for model in collections.model %}
-        <a href="/Model/{{ model.data.page.fileSlug }}" class="card">
-            {{ model.data.page.fileSlug | capitalize }}
-            <img src="/assets/images/team/{{model.data.image | capitalize }}.jpg">
-        </a>
-        <p>{{ model.data.summary }}</p>
+        <div>
+            <div class="title">
+                <h1> {{ model.data.page.fileSlug | capitalize }} </h1>
+            </div>
+
+            <div class="box">
+                <p>{{ model.data.summary }}</p>
+                <div>
+                    <a href="/Model/{{ model.data.page.fileSlug }}">
+                        <button>READ MORE</button>
+                    </a>
+                </div>
+                <img src="/assets/images/model/{{model.data.image }}">
+
+            </div>
+           
+        </div> 
+        
+
     {% endfor %}
 </div>

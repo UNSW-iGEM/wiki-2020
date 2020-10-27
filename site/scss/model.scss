@@ -1,6 +1,7 @@
 #model-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
   ul {
     list-style: disc;
   }
@@ -8,8 +9,20 @@
     text-align: center;
     color: $site-black;
     display: block;
-    div {
-        background-color: $site-pink;
-    }
+    outline-offset: 25px;
   }
+  
+  
+  div.box {
+    background-color: $site-pink;
+    border-radius: 0;
+    padding: 25px;
+    text-align: justify
+  }
+
+  div {
+    padding: 25px
+  }
+
+    
 }

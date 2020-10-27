@@ -1,30 +1,20 @@
 ---
 tags: model
 summary: The central dogma of proteins is that with the understanding of the structure of a protein, comes the understanding of its function. We utilised fold recognition template modelling with the i-TASSER server to impose a reasonable 3D structure onto a sequence of peptides. After the refinement of these monomer models with molecular dynamics simulations, dimers and a larger 12mer complex was constructed to lead to an atomic understanding of how heat shock proteins function.
-image: caitlin
+image: rsz_12_mer_colourful_image.png
+
 ---
 
-## How
-Refer to 2019 team’s guide on how to create 3D structure files of proteins, we will extend this tutorial by showing you how to dock protein units together to form a complex. % of proteins that are actually part of a multi-unit complex?
+## Aim
+While investigating the existing literature for the mechanisms behind algal small heat shock proteins, we realised that species studied for conservation are very underserved by protein structure research. All that could be summarised was that small heat shock proteins form dimers which may then assemble further into 12mer-32mer complexes. (1) This served as our first lead in investigating the holdase function of HSP22E/F. 
 
-## What
-Need to be written
+A protein’s structure determines its function. A peptide sequence is composed of amino acids that have side chains with various chemical properties. Due to the particular sequence of these amino acids, various side chains at different distances will attract and repel, and then self-assemble into its native state(s) in a matter of milliseconds. (2) This is important to remember when performing molecular dynamics simulations. Such simulations are usually on the timescale of nanoseconds (e-9) while protein folding happens on the order of milliseconds (e-3) and protein-protein interactions like that of dimer formation may take seconds as evidenced in typical molecular assays. Longer simulations require ever more computational resources and time to simulate. As such, molecular dynamics are best for refining protein structures that are suspected to be quite close to their native conformation.
 
-We don’t know what the range of complex sizes it can be
+## Structure Determination
+There are no known heat shock protein structures from *C. reinhardtii* that have been experimentally determined. However, the amino acid sequences of *C. reinhardtii* heat shock proteins are known, specifically - HSP22E, HSP22F and HSP22G - which our team decided to predict the structure of to help with the understanding of their function. These heat shock proteins were chosen as HSP22G was predicted to localise to mitochondria and while HSP22E and HSP22F localised to chloroplasts. (1) After running a blastp (3) search on all of these proteins with the PDB database, (4) it was found that HSP22G had quite low sequence identity of ~25%, insignificant E values and low query coverage with the other known structural PDB hits. In contrast, HSP22E and HSP22F both had higher percentage identities ranging from ~28-50%, significant E values and higher percentage coverage. For this reason, the team changed to predict the structures of HSP22E and HSP22F instead of HSP22G. Even though the hits for HSP22E and HSP22F were better than the hits for HSP22G, they were all very similar and it was hard to definitively select one to be used as a template for homology modelling. A fold recognition and template modelling server, I-TASSER (5–7), was used to create models for HSP22E and HSP22F based on the best templates found by I-TASSER using a threading approach. The highest ranking models for both the HSP22E and HSP22F sequences were chosen as the starting structural models to be further refined and used in future molecular dynamic simulations (Figures 1 and 2). Both the I-TASSER models were based on the same PDB template structure 1GME (8) which is another eukaryotic small heat shock protein that forms a 12-mer complex made up of 6 dimers bound together. Interestingly, the literature on *C. reinhardtii* small heat shock proteins propose that they form dimers and further form larger oligomers ranging from 12 to 32 subunits (1). 
 
-![Figure 1](HSP22E structural modelling)
-![Figure 2](HSP22F structural modelling)
+![Figure 1 - the best scoring I-TASSER model for HSP22E](HSP22E_itasser.png) ![Figure 2 - the best scoring I-TASSER model for HSP22F](HSP22F_itasser.png)
 
-![Figure 3](HSP22E momer modelling)
-![Figure 4](HSP22F Monomer modelling)
-![Figure 5](Dimer modelling between HSP22E and HSP22F)
 
-![Figure 6](12-mer model- version 1)
-![Figure 7](Evaluation of EM - version 1)
-![Figure 8](12-mer model - version 2)
-![Figure 9](Evaluation of EM - version 2)
-![Figure 10](12-mer model - version 3)
-![Figure 11](Evaluation of EM - version 1)
-![Figure 12](Final 12-mer modelling - 10ns video/gif)
 
 [/code.zip](Zip file of scripts, inputs, outputs that pertain to figures)
