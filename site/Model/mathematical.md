@@ -110,7 +110,6 @@ This group of graph is the comparision of the baseline condition under different
 ![Baseline Model at Higher temp](/assets/images/Model/Baseline_model_TEMP1.png)
 *graph output under higher temp with the baseline model* -->
 
-
 After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referencing as the sHSP with Glutathione model afterwards.
 
 {{ '/assets/images/Model/AddOn_model_TEMP0.png#graph_output_under_nomral_temperature_with_the_add_on_model /assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_the_add_on_model' | sideBySide }}
@@ -120,14 +119,22 @@ After comparing the baseline model at different temperatures, we want to see how
 As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in the add on model is delepting at a significantly lower rate than the Natural Protein in the baseline model.
 
 The above comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
-![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
-![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png)
+
+{{ '/assets/images/Model/sHSP_model_TEMP1.png#graph_output_under_high_temperature_with_only_sHSP_added /assets/images/Model/Glutathione_model_TEMP1.png#graph_output_under_high_temperature_with_only_Glutathione_added' | sideBySide }}
+
 From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which is the main cause of protein misfolding.
 
+<!-- ![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
+![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png) -->
+
 After knowing that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione before the actual ROS level surge would be helpful for the cell to increase its survivability.
-![Without Glutathione frontload at higher temp](/assets/images/Model/AddOn_model_TEMP1.png)
-![With Glutathione frontload at higher temp](/assets/images/Model/Glut_FrontLoad_model_TEMP1.png)
+
+{{ '/assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_Glutathione_frontload /assets/images/Model/Glut_FrontLoad_model_TEMP1.png#graph_output_under_high_temperature_without_Glutathione_frontload' | sideBySide }}
+
 The graph above suggested that 10 times initial frontloading of the Glutathione is not improving the state of cell further. This is largely due to the setting of the model, where a small amount of Glutathione is sufficient to oppress the ROS level inside the cell.
+
+<!-- ![Without Glutathione frontload at higher temp](/assets/images/Model/AddOn_model_TEMP1.png)
+![With Glutathione frontload at higher temp](/assets/images/Model/Glut_FrontLoad_model_TEMP1.png) -->
 
 
 ## Discussion
@@ -148,5 +155,15 @@ Initially we began by using the MATLAB SimBiology package. This proved to be obt
 (Link to code)[code.zip]
 
 
-
 ## Reference
+1. Proctor CJ, Sőti C, Boys RJ, Gillespie CS, Shanley DP, Wilkinson DJ, et al. Modelling the actions of chaperones and their role in ageing. Mechanisms of Ageing and Development. 2005;126(1):119–31. Available from: https://linkinghub.elsevier.com/retrieve/pii/S0047637404002337
+
+2. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 95(6):579–91. Available from: http://link.springer.com/10.1007/s11103-017-0672-y
+  
+3. Lopez CF, Muhlich JL, Bachman JA, Sorger PK. Programming biological models in Python using PySB. Mol Syst Biol. 2013; 9(1):646. Available from: https://onlinelibrary.wiley.com/doi/abs/10.1038/msb.2013.1
+  
+  
+4. Hucka M, Bergmann FT, Hoops S, Keating SM, Sahle S, Schaff JC, et al. The Systems Biology Markup Language (SBML): Language Specification for Level 3 Version 1 Core. Journal of Integrative Bioinformatics. 2015 Jun 1;12(2):382–549. Available from: https://www.degruyter.com/view/journals/jib/12/2/article-p382.xml
+  
+
+  
