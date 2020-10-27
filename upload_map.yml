@@ -461,7 +461,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 5f7af97f9a2b367298756f75d0469df6
+    md5: e8d545176f71e011ec545c75cb5c5355
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -492,7 +492,7 @@ html:
     md5: 4b1ab02f20f3fee632e36f264b91c648
   Education/High_School/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/High_School
-    md5: d2778dcf9feeb395ebd9bf987637d1ac
+    md5: 7998825a9626028be59e2f4f2e455852
   Education/Interview/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Interview
     md5: 31420ef23dfbbfa8687666d4ecad96b2
