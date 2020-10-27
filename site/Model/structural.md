@@ -118,6 +118,7 @@ The dimer was simulated with the same procedure as the monomers but for a much l
 
 To really get an intuitive understanding of these graphs, they need to be examined in conjunction with the movement of the molecule. In this 275ns simulation you can see C-termini settling over time and the beta sheet core staying rather constant in both the graphs and the video. Given that the arms are settling in, we would expect convergence to be close.
 
+<<<<<<< HEAD
 
 {{
 '/assets/images/model/Protein_Friend_ Animation.gif#Figure 16: Radius of gyration for HSP22E/F dimer - all atom' | sideBySide 
@@ -148,6 +149,15 @@ Additionally, the team was limited by time and therefore could not create a full
 
 
 ## References
+=======
+{{
+'/assets/images/model/rsz_12_mer_colourful_image.png#Figure 17: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
+}}
+
+
+
+## Reference
+>>>>>>> modelling_wiki
 
 1. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 Dec 1;95(6):579–91.
 2. Kubelka J, Hofrichter J, Eaton WA. The protein folding ‘speed limit.’ Curr Opin Struct Biol. 2004 Feb 1;14(1):76–88.
