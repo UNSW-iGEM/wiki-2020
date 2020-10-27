@@ -1,6 +1,11 @@
 div.attributions-box{
-  background-color: $site-pink;
   grid-column: 2/span 10;
+}
+
+div.attributions-box h1{
+  grid-column: 2/span 10;
+  margin:100px 0 50px 0;
+  text-align: center;
 }
 
 div.attribute-profile{
@@ -21,4 +26,8 @@ div.attribute-des{
 
 div.attribute-des h2{
   margin-bottom: 25px;
+}
+
+div.att-des{
+  margin: 50px;
 }
