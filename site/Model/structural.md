@@ -13,7 +13,26 @@ A protein’s structure determines its function. A peptide sequence is composed 
 ## Structure Determination
 There are no known heat shock protein structures from *C. reinhardtii* that have been experimentally determined. However, the amino acid sequences of *C. reinhardtii* heat shock proteins are known, specifically - HSP22E, HSP22F and HSP22G - which our team decided to predict the structure of to help with the understanding of their function. These heat shock proteins were chosen as HSP22G was predicted to localise to mitochondria and while HSP22E and HSP22F localised to chloroplasts. (1) After running a blastp (3) search on all of these proteins with the PDB database, (4) it was found that HSP22G had quite low sequence identity of ~25%, insignificant E values and low query coverage with the other known structural PDB hits. In contrast, HSP22E and HSP22F both had higher percentage identities ranging from ~28-50%, significant E values and higher percentage coverage. For this reason, the team changed to predict the structures of HSP22E and HSP22F instead of HSP22G. Even though the hits for HSP22E and HSP22F were better than the hits for HSP22G, they were all very similar and it was hard to definitively select one to be used as a template for homology modelling. A fold recognition and template modelling server, I-TASSER (5–7), was used to create models for HSP22E and HSP22F based on the best templates found by I-TASSER using a threading approach. The highest ranking models for both the HSP22E and HSP22F sequences were chosen as the starting structural models to be further refined and used in future molecular dynamic simulations (Figures 1 and 2). Both the I-TASSER models were based on the same PDB template structure 1GME (8) which is another eukaryotic small heat shock protein that forms a 12-mer complex made up of 6 dimers bound together. Interestingly, the literature on *C. reinhardtii* small heat shock proteins propose that they form dimers and further form larger oligomers ranging from 12 to 32 subunits (1). 
 
-![Figure 1 - the best scoring I-TASSER model for HSP22E](HSP22E_itasser.png) ![Figure 2 - the best scoring I-TASSER model for HSP22F](HSP22F_itasser.png)
+{{
+'/assets/images/model/HSP22E_itasser.png#[Figure 1 - the best scoring I-TASSER model for HSP22E]() ![Figure 2 - the best scoring I-TASSER model for HSP22F](HSP22F_itasser.png)' 
+}}
+
+
+## Structure Refinement 
+I-TASSER unlike other template based methods builds models with multiple templates rather than a single template sometimes resulting in models with backbone torsion angles that are energetically unfavourable. More broadly the practice of imposing the structure of a known protein onto our similar protein aims to get a largely correct global topology but might not be so accurate at a local level. (9) As such, refinement must be conducted to ‘flex’ structures into more energetically favourable configurations. MolProbity, (10) was used to evaluate the viability of structures before and after each stage of refinement. Refinement was first targeted at improving the rotamers for the local structure and then globally improving atom clashes.
+
+We hope that our exercise in refinement will shed some light on rather opaque metrics and software. Measures to pay particular attention to:
+
+- Clashscore
+    - Number of serious overlap between pairs of nonbonded atoms
+    - Lower is better
+- Poor/Favoured Rotamers 
+    - Quality of placement of side chains
+    - Lower is better
+- MolProbity Score 
+    - Log-weighted combination of clashscore, percentage Ramachandran not favored and percentage bad side-chain rotamers
+    - Lower is better
+
 
 
 
