@@ -461,7 +461,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: e8d545176f71e011ec545c75cb5c5355
+    md5: e94060e72618c3a55e66034def6a8c87
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -480,7 +480,7 @@ html:
     md5: 7e8895bc5833f1032b50a4b9c938ba90
   Description/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Description
-    md5: cb128b19a0cd9ba0ca2c4ad0a28c341b
+    md5: bde6d6712922cccb4105fff7395ad9d8
   Design/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Design
     md5: 8e30e773006a6f5980bdba51be57b35b
@@ -492,7 +492,7 @@ html:
     md5: 4b1ab02f20f3fee632e36f264b91c648
   Education/High_School/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/High_School
-    md5: 7998825a9626028be59e2f4f2e455852
+    md5: 9a964497b84200d2495d75736f203de9
   Education/Interview/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Interview
     md5: 31420ef23dfbbfa8687666d4ecad96b2
@@ -516,7 +516,7 @@ html:
     md5: 5ace424e7aa3c2065eea739450ebba3c
   Implementation/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Implementation
-    md5: 37ad161c7c4b135a978e645ed31a7151
+    md5: 5ac033cce24f8e3029fe8f02182dba0c
   Medals/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Medals
     md5: 2bb8b6abcb0828e835fc60c6ea40e944
