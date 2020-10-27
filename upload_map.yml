@@ -453,7 +453,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 26791ab23b8c2078b041ab7f96b67c96
+    md5: e8dd19e4359c60fc3ffe812c99fdd65b
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -514,7 +514,7 @@ html:
     md5: 2bb8b6abcb0828e835fc60c6ea40e944
   Model/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model
-    md5: 7166c076ff164db9159697253d45a4ac
+    md5: d452d1837349f478f92b138a130506d5
   Model/mathematical/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/mathematical
     md5: f2713896d049a467fcbcf1b3791be3da
