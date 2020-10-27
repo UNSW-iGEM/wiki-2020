@@ -1,0 +1,58 @@
+#Book {
+  object {
+    width: 100%;
+    margin: auto;
+    height: 1050px;
+  }
+
+  section {
+    padding: 2em;
+    &:nth-child(even) {
+      background-color: $site-pink;
+    }
+  }
+
+  canvas {
+    height: 80vh;
+  }
+
+  #book-viewer, #controls {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #controls {
+    padding-top: 2em;
+  }
+
+
+}
+
+$arrow-size: 2em;
+
+.review {
+  position: relative;
+  background: $site-light-pink;
+  border-radius: 0.2em;
+  border-bottom-left-radius: 0;
+  width: max-content;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: $arrow-size / 2;
+    width: 0;
+    height: 0;
+    border: $arrow-size solid transparent;
+    border-top-color: $site-light-pink;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -$arrow-size / 2;
+    margin-bottom: -$arrow-size;
+  }
+
+  p {
+    padding: 2em;
+  }
+}
