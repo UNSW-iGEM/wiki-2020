@@ -141,7 +141,7 @@ In [Phase II,](/Design#Phase_Two) if the wet lab’s experiments find that the b
 Additionally, the team was limited by time and therefore could not create a fully refined HSP22E/F 12-mer model (Figure 19). We simply aligned six of the HSP22E/F dimers onto a 12-mer assembly of 1GME to generate a physically impossible 12-mer configuration. There are obvious clashes between the six different dimers that model needs to be adjusted for. This would most likely require loop remodelling as well as the transposition of each dimer a bit further away from each other in order to let them fall naturally into place through a molecular dynamics simulation.
 
 {{
-'/assets/images/model/rsz_12_mer_colourful_image.png#Figure 19: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
+'/assets/images/model/12mer_colourful_lowres.gif#Figure 19: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
 }}
 
 
