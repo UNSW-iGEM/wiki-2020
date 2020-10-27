@@ -20,8 +20,9 @@ $site-grey: #dddddd;
 @import 'IHP.scss';
 @import 'Notebook.scss';
 @import 'model.scss';
-// @import 'book.scss';
+@import 'book.scss';
 @import 'Medals.scss';
+@import 'software.scss';
 
 #UNSW-iGEM {
   h1 {
@@ -44,18 +45,51 @@ $site-grey: #dddddd;
     font-weight: 500;
     font-size: 20px;
     line-height: 36px;
+  }  
+
+  h4{
+    font-family: Source Sans Pro !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
   }
-  p {
+
+  p, span {
     font-family: Source Sans Pro !important;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
   }
+
+  button {
+    box-shadow: inset 0px 0px 0px 0px #276873;
+    background-color: $site-grey;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Josefin Sans;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 16px 32px;
+    text-decoration: none;
+    transition: 0.3s;
+    grid-column: 3 / span 2;
+    &:hover{
+      background-color: $site-green;
+      color: white;
+    }
+  }
+
+  .button-pink {
+    background-color: $site-pink;
+  }
 }
 
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -80,7 +114,7 @@ body {
   transition: 0.3s;
 }
 
-.navbar img{
+.navbar img {
   width: 50px;
   margin-top: 10px;
 }
@@ -102,12 +136,11 @@ body {
   font-family: inherit;
   margin: 0;
   transition: 0.3s;
-  margin-left: 40px
-
+  margin-left: 40px;
 }
 
-.navbar a:hover{
-  background-color:transparent;
+.navbar a:hover {
+  background-color: transparent;
 }
 
 .dropdown:hover .dropbtn {
@@ -120,7 +153,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-left: 40px;
   a {
@@ -140,7 +173,6 @@ body {
   }
 }
 
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -151,7 +183,7 @@ section {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px 32px;
   grid-auto-flow: dense;
-  &>* {
+  & > * {
     grid-column: 2 / span 10;
   }
 }
@@ -213,7 +245,7 @@ img#second{
 }
 
 /* references */
-#references h2{
+#references h2 {
   font-family: Lato;
   font-style: normal;
   font-weight: 500;

@@ -1,23 +1,23 @@
 /*introduction image*/
-section.introduction h1{
+section.introduction h1 {
   grid-column: span 12;
   text-align: center;
-  text-shadow: 4px 4px 0px #F3E7F1;
+  text-shadow: 4px 4px 0px #f3e7f1;
   margin-top: 100px;
 }
 
-section.introduction p{
-  grid-column: 3/span 8;
+section.introduction p {
+  grid-column: 3 / span 8;
 }
 
-section.introduction ol{
-  grid-column:3 /span 8;
+section.introduction ol {
+  grid-column: 3 / span 8;
   font-size: 18px;
 }
 
-section.introduction ul{
-	grid-column:3/ span 8;
-	font-family: Source Sans Pro !important;
+section.introduction ul {
+  grid-column: 3 / span 8;
+  font-family: Source Sans Pro !important;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -25,16 +25,16 @@ section.introduction ul{
   text-align: justify;
 }
 
-section.introduction li{
+section.introduction li {
   margin: 10px;
 }
 
-section.introduction img#future{
-  grid-column: 4/span 6; 
+section.introduction img#future {
+  grid-column: 4 / span 6;
   max-height: 400px;
 }
 
-section.introduction a{
+section.introduction a {
   text-decoration: none;
   color: black;
   transition: 0.3s;
@@ -42,17 +42,16 @@ section.introduction a{
   padding-right: 0px !important;
 }
 
-section.introduction a:hover{
-    color: #fad4d6;
+section.introduction a:hover {
+  color: #fad4d6;
 }
 
-section.introduction div.divide h1{
-  background-color:  #fad4d6;
-  grid-column: 3/span 8;
+section.introduction div.divide h1 {
+  background-color: #fad4d6;
+  grid-column: 3 / span 8;
   margin: 32px 0;
-  text-shadow: 0px 0px 0px #F3E7F1;
+  text-shadow: 0px 0px 0px #f3e7f1;
   text-align: center;
-  
 }
 
 section.introduction div.link {
@@ -65,97 +64,134 @@ section.introduction div.link {
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
-  grid-column: 5/span 4;
+  grid-column: 5 / span 4;
 }
 
-section.introduction div.link a{
+section.introduction div.link a {
   color: white;
   font-weight: normal;
   transform: scale3d(2);
   text-align: center;
 }
 
-section.introduction div.link a:hover{
-  text-shadow: 0 0 .9px white, 0 0 .9px white, 0 0 .9px white;
+section.introduction div.link a:hover {
+  text-shadow: 0 0 0.9px white, 0 0 0.9px white, 0 0 0.9px white;
 }
 
-section.introduction div.book{
-  grid-column:4 /span 6;
+section.introduction div.book {
+  grid-column: 4 / span 6;
 }
 
-section.introduction .scale{
+section.introduction .scale {
   //max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-section.introduction .scalelogo{
+section.introduction .scalelogo {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-section.introduction .scaleform{
+section.introduction .scaleform {
   max-width: 40%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-
 /*category section*/
-section.categories div.category{
+section.categories div.category {
   background-color: $site-green;
-  grid-column: 3/span 8;
+  grid-column: 3 / span 8;
   margin: 32px 0;
 }
 
-section.categories div.category h1{
+section.categories div.category h1 {
   color: white;
   text-align: center;
   margin: 32px;
 }
 
-section.categories img{
-  grid-column: 3/ span 4;
+section.categories img {
+  grid-column: 3 / span 4;
   border: 5px solid $site-green;
 }
 
-section.categories div.category-des{
-  grid-column: 7/span 4;
+section.categories div.category-des {
+  grid-column: 7 / span 4;
   text-align: justify;
 }
 
-section.categories div.category-des p{
-  margin-bottom: 32px
+section.categories div.category-des p {
+  margin-bottom: 32px;
 }
 
-.category-des button{
-  box-shadow:inset 0px 0px 0px 0px #276873;
-  background-color: $site-grey;
-  border:none;
-  display:inline-block;
-  cursor:pointer;
-  color: $site-black;
-  font-family:Josefin Sans;
-  font-size:14px;
-  font-weight:bold;
-  line-height: 23px;
-  padding: 16px 32px;
-  text-decoration:none;
-  transition: 0.3s;
-  grid-column: 8/ span 2;
-  margin-bottom: 50px;
-}
-
-.category-des button:hover{
-  background-color: $site-green;
-  color: white;
-}
-
-/*escape room page*/ 
-section.overview img{
+/*escape room page*/
+section.overview img {
   grid-column: span 5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kings-logos {
+  align-content: center;
+  display:flex;
+  justify-content: center;
+  img {
+    width: 25%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+.edulogo p {
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 12;
+  margin-bottom: 0%;
+}
+
+section.edupanel img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+section.edupanel p {
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.overview p {
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 10;
+  margin-bottom: 0%;
+}
+
+section.edulec img {
+  grid-column: 4 / span 6;
+  max-height: 400px;
+}
+
+section.edulec p {
+  text-align: center;
+  font-size: 12;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: span 12;
 }

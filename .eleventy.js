@@ -14,9 +14,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("imagePrefix", function(values) {
         return "/assets/images/" + values;
     })
-    eleventyConfig.addFilter("cite", function(values) {
-        // grab the paper name and stuff from the csv.
-        return "(Li, Robbers 2030)";
+    eleventyConfig.addFilter("betweenBody", function(values) {
+        // janky way to just get the content between body tags
+        return values.split('<body>')[1].split('</body>')[0];
     });
 
     eleventyConfig.addPassthroughCopy('site/assets')

@@ -3,12 +3,16 @@ layout: default.liquid
 ---
 {{ content }}
 
+<div class="card">
+    <div class="title">
+        <h1> Protein Structure </h1>
+    </div>
+    <div class="title">
+        <h1> Mathematical </h1>
+    </div>
+</div>    
 
-<div class="title">
-    <h1> Protein Structure </h1>
-</div>
-
-<div id="model">
+<div id="model-links">
     {% for model in collections.model %}
         <a href="/Model/{{ model.data.page.fileSlug }}" class="card">
             {{ model.data.page.fileSlug | capitalize }}
