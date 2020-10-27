@@ -9,7 +9,38 @@
     color: $site-black;
     display: block;
     div {
-        background-color: $site-pink;
+      background-color: $site-pink;
     }
   }
+}
+
+.side-by-side {
+  display: flex;
+  figure {
+    background-color: $site-pink;
+    display: block;
+    margin: 1em;
+    img {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.5em;
+      display: block;
+    }
+    figcaption {
+      font-family: Source Sans Pro;
+      text-align: center;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+  }
+}
+
+div#structural h3,
+div#mathematical h3 {
+  font-family: Lato !important;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 36px;
 }
