@@ -34,6 +34,8 @@
 
 .side-by-side {
   display: flex;
+  justify-content: centre;
+  
   figure {
     background-color: $site-pink;
     display: block;
