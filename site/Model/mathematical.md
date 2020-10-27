@@ -80,17 +80,19 @@ Moreover, we realized the model would deviate from the expected output if we ass
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
 
+{{ '/assets/images/Model/Baseline_model_TEMP00.png#graph_output_under_nomral_temperature_with_the_baseline_model /assets/images/Model/Baseline_model_TEMP1.png#graph_output_under_higher_temperature_with_the_baseline_model' | sideBySide }}
+
+This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
+<!-- 
 ![Baseline Model](/assets/images/Model/Baseline_model_TEMP00.png)
 *This is the caption, graph output under nomral condition with the baseline model*
 ![Baseline Model at Higher temp](/assets/images/Model/Baseline_model_TEMP1.png)
-*graph output under higher temp with the baseline model*
+*graph output under higher temp with the baseline model* -->
 
-Make this the figure comment
-This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
 
-After comparing the baseline model at different temprature, we want to see how the model with HSP22E/F and Glutathione behave which we will be referecing as the add on model afterwards.
+After comparing the baseline model at different temprature, we want to see how the model with sHSP and Glutathione behave which we will be refering as the add on model.
 
-{{ '/assets/images/Model/AddOn_model_TEMP0.png#caption /assets/images/Model/AddOn_model_TEMP1.png' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#graph_output_under_nomral_temperature_with_the_add_on_model /assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_the_add_on_model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
 <!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
 
