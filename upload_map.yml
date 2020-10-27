@@ -23,7 +23,7 @@ assets:
       (Description Page).png
   assets/images/Description/four identifiable problems.png:
     link_URL: https://2020.igem.org/wiki/images/e/ef/T--UNSW_Australia--images--Description--four_identifiable_problems.png
-    md5: 8d65737cf9fcf418ddbaad62f55c9664
+    md5: 85add8c2f609623e7f78afaad1fc30d7
     upload_filename: T--UNSW_Australia--images--Description--four identifiable problems.png
   assets/images/Description/gbr.jpg:
     link_URL: https://2020.igem.org/wiki/images/1/18/T--UNSW_Australia--images--Description--gbr.jpg
@@ -461,7 +461,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: e94060e72618c3a55e66034def6a8c87
+    md5: 0c4a215ad7ec6cf1f1cdba51b1aa5fbc
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
