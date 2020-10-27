@@ -50,10 +50,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/b/b2/T--UNSW_Australia--images--Education--coral-book.png
     md5: 041d053fe616e5f3981a0e4aff87cb79
     upload_filename: T--UNSW_Australia--images--Education--coral-book.png
+  assets/images/Education/coralconundrum.zip:
+    link_URL: https://2020.igem.org/wiki/images/d/d2/T--UNSW_Australia--images--Education--coralconundrum.zip
+    md5: c9e1c9228fd75b021c72302648ae8bc7
+    upload_filename: T--UNSW_Australia--images--Education--coralconundrum.zip
   assets/images/Education/education-package.png:
     link_URL: https://2020.igem.org/wiki/images/c/c4/T--UNSW_Australia--images--Education--education-package.png
     md5: 47df729b0fc59bbb8a580e8439073966
     upload_filename: T--UNSW_Australia--images--Education--education-package.png
+  assets/images/Education/educationpackage.zip:
+    link_URL: https://2020.igem.org/wiki/images/5/5a/T--UNSW_Australia--images--Education--educationpackage.zip
+    md5: 75e7b2835476fb71bffd96e2e641348d
+    upload_filename: T--UNSW_Australia--images--Education--educationpackage.zip
   assets/images/Education/eduform1.png:
     link_URL: https://2020.igem.org/wiki/images/6/63/T--UNSW_Australia--images--Education--eduform1.png
     md5: 62308835c59b9880315cff1687dd3d61
@@ -453,7 +461,7 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: a420b53282785ab673fdae680a2df433
+    md5: 5f7af97f9a2b367298756f75d0469df6
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
     md5: 3b26112707ae82d995d38b10c43e76ac
@@ -484,7 +492,7 @@ html:
     md5: 1c75e5955058f2732d70a8faa2430477
   Education/High_School/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/High_School
-    md5: 0fc7a9bb33ec325dc3d06439a6b6cf37
+    md5: adf1a0969c8945ecd9026b9303d5ee2e
   Education/Interview/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Education/Interview
     md5: f3ce02f83b9b9e0e7d3ff005572f7158
