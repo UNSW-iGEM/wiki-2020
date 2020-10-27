@@ -23,7 +23,7 @@ Type in "UNSW-iGEM/wiki-2020" and click clone. This downloads all of the wiki co
 
 ### Node.js, NPM
 
-Download and install node.js from [here](https://nodejs.org/en/download/). Click the large green square under LTS that corresponds to your OS. Wikibrick is built on node.js.
+Download and install node.js from [here](https://nodejs.org/en/download/). Click the large green square under LTS that corresponds to your OS. WikiSync is built on node.js.
 
 From Github Desktop, Select "Repository > Open in Command Prompt (Windows) / Open in Command Prompt (Mac)".
 
@@ -34,6 +34,13 @@ Type ```npm install``` and press enter. This will install all of the other softw
 ### Running locally
 
 ```npm start```
+
+### Manual Push
+
+Set your igem username and password as the environment variables `IGEM_USERNAME` and `IGEM_PASSWORD` respectively.
+
+```npm run build```
+```python3 wikisync.py```
 
 ## Git Usage
 

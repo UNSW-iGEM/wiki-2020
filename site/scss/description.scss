@@ -23,6 +23,7 @@ section.bg-GBR p{
 
 #quote{
   font-style: italic !important;
+  text-align: center;
 }
 
 section.bg-GBR img{
@@ -31,11 +32,12 @@ section.bg-GBR img{
 
 /*inspiration*/
 div.inspo-title{
-  grid-column: 2/ span 5;
+  grid-column: 2/ span 10;
 }
 
 div.inspo-title h1{
   margin: 50px 0;
+  text-align: center;
 }
 
 div.inspo-title img{
@@ -52,22 +54,53 @@ div.inspiration #first{
 
 /*why syn-bio*/
 div.syn-bio{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
   background-color: $site-pink;
-  grid-column: 2/ span 10;
 }
 
 div.syn-bio h1{
   margin: 50px 120px;
+  grid-column: 2/span 10;
+  text-align: center;
 }
 
-div.syn-bio p{
-  margin: 0 120px 20px 120px;
+div.syn-bio div.problem{
+  grid-column: 2/span 5;
+}
+
+div.syn-bio img{
+  grid-column: 7/ span 5;
+}
+
+div.syn-bio div.why-synbio{
+  grid-column: 2/span 10;
 }
 
 p#last{
   margin-bottom: 50px;
 }
 
+div.our-solution{
+  margin: 0px 0 32px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+div.our-solution img{
+  grid-column: span 6;
+}
+
+i{
+  font-style: italic !important;
+}
+
+/*goals*/
 div.project-goals {
   background-color: $site-green;
   grid-column: 2/ span 10;
@@ -95,12 +128,20 @@ div.project-goals {
   }
 }
 
-div.HP-goals {
+div.HP-goals{
   grid-column: 2/span 5;
+}
+
+div.HP-goals h2{
+  margin-bottom: 50px;
 }
 
 div.Lab-goals {
   grid-column: 7/ span 5;
+}
+
+div.Lab-goals h2{
+  margin-bottom: 50px;
 }
 
 /*final statement*/

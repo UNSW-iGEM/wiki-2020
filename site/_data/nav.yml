@@ -6,6 +6,7 @@
     - name: Description
     - name: Design
     - name: Contribution
+    - name: Software
 - name: Human Practices
   children:
     - name: Overview
@@ -39,7 +40,7 @@
       url: Education/High_School
     - name: Virtual Escape Room
       url: Education/Escape_Room
-    - name: Molecular Cloud Interview
+    - name: MolecularCloud Interview
       url: Education/Interview
     - name: Presenting to the Public
       url: Education/Talk
