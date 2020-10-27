@@ -96,6 +96,7 @@ The monomers HSP22E and HSP22F were superimposed onto the 1GME dimer model in an
 '/assets/images/model/dimer_superimposition.gif#Figure 12: the refined monomer models of HSP22E and HSP22F superimposed onto the 1GME dimer' | sideBySide
 }}
 
+
 ## De novo Loop remodelling 
 UCSF’s Modeller (23–26) program interface in Chimera was used to remodel HSP22E and HSP22F monomers to make the superimposition of monomers physically viable. Modeller refines existing segments by generating different possible conformations and it outputs five different models for the user to choose from. The team analysed the Modeller models and selected the best HSP22E and HSP22F models based on whether it appeared that loops had been repositioned to no longer cause clashes. Each model was then aligned to a different chain of 1GME to create a HSP22E/F dimer model (Figure 13). A few different variations of HSP22E and HSP22F models from Modeller were used to create trial dimers before the best combination of monomers was decided to be used for the final HSP22E/F model. Many of these dimer variations of monomers still experienced overlapping residues and so extra iterations of Modeller were carried out to further refine and remodel these clashing segments until they no longer clashed. Even though the best HSP22E/F dimer combination experienced no overlap there were still sections between HSP22E and HSP22F that almost came into contact with one another (Figure 14). At times some small alpha-helical structures which the team didn’t think were too structurally important were remodelled. However, it is a possibility that those removed alpha-helices were structurally important. Therefore dimer refinement was performed once again in order to solve this problem as well as to move the almost overlapping segments in the model further away from one another.
 
@@ -103,27 +104,50 @@ UCSF’s Modeller (23–26) program interface in Chimera was used to remodel HSP
 '/assets/images/model/modeller_dimer_aligned_1gme.gif#Figure 13: the best HSP22E/F Modeller dimer combination aligned onto the 1GME dimerSPLIT/assets/images/model/modeller_dimer_close_segments.gif#Figure 14: the best HSP22E/F Modeller dimer combination where the pink and yellow show the almost overlapping segments of the dimer' | sideBySide 
 }}
 
+
 ## Dimer refinement 
 
-The dimer was simulated with the same procedure as the monomers but for a much longer duration. We ran this simulation for as long as we could (100+ hours of HPC time), with GPUs on UNSW’s computational cluster Katana. This resulted in a simulation of approximately 275 ns where you can see the N and C-termini settling and the beta sheet core staying rather constant.
+The dimer was simulated with the same procedure as the monomers but for a much longer duration. We ran this simulation for as long as we could (100+ hours of HPC time), with GPUs on UNSW’s computational cluster Katana. The reason for this longer compute time was to try to observe convergence of our dimer model. There is no hard definition for convergence but it generally means that the structure has settled into a conformation where energy is minimised. (27) To depict this, our expert Brian, drew this set of graphs to show how we could observe convergence. RMSD is the root mean square distance between pairs of equivalent alpha carbons between two structures. (28) Rg is the radius of gyration, this is a measure of the compactness of a structure. (27)  In these mock graphs, convergence would be the common time at which the distance of both plots became quite consistent, signified by the dotted lines.
 
-<ALMOST DONE>
+
+{{
+'/assets/images/model/Convergence_Diagram.png#Figure 15: What convergence may look like while refining a structure' | sideBySide 
+}}
+
+
+
+To really get an intuitive understanding of these graphs, they need to be examined in conjunction with the movement of the molecule. In this 275ns simulation you can see C-termini settling over time and the beta sheet core staying rather constant in both the graphs and the video. Given that the arms are settling in, we would expect convergence to be close.
+
+
+{{
+'/assets/images/model/Protein_Friend_ Animation.gif#Figure 16: Radius of gyration for HSP22E/F dimer - all atom' | sideBySide 
+}}
+
+
+We further investigated the extent of movement in the core of the protein. Both of these figures were created by only looking at the backbone atoms of the core of the dimer. The core was defined as all residues besides those in the flexible C-termini of the monomers in the dimer. Additionally, only backbone atoms were considered as side chains of residues (rotamers) can also have a lot of movement. 
+
+{{
+'/assets/images/model/dimer_RMSD_ba_core_nojump_cent_fit.png#Figure 17: RMSD of backbone atoms of core proteinSPLIT/assets/images/model/dimer_gyrate_ba_core_nojump_cent_fit.png#Figure 18: Radius of gyration of backbone atoms of core protein' | sideBySide 
+}}
+
+The RMSD was calculated by comparing the alpha carbons of the first frame of the 275nm simulation with every successive frame of the simulation (the trajectory). Over time it can be observed that the RMSD plateaus on the y-axis (distance in nanometres), within 0.1nm of a distance of 0.8nm, suggesting that the backbone of the core protein is reasonably stable. This is to say that from 50ns onwards the amount of difference between each successive structure conformation of the dimer, and the starting structure was quite consistent. In regards to the Rg of the backbone atoms of the core protein, convergence was not so convincing and would benefit with a longer simulation time. This would give us greater confidence as to whether the Rg fluctuating by 0.1 nm (2.18-2.28nm) is just fluctuations between many versions of energy minimised structures in which case it would have converged or if the range of Rg will shrink with further simulation time. 
+
 
 
 ## Future Directions 
 
-In [Phase II](/Design#Phase_Two), if the wet lab’s experiments find that the binding affinity between homodimers is higher than that of the E/F heterodimer, structural modelling of those homodimers and the large oligomer would be conducted. These structures would then be used in further simulations to investigate whether the HSP22 are active as dimers or large oligomers.
+In [Phase II,](/Design#Phase_Two) if the wet lab’s experiments find that the binding affinity between homodimers is higher than that of the E/F heterodimer, structural modelling of those homodimers and the large oligomer would be conducted. These structures would then be used in further simulations to investigate whether the HSP22 are active as dimers or large oligomers.
 
-Additionally, the team was limited by time and therefore could not create a fully refined HSP22E/F 12-mer model (Figure 17). We simply aligned six of the HSP22E/F dimers onto a 12-mer assembly of 1GME to generate a physically impossible 12-mer configuration. There are obvious clashes between the six different dimers that model needs to be adjusted for. This would most likely require loop remodelling as well as the transposition of each dimer a bit further away from each other in order to let them fall naturally into place through a molecular dynamics simulation.
+Additionally, the team was limited by time and therefore could not create a fully refined HSP22E/F 12-mer model (Figure 19). We simply aligned six of the HSP22E/F dimers onto a 12-mer assembly of 1GME to generate a physically impossible 12-mer configuration. There are obvious clashes between the six different dimers that model needs to be adjusted for. This would most likely require loop remodelling as well as the transposition of each dimer a bit further away from each other in order to let them fall naturally into place through a molecular dynamics simulation.
 
-
-'/assets/images/model/12_mer_colourful.gif#Figure 17: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
-
-
-
+{{
+'/assets/images/model/rsz_12_mer_colourful_image.png#Figure 19: Unrefined 12-mer model of HSP22E and HSP22F' | sideBySide
+}}
 
 
-## Bibliography
+
+
+## References
 
 1. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 Dec 1;95(6):579–91.
 2. Kubelka J, Hofrichter J, Eaton WA. The protein folding ‘speed limit.’ Curr Opin Struct Biol. 2004 Feb 1;14(1):76–88.
