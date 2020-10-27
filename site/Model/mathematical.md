@@ -96,7 +96,7 @@ Given the equation, if we assume the activation energy is \\(100kJmol^{-1}\\), \
 & = 3.874.
 \end{align}
 Hence, with the Arrhenius equation as guidance we decided to have a rate constant relationship as follow,
-\begin{align} 1 \leq \frac{k_{elevatedT}}{k_{nomralT}} \leq 10. \end{align}
+\begin{align} 1 \leq \frac{k_{elevatedT}}{k_{normalT}} \leq 10. \end{align}
 Moreover, we realized the model would deviate from the expected output if we assume it strictly follows the Arrhenius equation. Unlike chemical reaction, biochemical reaction is extensively controlled by the enzyme, given  temperature increment in the environment which would result in different levels of protein conformational change hence disobeying the Arrhenius equation.
 
 Therefore, we abstract the temperature change to the alternation of a few parameters which relates significantly to temperature changes.  (\\(k_{1}\\)) goes down if temperature goes up, (\\(k_{2}, k_{6}, k_{20}, k_{29}, k_{30}, \\)) go up if temperature rises.
@@ -104,6 +104,7 @@ Therefore, we abstract the temperature change to the alternation of a few parame
 {{ '/assets/images/Model/Baseline_model_TEMP00.png#graph output under normal temperature with the baseline modelSPLIT/assets/images/Model/Baseline_model_TEMP1.png#graph output under higher temperature with the baseline model' | sideBySide }}
 
 This group of graph is the comparision of the baseline condition under different temperature. It is evident that under higher temperature the level of natural proteins goes down quite swiftly in 100 unit time. This can be seen as a baseline of the cellular responce to temperature elevation.
+
 <!--
 ![Baseline Model](/assets/images/Model/Baseline_model_TEMP00.png)
 *This is the caption, graph output under nomral condition with the baseline model*
@@ -120,7 +121,7 @@ As you can see by comparing the baseline and add on model at higher temp, we can
 
 The above comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
 
-{{ '/assets/images/Model/sHSP_model_TEMP1.png#graph_output_under_high_temperature_with_only_sHSP_added /assets/images/Model/Glutathione_model_TEMP1.png#graph_output_under_high_temperature_with_only_Glutathione_added' | sideBySide }}
+{{ '/assets/images/Model/sHSP_model_TEMP1.png#graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#graph output under high temperature with only Glutathione added' | sideBySide }}
 
 From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which is the main cause of protein misfolding.
 
@@ -129,7 +130,7 @@ From the graph, we can conclude that Glutathione is the main helper as expected 
 
 After knowing that Glutathione is the main helper, we would also like to evaluate if frontloading the amount of Glutathione before the actual ROS level surge would be helpful for the cell to increase its survivability.
 
-{{ '/assets/images/Model/AddOn_model_TEMP1.png#graph_output_under_high_temperature_with_Glutathione_frontload /assets/images/Model/Glut_FrontLoad_model_TEMP1.png#graph_output_under_high_temperature_without_Glutathione_frontload' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP1.png#graph output under high temperature with Glutathione frontloadSPLIT/assets/images/Model/Glut_FrontLoad_model_TEMP1.png#graph output under high temperature without Glutathione frontload' | sideBySide }}
 
 The graph above suggested that 10 times initial frontloading of the Glutathione is not improving the state of cell further. This is largely due to the setting of the model, where a small amount of Glutathione is sufficient to oppress the ROS level inside the cell.
 
@@ -156,6 +157,7 @@ Initially we began by using the MATLAB SimBiology package. This proved to be obt
 
 
 ## Reference
+
 1. Proctor CJ, Sőti C, Boys RJ, Gillespie CS, Shanley DP, Wilkinson DJ, et al. Modelling the actions of chaperones and their role in ageing. Mechanisms of Ageing and Development. 2005;126(1):119–31. Available from: https://linkinghub.elsevier.com/retrieve/pii/S0047637404002337
 
 2. Rütgers M, Muranaka LS, Mühlhaus T, Sommer F, Thoms S, Schurig J, et al. Substrates of the chloroplast small heat shock proteins 22E/F point to thermolability as a regulative switch for heat acclimation in Chlamydomonas reinhardtii. Plant Mol Biol. 2017 95(6):579–91. Available from: http://link.springer.com/10.1007/s11103-017-0672-y
