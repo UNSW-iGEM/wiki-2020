@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{{ content }}
+<p id="References">REFERENCES</p>
+<ol id="references">
+    {% for reference in references %}
+        <li>{{ reference }}</li>
+    {% endfor %}
+</ol>
