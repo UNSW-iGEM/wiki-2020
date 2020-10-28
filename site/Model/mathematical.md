@@ -3,7 +3,7 @@ layout: model-page
 title: Mathematical Modelling
 # subtitle: Modelling biochemical reactions to determine the effectiveness of PROTECC Coral
 tags: model
-summary: Heat shock and ROS responses are ubiquitous in living organisms as all environments have temperature fluctuations and a need to mitigate oxidative stress. Mathematical models of the new engineered system were compared to a model of the wild type system to predict the biochemical changes on the level of the cell. Both stochastic and deterministic versions of these models were implemented using the PySB library and sensitivity analysis was conducted.
+summary: Heat shock and ROS responses are ubiquitous in living organisms as all environments have temperature fluctuations and a need to mitigate oxidative stress. Mathematical models of the new engineered system were compared to a model of the wild type system to predict the biochemical changes on the level of the cell. Both stochastic and deterministic versions of these models were implemented using the PySB library.
 image: blank_graph.png
 references:
     - 'Proctor CJ, Sőti C, Boys RJ, Gillespie CS, Shanley DP, Wilkinson DJ, et al. Modelling the actions of chaperones and their role in ageing. Mechanisms of Ageing and Development. 2005;126(1):119–31. Available from: https://linkinghub.elsevier.com/retrieve/pii/S0047637404002337'
@@ -149,7 +149,7 @@ The graph above suggested that 10 times initial frontloading of the Glutathione 
 ## Discussion
 Overall, our mathematical modelling shed some insights into how our PROTECC coral solution is effective in maintaining the functionality of the cell. From the analysis of the model, we know that this is a feasible solution to combat cellular heat stress for Symbiodinium cells. Moreover, we figured out that Glutathione is the primary force in lifting the cell from extreme thermality.
 However, on a more negative note that most of the value of the parameter is chosen at our best estimation since reliable data were hard to obtain. Thus the model is only a rough estimation of the *in vitro* environment. Furthermore, we did not reach our original goal of evaluating the optimal condition to activate the cellular response due to the limit of time and also the difficulties in adding the quantitative measure onto the model.
-Additionally, we would like to perform a sensitivity analysis in the future to evaluate further the robustness of our model and how it responds to various parameter tweaking.
+Additionally, we would like to perform sensitivity analysis in the future to evaluate further the robustness of our model and how it responds to various parameter tweaking.
 
 ### Limitations and difficulties
 We experienced some technical difficulties in incorporating the temperature feature in the model where we used `Expression` in the PySB package where it seems to have some bug. Thanks to Rodrigo Santibáñez an active member in the PySB community helped us with the debugging and further pointed us to the Kappa package.
