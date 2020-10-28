@@ -783,10 +783,10 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: 390f461432fa47932a2f4171be139312
+    md5: f95fb078155e1eb8af3d0ebfd6a8de77
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
-    md5: 3b26112707ae82d995d38b10c43e76ac
+    md5: 7934562a7a427544b10a1fd96f7b2295
 html:
   Attributions/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Attributions
@@ -862,7 +862,7 @@ html:
     md5: fa3bef0e07d0384098fa29b499722537
   Software/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Software
-    md5: 971887e3662aeb6f7be3b1adcd8d78de
+    md5: f1ce16adb835ed532b352678d907db5c
   Stakeholders/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Stakeholders
     md5: 17540df6fb2900eb73871f8ada84106c
@@ -929,6 +929,9 @@ html:
   sHSPs/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/sHSPs
     md5: e7baaf416328765656fd9b31d5c06828
+  software/index.html:
+    link_URL: https://2020.igem.org/Team:UNSW_Australia/software
+    md5: 0480880ef6eb2cb827d568054ca5cb8a
 js:
   assets/0.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/0JS?action=raw&ctype=text/javascript
@@ -938,16 +941,16 @@ js:
     md5: ff5c80c16ca928ed1f057922d9417d09
   assets/app.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appJS?action=raw&ctype=text/javascript
-    md5: 7c67ce8aa6b42f728d821afc4663be05
+    md5: a1f9cb7ff8d12b1d8564144e1b3410d0
   assets/pdf.worker.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/pdf-workerJS?action=raw&ctype=text/javascript
-    md5: 0ad2b11a78c4fc77a806587f31e4cd96
+    md5: 8bfdacf8507022b0e5ee10dda997da83
   assets/pdfjs.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/pdfjsJS?action=raw&ctype=text/javascript
-    md5: 3b94adfcb375123530092b2565706db6
+    md5: 4c66ea662f745c164e152f4eba25bdd3
   assets/runtime.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/runtimeJS?action=raw&ctype=text/javascript
-    md5: e7b26ad1cccfdabd22795e4b6a76b5b0
+    md5: 000c3893cd42406aebf5454f3954e3e5
   assets/vendors~pdf.worker.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/vendors~pdf-workerJS?action=raw&ctype=text/javascript
     md5: 206699640b0cf8a8b4039c4fbf62469e
