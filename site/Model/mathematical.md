@@ -123,15 +123,15 @@ This group of graph is the comparision of the baseline condition under different
 
 After comparing the baseline model at different temperatures, we want to see how the model with sHSP and Glutathione behave which we will be referring to as the sHSP with Glutathione model afterwards.
 
-{{ '/assets/images/Model/AddOn_model_TEMP0.png#Figure 5: graph output under nomral temperature with the sHSP and Glutathione model modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#Figure 6: graph output under high temperature with the sHSP and Glutathione model' | sideBySide }}
+{{ '/assets/images/Model/AddOn_model_TEMP0.png#Figure 5: graph output under nomral temperature with the sHSP and Glutathione modelSPLIT/assets/images/Model/AddOn_model_TEMP1.png#Figure 6: graph output under high temperature with the sHSP and Glutathione model' | sideBySide }}
 <!-- ![Add on Model](/assets/images/Model/AddOn_model_TEMP0.png) -->
 <!-- ![Add on Model at Higher Temp](/assets/images/Model/AddOn_model_TEMP1.png) -->
 
-As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in Figure 6 is delepting at a significantly lower rate than the Natural Protein in Figure 5. This comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
+As you can see by comparing the baseline and add on model at higher temp, we can see that the Natural Protein in Figure 4 is delepting at a significantly lower rate than the Natural Protein in Figure 5. This comparison showed a promising result, however, it is still unclear whether sHSP or Glutathione contribute more to the alleviation of the heat stress. Therefore, graphs with only sHSP or Glutathione were plotted below.
 
 {{ '/assets/images/Model/sHSP_model_TEMP1.png#Figure 7: graph output under high temperature with only sHSP addedSPLIT/assets/images/Model/Glutathione_model_TEMP1.png#Figure 8: graph output under high temperature with only Glutathione added' | sideBySide }}
 
-From the graph, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which acts as the main cause of protein misfolding.
+Comparing Figure 7 and Figure 8, we can notice that the Natural Proteins of the model with only sHSP decreased to 0, while in Figure 8 the Natural Protein is still maintained at a relatively healthy level. Hence, we can conclude that Glutathione is the main helper as expected since its main function is to reduce the ROS level inside the cell which acts as the main cause of protein misfolding.
 
 <!-- ![sHSP on Higher temp](/assets/images/Model/sHSP_model_TEMP1.png)
 ![Glu on Higher temp](/assets/images/Model/Glutathione_model_TEMP1.png) -->
