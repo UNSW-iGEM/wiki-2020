@@ -783,10 +783,10 @@ assets:
 css:
   assets/app.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appCSS?action=raw&ctype=text/css
-    md5: f95fb078155e1eb8af3d0ebfd6a8de77
+    md5: 390f461432fa47932a2f4171be139312
   assets/ttf.css:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/ttfCSS?action=raw&ctype=text/css
-    md5: 7934562a7a427544b10a1fd96f7b2295
+    md5: 3b26112707ae82d995d38b10c43e76ac
 html:
   Attributions/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Attributions
@@ -847,7 +847,7 @@ html:
     md5: 15d43519002b19c568ba4e760175c58d
   Model/mathematical/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/mathematical
-    md5: b0ddb172e0c19768b05510bc11a22b35
+    md5: 67fbbd72baa3619d5a5bc67117044386
   Model/structural/index.html:
     link_URL: https://2020.igem.org/Team:UNSW_Australia/Model/structural
     md5: 559608838c5a5467e6d3e3d6fdccf444
@@ -941,16 +941,16 @@ js:
     md5: ff5c80c16ca928ed1f057922d9417d09
   assets/app.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/appJS?action=raw&ctype=text/javascript
-    md5: a1f9cb7ff8d12b1d8564144e1b3410d0
+    md5: 7c67ce8aa6b42f728d821afc4663be05
   assets/pdf.worker.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/pdf-workerJS?action=raw&ctype=text/javascript
-    md5: 8bfdacf8507022b0e5ee10dda997da83
+    md5: 0ad2b11a78c4fc77a806587f31e4cd96
   assets/pdfjs.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/pdfjsJS?action=raw&ctype=text/javascript
-    md5: 4c66ea662f745c164e152f4eba25bdd3
+    md5: 3b94adfcb375123530092b2565706db6
   assets/runtime.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/runtimeJS?action=raw&ctype=text/javascript
-    md5: 000c3893cd42406aebf5454f3954e3e5
+    md5: e7b26ad1cccfdabd22795e4b6a76b5b0
   assets/vendors~pdf.worker.js:
     link_URL: https://2020.igem.org/Template:UNSW_Australia/assets/vendors~pdf-workerJS?action=raw&ctype=text/javascript
     md5: 206699640b0cf8a8b4039c4fbf62469e
