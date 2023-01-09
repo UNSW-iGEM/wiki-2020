@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/UNSW-iGEM/wiki-2020/#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^1.0.2",
     "@symfony/webpack-encore": "^0.31.0",
     "google-fonts-plugin": "^5.0.2",
     "node-sass": "^4.14.1",
